@@ -1,5 +1,11 @@
 # Group 12 - Project - Waterman Works
 
+## Contents
+- [Brief](https://github.com/WestheadJ/group12/edit/main/README.md#brief)
+- [Extra Guidance on the Project](https://github.com/WestheadJ/group12/edit/main/README.md#extra-guidance-on-the-project)
+- [How to use the Repo](https://github.com/WestheadJ/group12/edit/main/README.md#extra-guidance-on-the-project)
+- [Resources on how to use Github and Github Desktop](https://github.com/WestheadJ/group12/edit/main/README.md#resources-on-how-to-use-github)
+
 ## Brief:
 
 The performance dashboard is somewhat undeveloped. We would like to offer a more polished Greenspace Performance Dashboard which could include:
@@ -10,7 +16,7 @@ The performance dashboard is somewhat undeveloped. We would like to offer a more
 - Ability to upload and present data eg Net Zero commitments, energy, waste etc
 - And other ideas to showcase our client's improvements and plans that the students may have!
 
-## Extra guidance on the project
+## Extra Guidance on the Project
 [How the service works](https://learn-eu-central-1-prod-fleet01-xythos.content.blackboardcdn.com/5f3a6812009c4/18819893?X-Blackboard-S3-Bucket=learn-eu-central-1-prod-fleet01-xythos&X-Blackboard-Expiration=1677618000000&X-Blackboard-Signature=1fzUh%2Ba3E2LZA0yY%2F0MTnb4yXXWrn%2BoBJEtqh8X9Wpc%3D&X-Blackboard-Client-Id=100379&X-Blackboard-S3-Region=eu-central-1&response-cache-control=private%2C%20max-age%3D21600&response-content-disposition=inline%3B%20filename%2A%3DUTF-8%27%27WIE19634_Greenspace%2520Service%2520Guide_Jan_2023.pdf&response-content-type=application%2Fpdf&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEND%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDGV1LWNlbnRyYWwtMSJGMEQCIBW0K758WfkIzDtsvSVRooqmuW939R0OX7lkRjhmQedIAiBep1CBD6UB7Ka%2BGGw4SYItgEYHBESFESe%2BfzXxh54Bfyq9BQh5EAIaDDYzNTU2NzkyNDE4MyIMgmDO6hXtNFD0ixE8KpoFp3IgQVP3ZlmjGHIcoyvmZuwELTEemKog8abmbPYmgdzTu9Q9G5HigBhHTNl0xcWMqysf0Jt5Rw4WoKDIQvPe8IYkp1SPIxq3wQ0w%2B%2BB72HG%2BxvqK8IGcCxa2kDoHhn0RSaXP%2FWr35gYIaMZQQb0p0P%2Bw9zZ575DP4Q5uYz8BE0So%2BaqODLmalzkUlRXb5PSAOEb23vCGgStUJuL42DSNqhygJVRBCgk1VMrnMvTY5yS8%2Fr5UwWyjwm80SVk1JKMj%2BXQxUo4NR4NSsPESvMy5mOw08oDFiKueuP7altHwAXhLHbe0mxpATckFWQj92c1kVHKH%2Fi6fIhUhYJi1%2FgX9eTxUO1DlXEREJZEicJs3kzUXA2w41O%2FGOjsp7UjHKxstsNdrHKxPR5je0Ia6hoeoqpI47oSWRGPaK2tK8W35jJJbFOAXXLYFPuOXDA9KirZ3aOB57JhhW%2Ft%2BVV0K23bXiQcbk%2FNRLgBSqzyTRiW4mClP%2F%2BKnhXXz6SvmgZ3BUdXQgBQpECVlt3zFibA8%2FGjF%2FlnxfTslm%2FJHhsnTothJ8iryIR57CkyCr6W%2BopMC%2B127RvyP2Wrm87J%2BM63KHsPM2lP76dREBlojbHhOOYA8OiY6Q%2BF%2FVhWPmaE7uCLGgTji76kF%2FrJzMxpbrdFeg8%2Bqv7TWfsDAuQCHmkS9HamIj69oDMhSl%2B%2FcmuK4%2B%2BdtBVrqAF4YMIddktyCm8vMmsgBVPhsqLSDfsGkt1jPnun0ollPMN36xyeiHfV4qGACSP3b9fL8YIBD1R3cAKiu3wyuF1EM31wR9rpFwYqgP33igSc5vK01OLCa1cW%2BB6bgC0ufjxONeL6Knfyn8SVOifqAbV%2FQHzEpBtBdMqnUUIaXHPuVgcBeJq1Y%2Fe4NMITK%2BJ8GOrIB3Sr8vf9cEUJCZ58NYvg0LR3%2BKj2mNUhi70L1tWtvJoofVAL68ekzvDStUF%2B4RJ2H6jJ1wvu8XnB31W2VwSJu11zqCLugMmRapABSCIYy3lsQFW2vsjLtMAB19h1LabwtwrUYdwqu2FtOVwi%2Be4L629lFBSfkhmdadMytxLzeB4Q2yTU%2BPOY8FLiudATYf%2FVoFLO%2FSkYhwFvthuliIpJqQFMI8kClDlQ4dcBEgI55PniMWQ%3D%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20230228T150000Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Credential=ASIAZH6WM4PL5RXI5YH4%2F20230228%2Feu-central-1%2Fs3%2Faws4_request&X-Amz-Signature=669163888970fa7ff4307e40ddd6a71824cf9b0bf91c5fa19faf72eddabbe1c7).
 
 ## How to use the Repo
