@@ -1,11 +1,23 @@
+var randomData = function () {
+    return [
+      randomScalingFactor(),
+      randomScalingFactor(),
+      randomScalingFactor(),
+      randomScalingFactor(),
+      randomScalingFactor(),
+      randomScalingFactor()
+    ];
+  };
+
+  var barData = randomData();
+
 function displayChart() {
     var chartData = {
-        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+        labels: ['Green', 'Amber', 'Red'],
         datasets: [{
-            label: 'Sales',
-            data: [200, 300, 400, 500, 600, 700, 800],
-            backgroundColor: 'rgba(54, 162, 235, 0.2)',
-            borderColor: 'rgba(54, 162, 235, 1)',
+            label: 'Bar Chart',
+            data: barData,
+            backgroundColor: ['green', 'orange', 'red'],
             borderWidth: 1
         }]
     };
