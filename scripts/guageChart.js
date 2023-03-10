@@ -60,11 +60,3 @@ window.onload = function() {
   window.myGauge = new Chart(ctx, config);
 };
 
-document.getElementById('randomizeData').addEventListener('click', function() {
-  config.data.datasets.forEach(function(dataset) {
-    dataset.data = randomData();
-    dataset.value = randomValue(dataset.data);
-  });
-
-  window.myGauge.update();
-});
