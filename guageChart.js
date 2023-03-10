@@ -22,7 +22,7 @@ var config = {
   data: {
     //labels: ['Success', 'Warning', 'Warning', 'Error'],
     datasets: [{
-      data: data,a
+      data: data,
       value: value,
       backgroundColor: ['green', 'orange', 'red'],
       borderWidth: 2
