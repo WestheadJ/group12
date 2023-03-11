@@ -1,4 +1,4 @@
-<!-- What we need 
+<!-- <!-- What we need
     Button to add chart -> chart select (select chart) user click update -> display chart type.
     Return to dashboard
     Display chart
@@ -6,29 +6,48 @@
 
 <?php include 'navbar.php'; ?>
 <div class="mainpage">
-  <div class="mainpage-content">
-    <script src="../scripts/guageChart.js"></script>
-    <div id="canvas-holder" style="width:50%">
-      
-    <canvas id="chart"></canvas>
-    
-  </div>
-  <div id=" graphButton">
+  <div class="mainpage-row">
+    <div class="mainpage-item">
+      <script src="../scripts/guageChart.js"></script>
+      <div id="canvas-holder">
+        <canvas id="chart"></canvas>
+      </div>
+    </div>
+    <div class="mainpage-item">
+      <script src="../scripts/guageChart.js"></script>
+      <div id="canvas-holder" style="width:100%">
+        <canvas id="chart"></canvas>
+      </div>
+    </div>
+    <div class="mainpage-item">
+      <script src="../scripts/guageChart.js"></script>
+      <div id="canvas-holder" style="width:100%">
+        <canvas id="chart"></canvas>
+      </div>
+    </div>
+    <div class="mainpage-item">
+      <script src="../scripts/guageChart.js"></script>
+      <div id="canvas-holder" style="width:100%">
+        <canvas id="chart"></canvas>
+      </div>
+    </div>
+    <!-- <div class="mainpage-item">
+      <script src="../scripts/addGraphBtn.js"></script>
+      <div id="canvas-holder" style="width:100%">
+        <canvas id="myChart"></canvas>
+      </div>
+    </div> -->
+  <!-- <div id=" graphButton">
     <script src="../scripts/addGraphBtn.js"></script>
     <button class = "button-blue" onclick="displayChart()">Add Graph</button>
-    <div id="canvas-holder" style="width:50%">
-      <canvas id="myChart"></canvas>
-    </div>
   </div>
 </body>
 
 </html>
 
-<script src="../scripts/addGraphBtn.js"></script>
 
-<a href="dashboard.php">Return to dashboard</a>
 </div>
 </div>
 </body>
 
-</html>
+</html> -->
