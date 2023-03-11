@@ -1,6 +1,18 @@
+<?php require 'index.php';?>
+
 <nav class="nav">
-  <ul>
-    <li><a href="index.php">Performance dashboard</a></li>
-    <li><a href="dashboard.php">Dashboard</a></li>
-  </ul>
+<!-- <form action="overview.php" method="POST">
+  <input type="submit"/>
+</form>
+<form action="dashboard.php" method="POST">
+  <input type="submit"/>
+</form> -->
+
+<a href="overview.php">
+  <button>Overview</button>
+</a>
+<a href="dashboard.php">
+  <button>Dashboard</button>
+</a>
+
 </nav>

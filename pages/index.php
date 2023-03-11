@@ -11,17 +11,4 @@
 </head>
 
 <body>
-<?php include 'navbar.php'; ?>
-  <script src="../scripts/guageChart.js"></script>
-  <div id="canvas-holder" style="width:50%">
-    <canvas id="chart"></canvas>
-  </div>
-  <div id = " graphButton">   
-    <script src="../scripts/addGraphBtn.js"></script>
-    <button onclick="displayChart()">Add Graph</button>
-    <div id="canvas-holder" style="width:50%">
-	    <canvas id="myChart"></canvas>
-    </div>
-  </div>
-</body>
-</html>
+
