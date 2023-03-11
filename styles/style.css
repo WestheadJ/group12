@@ -1,9 +1,3 @@
-canvas {
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-}
-
 nav ul {
   list-style: none;
   padding-left: 0;
@@ -25,4 +19,4 @@ nav ul li a {
   text-decoration: none;
   color: white;
   padding: 8px 15px;
-}
+} 
