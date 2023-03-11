@@ -1,5 +1,8 @@
 <?php require 'index.php'; ?>
-
+<head>
+  <link rel="stylesheet" href="../styles/navbar.css">
+</head>
+<body>
 <nav class="nav">
   <div class="nav-content">
 
@@ -25,3 +28,4 @@
   </div>
   </div>
 </nav>
+</body>
