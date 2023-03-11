@@ -4,7 +4,7 @@
     Display chart
 -->
 
-<?php include 'navbar.php'; ?>
+<?php require 'navbar.php' ?>
 <div class="mainpage">
   <div class="mainpage-content">
     <script src="../scripts/guageChart.js"></script>

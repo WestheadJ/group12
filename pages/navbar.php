@@ -3,12 +3,14 @@
 <nav class="nav">
   <div class="nav-content">
 
-    <h1>Waterman Grp</h1>
+    <h1>Waterman Group</h1>
 
   </div>
   <div class="nav-content">
 
     <h4>Enviromental</h4>
+    <h4>Climate Space</h4>
+    <h4>H&S</h4>
 
   </div>
   <div class="nav-content">
