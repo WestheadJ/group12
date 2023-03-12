@@ -38,3 +38,13 @@
 //     });
 // }
 
+function insertAfter(referenceNode, newNode) {
+    referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
+}
+
+function buttonClickityClick(){
+    var el = document.createElement("div");
+    el.innerHTML = "test";
+    var div = document.getElementById("row-1-item-1");
+    insertAfter(div, el);
+}
