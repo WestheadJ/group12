@@ -109,7 +109,7 @@ button.nav-item {
   font-family: 'Times New Roman', Times, serif;
   border: none;
   outline: none;
-  background-color: #10794f;;
+  background-color: #10794f;
   color: white;
   padding: 0.5rem 1rem;
   border-radius: 0.25rem;
@@ -126,4 +126,27 @@ a {
 
 .nav-item:first-child {
   margin-right: 1rem;
+}
+
+.filter-box {
+position: absolute;
+top: 24vh;
+right: 20px;
+width: 350px; 
+padding: 5px 10px;
+border-radius: 10px;
+background-color: #10794f;
+height: 70px;
+display: flex;
+justify-content: space-between;
+}
+      
+.filter-box select {
+font-family: 'Times New Roman', Times, serif;
+width: 100px;
+height: 30px;
+border-radius: 10px;
+padding: 5px;
+background-color: white;
+margin-top: 20px;
 }
