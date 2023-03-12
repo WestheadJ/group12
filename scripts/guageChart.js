@@ -1,4 +1,4 @@
-var randomScalingFactor = function() {
+var randomScalingFactor = function () {
   return Math.round(Math.random() * 100);
 };
 
@@ -55,8 +55,61 @@ var config = {
   }
 };
 
-window.onload = function() {
-  var ctx = document.getElementById('chart').getContext('2d');
-  window.myGauge = new Chart(ctx, config);
+window.onload = function () {
+  var ctx = document.getElementById('guageChart').getContext('2d');
+  window.guageChart = new Chart(ctx, config);
+ 
+  var ctx = document.getElementById('lineChart').getContext('2d');
+  window.lineChart = new Chart(ctx, config1);
+
 };
 
+
+var randomDataBar = function () {
+    return [
+      randomScalingFactor(),
+      randomScalingFactor(),
+      randomScalingFactor(),
+      randomScalingFactor(),
+      randomScalingFactor(),
+      randomScalingFactor()
+    ];
+  };
+
+  var barData = randomDataBar();
+
+
+var config1 = {
+  type: 'bar',
+  data: {
+    labels: ['Green', 'Amber', 'Red'],
+    datasets: [{
+      label: 'Bar Chart',
+      data: barData,
+      backgroundColor: ['green', 'orange', 'red'],
+      borderWidth: 1
+    }]
+  },
+  options: {
+    scales: {
+      yAxes: [{
+        ticks: {
+          beginAtZero: true
+        }
+      }]
+    }
+  }
+  //labels: ['Green', 'Amber', 'Red'],
+  
+};
+
+// function insertAfter(referenceNode, newNode) {
+//   referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
+// }
+
+// function buttonClickityClick(){
+//   var el = document.createElement("div");
+//   el.innerHTML = "test";
+//   var div = document.getElementById("row-1-item-1");
+//   insertAfter(div, el);
+// }

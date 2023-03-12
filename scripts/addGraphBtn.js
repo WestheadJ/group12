@@ -31,20 +31,20 @@
 //         }
 //     };
 //     var ctx = document.getElementById('myChart').getContext('2d');
-//     var chart = new Chart(ctx, {
+//     var myChart = new Chart(ctx, {
 //         type: 'bar',
 //         data: chartData,
 //         options: chartOptions
 //     });
 // }
 
-function insertAfter(referenceNode, newNode) {
-    referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
-}
+// function insertAfter(referenceNode, newNode) {
+//     referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
+// }
 
-function buttonClickityClick(){
-    var el = document.createElement("div");
-    el.innerHTML = "test";
-    var div = document.getElementById("row-1-item-1");
-    insertAfter(div, el);
-}
+// function buttonClickityClick(){
+//     var el = document.createElement("div");
+//     el.innerHTML = "test";
+//     var div = document.getElementById("row-1-item-1");
+//     insertAfter(div, el);
+// }
