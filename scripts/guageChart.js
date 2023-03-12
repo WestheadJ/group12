@@ -96,7 +96,7 @@ var config1 = {
   data: {
     labels: ['Green', 'Amber', 'Red'],
     datasets: [{
-      label: 'Bar Chart',
+      label: 'Chart',
       data: data,
       backgroundColor: ['green', 'orange', 'red'],
       borderWidth: 1
@@ -111,7 +111,6 @@ var config1 = {
       }]
     }
   }
-  
 };
 
 
@@ -120,7 +119,7 @@ var config2 = {
   data: {
     labels: ['Green', 'Amber', 'Red'],
     datasets: [{
-      label: 'Bar Chart',
+      label: 'Chart',
       data: data,
       backgroundColor: ['green', 'orange', 'red'],
       borderWidth: 1
@@ -144,8 +143,9 @@ var config3 = {
   data: {
     labels: ['Green', 'Amber', 'Red'],
     datasets: [{
-      label: 'Bar Chart',
+      label: 'Chart',
       data: data,
+      fill: false,
       backgroundColor: ['green', 'orange', 'red'],
       borderWidth: 1
     }]

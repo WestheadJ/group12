@@ -55,10 +55,14 @@
     </div>
   </div> 
 
+  <div class = "abutton">
+    <button onclick="buttonClickityClick()">+</button>
+  </div>
+
   <div class="mainpage-row" id="row-1">
     <div class="mainpage-row-item" id="row-1-item-1">
       <!-- <a href="chartSelect.php"> -->
-      <button onclick="buttonClickityClick()">Add</button>
+      
       <!-- </a> -->
     </div>
   </div>

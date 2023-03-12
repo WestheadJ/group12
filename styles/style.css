@@ -102,6 +102,26 @@ a {
   width: 180px;
 }
 
+.abutton{
+  display: flex;
+  justify-content: center;
+}
+
+.abutton button {
+  background-color: rgb(44, 114, 206);
+  border-style: none;
+  padding: .5em;
+  padding-left: 2em;
+  padding-right: 2em;
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+}
+
+.abutton button:hover{
+  background-color: rgb(31, 95, 179);
+}
+
 #chart-select {
   height: 100%;
 }
