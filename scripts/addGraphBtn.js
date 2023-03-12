@@ -1,6 +1,7 @@
 function insertAfter(referenceNode, newNode) {
     referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
 }
+
 var count = 0
 function buttonClickityClick(){
     var el = document.createElement("div");
