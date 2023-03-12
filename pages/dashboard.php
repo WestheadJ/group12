@@ -4,8 +4,13 @@
     Display chart
 -->
 
+<script src="../scripts/addGraphBtn.js"></script>
+
 <?php require 'navbar.php' ?>
-<div class="filter-box">
+
+<!-- Maisha is this not for chartSelect, if it is put in chartSelect.php -->
+
+<!-- <div class="filter-box">
   <select>
     <option value="option1">Option 1</option>
     <option value="option2">Option 2</option>
@@ -21,19 +26,12 @@
     <option value="option2">Option 2</option>
     <option value="option3">Option 3</option>
   </select>
-</div>
+</div> -->
+
 <div class="mainpage">
   <div class="mainpage-row">
-    <div class="mainpage-item">
-      <script src="../scripts/guageChart.js"></script>
-      <div id="canvas-holder">
+    <div class="mainpage-row-item" id="row-1-item-1">    
         <canvas id="chart"></canvas>
-<script src="../scripts/addGraphBtn.js"></script>
-<div id="mainpage">
-  
-  <div class="mainpage-row" id="row-1">
-    <div class="mainpage-row-item" id="row-1-item-1">
-      <canvas id="chart"></canvas>
     </div>
 
     <div class="mainpage-row-item">
