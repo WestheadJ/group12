@@ -15,7 +15,9 @@
     </div>
     <div class="mainpage-row-item">
       <div class="add-graph-button">
-        <button>Add</button>
+        <a href="chartSelect.php">
+          <button>Add</button>
+        </a>
       </div>
     </div>
     
