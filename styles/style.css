@@ -41,6 +41,8 @@ html,body {
   width: 100%
 }
 
+/* NOTE: Below is how I get the boxes to shrink the same however if you notice the graph doesn't increase in size, if anyone can find a solution that would be great */
+
 #canvas-holder{
   width: fit-content;
 }

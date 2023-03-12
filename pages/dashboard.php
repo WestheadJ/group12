@@ -7,15 +7,15 @@
 <?php require 'navbar.php' ?>
 <script src="../scripts/guageChart.js"></script>
 <div class="mainpage">
-  <div class="mainpage-row">
-    <div class="mainpage-row-item">
+  <div class="mainpage-row" id="row-1">
+    <div class="mainpage-row-item" id="row-1-item-1">
       <div id="canvas-holder">
         <canvas id="chart"></canvas>
       </div>
     </div>
     <div class="mainpage-row-item">
       <div class="add-graph-button">
-        Add Graph +
+        <button>Add</button>
       </div>
     </div>
     
