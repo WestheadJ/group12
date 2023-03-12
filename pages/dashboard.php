@@ -8,10 +8,12 @@
   $x = null;
   $y = "class=\"selected\"";
   require 'navbar.php';
-
   ?>
- <script src="../scripts/addGraphBtn.js"></script>
- <div class="mainpage-row">
+
+<script src="../scripts/addGraphBtn.js"></script>
+<div id="mainpage">
+
+  <div class="mainpage-row">
     <div class="mainpage-row-item">
       <canvas id="barChartR3"></canvas>
     </div>
@@ -51,16 +53,13 @@
     <div class="single-mainpage-row-item">
       <canvas id="guageChartR4"></canvas>
     </div>
-</div> 
- 
- 
- <div id="mainpage">
+  </div> 
 
-   <div class="mainpage-row" id="row-1">
-     <div class="mainpage-row-item" id="row-1-item-1">
-       <!-- <a href="chartSelect.php"> -->
-       <button onclick="buttonClickityClick()">Add</button>
-       <!-- </a> -->
-     </div>
-   </div>
- </div>
+  <div class="mainpage-row" id="row-1">
+    <div class="mainpage-row-item" id="row-1-item-1">
+      <!-- <a href="chartSelect.php"> -->
+      <button onclick="buttonClickityClick()">Add</button>
+      <!-- </a> -->
+    </div>
+  </div>
+</div>
