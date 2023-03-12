@@ -28,43 +28,20 @@
       <script src="../scripts/guageChart.js"></script>
       <div id="canvas-holder">
         <canvas id="chart"></canvas>
+<script src="../scripts/addGraphBtn.js"></script>
+<div id="mainpage">
+  
+  <div class="mainpage-row" id="row-1">
+    <div class="mainpage-row-item" id="row-1-item-1">
+      <canvas id="chart"></canvas>
+    </div>
+
+    <div class="mainpage-row-item">
+      <div class="add-graph-button">
+        <!-- <a href="chartSelect.php"> -->
+          <button onclick="buttonClickityClick()">Add</button>
+        <!-- </a> -->
       </div>
     </div>
-    <div class="mainpage-item">
-      <script src="../scripts/guageChart.js"></script>
-      <div id="canvas-holder" style="width:100%">
-        <canvas id="chart"></canvas>
-      </div>
-    </div>
-    <div class="mainpage-item">
-      <script src="../scripts/guageChart.js"></script>
-      <div id="canvas-holder" style="width:100%">
-        <canvas id="chart"></canvas>
-      </div>
-    </div>
-    <div class="mainpage-item">
-      <script src="../scripts/guageChart.js"></script>
-      <div id="canvas-holder" style="width:100%">
-        <canvas id="chart"></canvas>
-      </div>
-    </div>
-    <!-- <div class="mainpage-item">
-      <script src="../scripts/addGraphBtn.js"></script>
-      <div id="canvas-holder" style="width:100%">
-        <canvas id="myChart"></canvas>
-      </div>
-    </div> -->
-  <!-- <div id=" graphButton">
-    <script src="../scripts/addGraphBtn.js"></script>
-    <button class = "button-blue" onclick="displayChart()">Add Graph</button>
   </div>
-</body>
-
-</html>
-
-
 </div>
-</div>
-</body>
-
-</html> -->
