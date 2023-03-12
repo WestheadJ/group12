@@ -58,6 +58,9 @@ var config = {
 window.onload = function () {
   var ctx = document.getElementById('guageChart').getContext('2d');
   window.guageChart = new Chart(ctx, config);
+
+  var ctx = document.getElementById('guageChart1').getContext('2d');
+  window.guageChart = new Chart(ctx, config);
  
   var ctx = document.getElementById('lineChart').getContext('2d');
   window.lineChart = new Chart(ctx, config1);

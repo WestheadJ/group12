@@ -1,1 +1,5 @@
-<?php require 'navbar.php' ?>
+<?php 
+$x = "class=\"selected\"";
+$y = null;
+require 'navbar.php'; 
+?>
