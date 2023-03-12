@@ -64,28 +64,13 @@ window.onload = function () {
 
 };
 
-
-var randomDataBar = function () {
-    return [
-      randomScalingFactor(),
-      randomScalingFactor(),
-      randomScalingFactor(),
-      randomScalingFactor(),
-      randomScalingFactor(),
-      randomScalingFactor()
-    ];
-  };
-
-  var barData = randomDataBar();
-
-
 var config1 = {
   type: 'bar',
   data: {
     labels: ['Green', 'Amber', 'Red'],
     datasets: [{
       label: 'Bar Chart',
-      data: barData,
+      data: data,
       backgroundColor: ['green', 'orange', 'red'],
       borderWidth: 1
     }]
