@@ -28,7 +28,6 @@ html,body {
   padding: 2em;
 
   display: flex;
-  justify-content: space-around;
   align-content: center;
 
   border-radius: 20px;
@@ -38,25 +37,8 @@ html,body {
 .mainpage-row-item { 
   margin: .5em;
   border: 1px solid black;
-  width: 100%
-}
-
-/* NOTE: Below is how I get the boxes to shrink the same however if you notice the graph doesn't increase in size, if anyone can find a solution that would be great */
-
-#canvas-holder{
-  width: fit-content;
-}
-
-#chart{
-  width: fit-content;
-}
-
-button {
-  font-size: 20px;
-  height: 30px;
-  border-width:0;
-  color: blue;
-  background-color: rgb(50, 193, 50);
+  width: 100%;
+  min-width: 1%;
 }
 
 .button-blue { 
@@ -79,7 +61,6 @@ a {
 }
 
 .add-graph-button{
-  background-color: blue;
   justify-content: center;
   align-content: center;
   height:50px;

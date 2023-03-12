@@ -7,19 +7,20 @@
 <?php require 'navbar.php' ?>
 
 <div id="mainpage">
-    <div class="mainpage-row" id="row-1">
-    <div class="mainpage-row-item" id="row-1-item-1">
-      <div id="canvas-holder">
-        <canvas id="chart"></canvas>
-      </div>
-    </div>
-    <div class="mainpage-row-item">
-      <div class="add-graph-button">
+  
+<div class="mainpage-row" id="row-1">
+  <div class="mainpage-row-item" id="row-1-item-1">
+    <canvas id="chart"></canvas>
+  </div>
+
+  <div class="mainpage-row-item">
+    <div class="add-graph-button">
         <a href="chartSelect.php">
           <button>Add</button>
         </a>
       </div>
-    </div>
+
+      </div>
     
     <!-- <div class="mainpage-item">
       <script src="../scripts/guageChart.js"></script>
