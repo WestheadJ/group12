@@ -19,26 +19,34 @@ html,body {
 }
 
 .mainpage-row {
-  color: purple;
-  height: auto;
-  max-height: 400px;
-  min-height: 300px;
-  width: 95%;
   display: flex;
   background-color: white;
+  min-height: 300px;
+  max-height: 450px ;
+  height: 100%;
+  width: 95%;
+  
   justify-content: space-around;
+  align-content: center;
+  
   margin: 1em;
+
   border-radius: 20px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,.3);
 }
 
 .mainpage-row-item { 
-  background-color: rgb(255, 255, 255);
-  width: 25%;
-  height: auto;
   margin: .5em;
-  border-radius: 20px;
+  border: 1px solid black;
+  width: 100%
+}
 
+#canvas-holder{
+  width: fit-content;
+}
+
+#chart{
+  width: fit-content;
 }
 
 button {

@@ -5,17 +5,20 @@
 -->
 
 <?php require 'navbar.php' ?>
+<script src="../scripts/guageChart.js"></script>
 <div class="mainpage">
   <div class="mainpage-row">
     <div class="mainpage-row-item">
-      <script src="../scripts/guageChart.js"></script>
       <div id="canvas-holder">
         <canvas id="chart"></canvas>
       </div>
     </div>
-    <div class="add-graph-button">
-      Add Graph +
+    <div class="mainpage-row-item">
+      <div class="add-graph-button">
+        Add Graph +
+      </div>
     </div>
+    
     <!-- <div class="mainpage-item">
       <script src="../scripts/guageChart.js"></script>
       <div id="canvas-holder" style="width:100%">
