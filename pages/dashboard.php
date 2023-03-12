@@ -5,9 +5,9 @@
 -->
 
 <?php require 'navbar.php' ?>
-<script src="../scripts/guageChart.js"></script>
-<div class="mainpage">
-  <div class="mainpage-row" id="row-1">
+
+<div id="mainpage">
+    <div class="mainpage-row" id="row-1">
     <div class="mainpage-row-item" id="row-1-item-1">
       <div id="canvas-holder">
         <canvas id="chart"></canvas>
