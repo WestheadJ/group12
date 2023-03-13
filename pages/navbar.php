@@ -13,6 +13,9 @@
     <a <?php echo $y ?> href="dashboard.php">
       <button class="nav-item" >Dashboard</button>
     </a>
+    <a href="fancyPie.php">
+      <button class="nav-item" >Example</button>
+    </a>
   </div>
   
   </div>
