@@ -34,7 +34,15 @@
         <label for="Graph X Axis Label">Graph X Axis Label</label>
       </div>
       <div class="col-75">
-        <input type="text" id="xAxis" name="XAxis" placeholder="Your Graph X Axis..">
+        <input type="text" id="xAxis" name="XAxis" placeholder="Your Graph X Axis Label..">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="Graph Y Axis Label">Graph Y Axis Label</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="yAxis" name="YAxis" placeholder="Your Graph Y Axis Label..">
       </div>
     </div>
     <div class="row">
@@ -58,7 +66,7 @@
       </div>
     </div>
     <div class="row">
-      <input type="submit" value="Submit">
+      <input type="submit" value="Update">
     </div>
   </form>
 </div>
