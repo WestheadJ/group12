@@ -1,5 +1,5 @@
 <?php 
-$x = "class=\"selected\"";
-$y = null;
+// $x = "class=\"selected\"";
+// $y = null;
 require 'navbar.php'; 
 ?>

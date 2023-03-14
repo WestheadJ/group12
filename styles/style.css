@@ -126,9 +126,13 @@ a {
   height: 100%;
 }
 
+a.active{
+  text-decoration: underline;
+  color: #245148;
+}
+
 @media screen and (max-width:750px) {
   .mainpage-row {
     flex-direction: column;
   }
-
 }

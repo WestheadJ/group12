@@ -84,3 +84,14 @@ button.nav-item {
 .nav-item:first-child {
   margin-right: 1rem;
 }
+
+
+.navbar {
+	background-color: #111;
+	padding: 1rem;
+}
+.navbar a {
+	text-decoration: none;
+	color: white;
+	padding: 1rem;
+}
