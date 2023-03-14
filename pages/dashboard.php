@@ -5,8 +5,6 @@
 -->
 
 <?php
-  // $x = null;
-  // $y = "class=\"selected\"";
   require 'navbar.php';
   ?>
 
