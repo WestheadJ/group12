@@ -19,18 +19,12 @@ var value = randomValue(data);
 
 
 
-var barConfigs;
-fetch('../configs/graphs/bar.json')
-    .then((response) => response.json())
-    .then((json) =>{ 
-    console.log(json)
-    barConfigs = json
-    barConfigs.data.datasets.data = data});
 
 
-var gaugeConfigs
+
+
 window.onload = async function () {
-    gaugeConfigs = await fetch('../configs/graphs/guage.json')
+  var gaugeConfigs = fetch('../configs/graphs/guage.json')
     .then((response) => response.json())
     .then((json) =>{ 
   json.data.datasets[0].data=data
@@ -44,14 +38,24 @@ window.onload = async function () {
     
     var ctx = document.getElementById('guageChart').getContext('2d');
     window.guageChart = new Chart(ctx, json);
-    return json
   });
+
+  var barConfigs;
+  fetch('../configs/graphs/bar.json')
+      .then((response) => response.json())
+      .then((json) =>{ 
+      console.log(json)
+      barConfigs = json
+      barConfigs.data.datasets[0].data = data
+
+      var ctx = document.getElementById('barChart').getContext('2d');
+      window.lineChart = new Chart(ctx, barConfigs);
+    });
 
   console.log("gauge:",gaugeConfigs)
   
 
-  // var ctx = document.getElementById('barChart').getContext('2d');
-  // window.lineChart = new Chart(ctx, barConfigs);
+
   
   // var ctx = document.getElementById('pieChart').getContext('2d');
   // window.lineChart = new Chart(ctx, config2);
