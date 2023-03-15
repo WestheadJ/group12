@@ -73,6 +73,7 @@
     </div>
     <div class="row">
       <input type="submit" value="Update">
+      <a href="dashboard.php">Cancel</a>
     </div>
   </form>
 </div>

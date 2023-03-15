@@ -23,6 +23,11 @@ a {
   padding-left: 20px;
 }
 
+a.edit-graph{
+  
+}
+
+
 #mainpage {
   padding-top: 2%;
   display: flex;
