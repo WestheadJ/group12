@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit</title>
+    <Title> Edit Graph OR Chart</Title>
     <style>
         <?php include '../styles/editGraph.css';?>
         </style>
@@ -23,6 +23,9 @@
         <input type = "Submit"> -->
 
         <div class="container">
+        <div class = "title"> 
+        <h1>Edit Graph OR Chart</h1>
+        </div>
   <form action="dashboard.php" method =" post">
     <div class="row">
       <div class="col-25">

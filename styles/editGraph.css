@@ -53,6 +53,9 @@ input[type=text], select, textarea{
     display: table;
     clear: both;
   }
+  .title{
+    text-align: center;
+  }
   
   
   @media screen and (max-width: 600px) {
