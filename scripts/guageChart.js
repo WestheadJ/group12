@@ -35,44 +35,82 @@ window.onload = async function () {
     .then((json) =>{ 
     json.data.datasets[0].data=data
     json.data.datasets[0].value = value
+    json.options.valueLabel = Math.round
+
+    var ctx = document.getElementById('guageChart').getContext('2d');
+    window.guageChart = new Chart(ctx, json);
     return json
   });
 
   console.log("gauge:",gaugeConfigs)
   
-  var ctx = document.getElementById('guageChart').getContext('2d');
-  window.guageChart = new Chart(ctx, gaugeConfigs);
+
+  // var ctx = document.getElementById('barChart').getContext('2d');
+  // window.lineChart = new Chart(ctx, barConfigs);
   
-  var ctx = document.getElementById('barChart').getContext('2d');
-  window.lineChart = new Chart(ctx, barConfigs);
+  // var ctx = document.getElementById('pieChart').getContext('2d');
+  // window.lineChart = new Chart(ctx, config2);
   
-  var ctx = document.getElementById('pieChart').getContext('2d');
-  window.lineChart = new Chart(ctx, config2);
+  // var ctx = document.getElementById('lineChart').getContext('2d');
+  // window.lineChart = new Chart(ctx, config3);
   
-  var ctx = document.getElementById('lineChart').getContext('2d');
-  window.lineChart = new Chart(ctx, config3);
+  // var ctx = document.getElementById('guageChartR2').getContext('2d');
+  // window.guageChart = new Chart(ctx, gaugeConfigs);
   
-  var ctx = document.getElementById('guageChartR2').getContext('2d');
-  window.guageChart = new Chart(ctx, gaugeConfigs);
+  // var ctx = document.getElementById('barChartR2').getContext('2d');
+  // window.lineChart = new Chart(ctx, barConfigs);
   
-  var ctx = document.getElementById('barChartR2').getContext('2d');
-  window.lineChart = new Chart(ctx, barConfigs);
+  // var ctx = document.getElementById('pieChartR2').getContext('2d');
+  // window.lineChart = new Chart(ctx, config2);
   
-  var ctx = document.getElementById('pieChartR2').getContext('2d');
-  window.lineChart = new Chart(ctx, config2);
+  // var ctx = document.getElementById('barChartR3').getContext('2d');
+  // window.lineChart = new Chart(ctx, barConfigs);
   
-  var ctx = document.getElementById('barChartR3').getContext('2d');
-  window.lineChart = new Chart(ctx, barConfigs);
+  // var ctx = document.getElementById('pieChartR3').getContext('2d');
+  // window.lineChart = new Chart(ctx, config2);
   
-  var ctx = document.getElementById('pieChartR3').getContext('2d');
-  window.lineChart = new Chart(ctx, config2);
-  
-  var ctx = document.getElementById('guageChartR4').getContext('2d');
-  window.guageChart = new Chart(ctx, gaugeConfigs);
+  // var ctx = document.getElementById('guageChartR4').getContext('2d');
+  // window.guageChart = new Chart(ctx, gaugeConfigs);
   
 };
 
+// var json = {
+//   type: "gauge",
+//   data: {
 
+//     datasets: [{
+//       data: data,
+//       value: value,
+//       backgroundColor: ["green", "orange", "red"],
+//       borderWidth: 2
+//     }]
+//   },
+//   options: {
+//     responsive: true,
+//     title: {
+//       display: true,
+//       text: "Gauge chart"
+//     },
+//     layout: {
+//       padding: {
+//         bottom: 30
+//       }
+//     },
+//     needle: {
+
+//       radiusPercentage: 2,
+
+//       widthPercentage: 3.2,
+
+//       lengthPercentage: 80,
+
+//       color: "rgba(0, 0, 0, 1)"
+//     },
+//     valueLabel: {
+//       formatter: Math.round
+//     }
+//   }
+// }
 
 var config2 = {
   type: 'pie',
