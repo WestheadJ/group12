@@ -18,9 +18,30 @@ var data = randomData();
 var value = randomValue(data);
 
 
-window.onload = function () {
+
+var barConfigs;
+fetch('../configs/graphs/bar.json')
+    .then((response) => response.json())
+    .then((json) =>{ 
+    console.log(json)
+    barConfigs = json
+    barConfigs.data.datasets.data = data});
+
+
+var gaugeConfigs
+window.onload = async function () {
+    gaugeConfigs = await fetch('../configs/graphs/guage.json')
+    .then((response) => response.json())
+    .then((json) =>{ 
+    json.data.datasets[0].data=data
+    json.data.datasets[0].value = value
+    return json
+  });
+
+  console.log("gauge:",gaugeConfigs)
+  
   var ctx = document.getElementById('guageChart').getContext('2d');
-  window.guageChart = new Chart(ctx, guageConfigs);
+  window.guageChart = new Chart(ctx, gaugeConfigs);
   
   var ctx = document.getElementById('barChart').getContext('2d');
   window.lineChart = new Chart(ctx, barConfigs);
@@ -32,7 +53,7 @@ window.onload = function () {
   window.lineChart = new Chart(ctx, config3);
   
   var ctx = document.getElementById('guageChartR2').getContext('2d');
-  window.guageChart = new Chart(ctx, guageConfigs);
+  window.guageChart = new Chart(ctx, gaugeConfigs);
   
   var ctx = document.getElementById('barChartR2').getContext('2d');
   window.lineChart = new Chart(ctx, barConfigs);
@@ -47,28 +68,11 @@ window.onload = function () {
   window.lineChart = new Chart(ctx, config2);
   
   var ctx = document.getElementById('guageChartR4').getContext('2d');
-  window.guageChart = new Chart(ctx, guageConfigs);
-  
-  
+  window.guageChart = new Chart(ctx, gaugeConfigs);
   
 };
 
-var guageConfigs;
 
-fetch('../configs/graphs/guage.json')
-    .then((response) => response.json())
-    .then((json) =>{ 
-    console.log(json)
-    guageConfigs = json
-    guageConfigs.value = value});
-
-var barConfigs;
-fetch('../configs/graphs/guage.json')
-    .then((response) => response.json())
-    .then((json) =>{ 
-    console.log(json)
-    barConfigs = json
-    barConfigs.data = data});
 
 var config2 = {
   type: 'pie',
