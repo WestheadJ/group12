@@ -23,30 +23,55 @@ window.onload = () => {
   .then(response=>response.json())
   .then((json)=>{
 
+    // Get the render container
     var renderContainer = document.getElementById('render')
 
+    // For each row in the dashboard
     json.configs.forEach(row=>{
+      
       // DEBUG
-      console.log(row)
-      var rowID = row.rowID
+      console.log(row.rowID.toString())
+
+      // Get the rowID
+      var rowID = row.rowID.toString()
+      
       var rowEl = document.createElement("div")
-      rowEl.setAttribute("class","mainpage-row-item")
-      rowEl.setAttribute("id",{rowID})
+      
+      rowEl.setAttribute("class","mainpage-row")
+      rowEl.setAttribute("id",rowID)
+      
       renderContainer.appendChild(rowEl)
       
       row.columns.forEach(column=>{
+        
         // DEBUG
         console.log(column)
-        const typeOfGraph = column.graphID
-          if(typeOfGraph === "gauge"){
-            fetch('../configs/graphs/gauge.json')
-              .then((response) => response.json())
-              .then((json) =>{ 
-                json.data.datasets[0].data=data
-                json.data.datasets[0].value = value
-                json.options.valueLabel.formatter = Math.round 
-                  
-              })
+
+        var typeOfGraph = column.graphID
+
+        if(typeOfGraph === "gauge"){  
+          fetch('../configs/graphs/gauge.json')
+          .then((response) => response.json())
+          .then((json) =>{ 
+                
+            json.data.datasets[0].data=data
+            json.data.datasets[0].value = value
+            json.options.valueLabel.formatter = Math.round 
+                
+            rowEl = document.getElementById(rowID)
+            var columnEl = document.createElement("div")
+            columnEl.setAttribute("class","mainpage-row-item")
+            columnEl.setAttribute("id",column.colID)
+            
+            rowEl.appendChild(columnEl)
+          })
+        }
+        else{
+            rowEl = document.getElementById(rowID.toString())
+            var columnEl = document.createElement("div")
+            columnEl.setAttribute("class","mainpage-row-item")
+            columnEl.setAttribute("id",column.colID)
+            rowEl.appendChild(columnEl)
             //   var ctx = document.getElementById('guageChart').getContext('2d');
             //   window.guageChart = new Chart(ctx, json);
           } 
