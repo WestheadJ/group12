@@ -8,11 +8,11 @@ FusionCharts.ready(function() {
       dataFormat: 'json',
       dataSource: {
         "chart": {
-          "caption": "Sales Breakup - Top Product Categories",
-          "subcaption": "Last Quarter",
+          "caption": "Waterman Group",
+          "subcaption": "Overview",
           "showPlotBorder": "1",
-          "piefillalpha": "60",
-          "pieborderthickness": "2",
+          "piefillalpha": "100",
+          "pieborderthickness": "1",
           "piebordercolor": "#FFFFFF",
           "hoverfillcolor": "#CCCCCC",
           "numberprefix": "$",
