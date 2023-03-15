@@ -18,7 +18,7 @@ var data = randomData();
 var value = randomValue(data);
 
 window.onload = async function () {
-  // https://www.freecodecamp.org/news/how-to-read-json-file-in-javascript/
+  // https://www.freecodecamp.org/news/how-to-read-json-file-in-javascript/w
 
   // Getting the gauge
   fetch('../configs/graphs/gauge.json')
@@ -34,6 +34,14 @@ window.onload = async function () {
     // console.log("value",json.data.datasets[0].value = value)
     
     var ctx = document.getElementById('guageChart').getContext('2d');
+    window.guageChart = new Chart(ctx, json);
+
+
+    var ctx = document.getElementById('guageChartR2').getContext('2d');
+    window.guageChart = new Chart(ctx, json);
+    
+
+    var ctx = document.getElementById('guageChartR4').getContext('2d');
     return window.guageChart = new Chart(ctx, json);
   });
 
@@ -57,8 +65,7 @@ window.onload = async function () {
   // var ctx = document.getElementById('lineChart').getContext('2d');
   // window.lineChart = new Chart(ctx, config3);
   
-  // var ctx = document.getElementById('guageChartR2').getContext('2d');
-  // window.guageChart = new Chart(ctx, gaugeConfigs);
+
   
   // var ctx = document.getElementById('barChartR2').getContext('2d');
   // window.lineChart = new Chart(ctx, barConfigs);
@@ -72,8 +79,7 @@ window.onload = async function () {
   // var ctx = document.getElementById('pieChartR3').getContext('2d');
   // window.lineChart = new Chart(ctx, config2);
   
-  // var ctx = document.getElementById('guageChartR4').getContext('2d');
-  // window.guageChart = new Chart(ctx, gaugeConfigs);
+
   
 };
 
