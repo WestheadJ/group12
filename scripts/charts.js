@@ -37,11 +37,11 @@ window.onload = async function () {
     window.guageChart = new Chart(ctx, json);
 
 
-    var ctx = document.getElementById('guageChartR2').getContext('2d');
+    ctx = document.getElementById('guageChartR2').getContext('2d');
     window.guageChart = new Chart(ctx, json);
     
 
-    var ctx = document.getElementById('guageChartR4').getContext('2d');
+    ctx = document.getElementById('guageChartR4').getContext('2d');
     return window.guageChart = new Chart(ctx, json);
   });
 
@@ -55,116 +55,41 @@ window.onload = async function () {
       
       json.data.datasets[0].data = data
 
-      var ctx = document.getElementById('barChart').getContext('2d');
+      var ctx = document.getElementById('barChartR2').getContext('2d');
+      window.lineChart = new Chart(ctx, json);
+
+      ctx = document.getElementById('barChartR3').getContext('2d');
+      window.lineChart = new Chart(ctx, json);
+
+      ctx = document.getElementById('barChart').getContext('2d');
       return window.lineChart = new Chart(ctx, json);
     });
-  
-  // var ctx = document.getElementById('pieChart').getContext('2d');
-  // window.lineChart = new Chart(ctx, config2);
-  
-  // var ctx = document.getElementById('lineChart').getContext('2d');
-  // window.lineChart = new Chart(ctx, config3);
-  
 
-  
-  // var ctx = document.getElementById('barChartR2').getContext('2d');
-  // window.lineChart = new Chart(ctx, barConfigs);
-  
-  // var ctx = document.getElementById('pieChartR2').getContext('2d');
-  // window.lineChart = new Chart(ctx, config2);
-  
-  // var ctx = document.getElementById('barChartR3').getContext('2d');
-  // window.lineChart = new Chart(ctx, barConfigs);
-  
-  // var ctx = document.getElementById('pieChartR3').getContext('2d');
-  // window.lineChart = new Chart(ctx, config2);
-  
+    fetch('../configs/graphs/pie.json')
+    .then((response)=>response.json())
+    .then((json)=>{
+      json.data.datasets[0].data=data
 
+      var ctx = document.getElementById('pieChart').getContext('2d');
+      window.lineChart = new Chart(ctx, json);var 
+      
+      ctx = document.getElementById('pieChartR2').getContext('2d');
+      window.lineChart = new Chart(ctx, json);
   
-};
+      ctx = document.getElementById('pieChartR3').getContext('2d');
+      return window.lineChart = new Chart(ctx, json);
 
-var config = {
-  type: 'gauge',
-  data: {
-    //labels: ['Success', 'Warning', 'Warning', 'Error'],
-    datasets: [{
-      data: data,
-      value: value,
-      backgroundColor: ['green', 'orange', 'red'],
-      borderWidth: 2
-    }]
-  },
-  options: {
-    responsive: true,
-    title: {
-      display: true,
-      text: 'Gauge chart'
-    },
-    layout: {
-      padding: {
-        bottom: 30
-      }
-    },
-    needle: {
-      // Needle circle radius as the percentage of the chart area width
-      radiusPercentage: 2,
-      // Needle width as the percentage of the chart area width
-      widthPercentage: 3.2,
-      // Needle length as the percentage of the interval between inner radius (0%) and outer radius (100%) of the arc
-      lengthPercentage: 80,
-      // The color of the needle
-      color: 'rgba(0, 0, 0, 1)'
-    },
-    valueLabel: {
-      formatter: Math.round
-    }
-  }
-};
+    })
 
-var config2 = {
-  type: 'pie',
-  data: {
-    labels: ['Green', 'Amber', 'Red'],
-    datasets: [{
-      label: 'Chart',
-      data: data,
-      backgroundColor: ['green', 'orange', 'red'],
-      borderWidth: 1
-    }]
-  },
-  options: {
-    scales: {
-      yAxes: [{
-        ticks: {
-          beginAtZero: true
-        }
-      }]
-    }
-  }
+    fetch("../configs/graphs/line.json")
+    .then(response=>response.json())
+    .then((json)=>{
+      json.data.datasets[0].data = data  
+      
+      var ctx = document.getElementById('lineChart').getContext('2d');
+      return window.lineChart = new Chart(ctx, json);
+    })
 
-  
-};
 
-var config3 = {
-  type: 'line',
-  data: {
-    labels: ['Green', 'Amber', 'Red'],
-    datasets: [{
-      label: 'Chart',
-      data: data,
-      fill: false,
-      backgroundColor: ['green', 'orange', 'red'],
-      borderWidth: 1
-    }]
-  },
-  options: {
-    scales: {
-      yAxes: [{
-        ticks: {
-          beginAtZero: true
-        }
-      }]
-    }
-  }
-  
+
 };
