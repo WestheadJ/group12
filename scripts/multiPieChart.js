@@ -3,8 +3,8 @@ FusionCharts.ready(function() {
       type: 'multilevelpie',
       renderAt: 'chart-container',
       id: "myChart",
-      width: '500',
-      height: '500',
+      width: '100%',
+      height: '50%',
       dataFormat: 'json',
       dataSource: {
         "chart": {
