@@ -18,7 +18,10 @@ var data = randomData();
 var value = randomValue(data);
 
 window.onload = async function () {
-  fetch('../configs/graphs/guage.json')
+  // https://www.freecodecamp.org/news/how-to-read-json-file-in-javascript/
+
+  // Getting the gauge
+  fetch('../configs/graphs/gauge.json')
     .then((response) => response.json())
     .then((json) =>{ 
     json.data.datasets[0].data=data
@@ -26,6 +29,7 @@ window.onload = async function () {
     json.options.valueLabel.formatter = Math.round 
 
     // DEBUG 
+    // console.log(json)
     // console.log("data:",json.data.datasets[0].data=data)
     // console.log("value",json.data.datasets[0].value = value)
     

@@ -9,7 +9,7 @@
   <script src="https://unpkg.com/chartjs-gauge@0.3.0/dist/chartjs-gauge.js"></script>
   <link rel="stylesheet" href="../styles/style.css">
   <link rel="stylesheet" href="../styles/navbar.css">
-  <script src="../scripts/guageChart.js"></script>
+  <script src="../scripts/charts.js"></script>
 </head>
 
 <body>
