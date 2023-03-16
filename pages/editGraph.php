@@ -29,7 +29,7 @@
   <form action="dashboard.php" method =" post">
     <div class="row">
       <div class="col-25">
-        <label for="Graph Title">Graph Title</label>
+        <label for="Graph Title">Graph Title:</label>
       </div>
       <div class="col-75">
         <input type="text" id="gTitle" name="graphTitle" placeholder="Your Graph Title..">
@@ -37,7 +37,7 @@
     </div>
     <div class="row">
       <div class="col-25">
-        <label for="Graph X Axis Label">Graph X Axis Label</label>
+        <label for="Graph X Axis Label">Graph X Axis Label:</label>
       </div>
       <div class="col-75">
         <input type="text" id="xAxis" name="XAxis" placeholder="Your Graph X Axis Label..">
@@ -45,7 +45,7 @@
     </div>
     <div class="row">
       <div class="col-25">
-        <label for="Graph Y Axis Label">Graph Y Axis Label</label>
+        <label for="Graph Y Axis Label">Graph Y Axis Label:</label>
       </div>
       <div class="col-75">
         <input type="text" id="yAxis" name="YAxis" placeholder="Your Graph Y Axis Label..">
@@ -53,7 +53,7 @@
     </div>
     <div class="row">
       <div class="col-25">
-        <label for="Graph Type">Graph Type</label>
+        <label for="Graph Type">Graph Type:</label>
       </div>
       <div class="col-75">
         <select id="Graph Type" name="Graph Type">
@@ -65,7 +65,7 @@
     </div>
     <div class="row">
       <div class="col-25">
-        <label for="Graph Description">Graph Description</label>
+        <label for="Graph Description">Graph Description:</label>
       </div>
       <div class="col-75">
         <textarea id="Graph Description" name="Graph Description" placeholder="Enter any details.." style="height:200px"></textarea>
