@@ -18,47 +18,81 @@ var data = randomData();
 var value = randomValue(data);
 
 window.onload = () => {
-
   fetch("../configs/dashboards/dashboard.json")
   .then(response=>response.json())
   .then((json)=>{
 
     // Get the render container
     var renderContainer = document.getElementById('render')
-
+    
     var rowID
     var rowEl
+    
     // For each row in the dashboard
     json.configs.forEach(row=>{
       
       // DEBUG
-      console.log(row.rowID.toString())
+      // console.log("This is row:",row.rowID.toString())
 
       // Get the rowID
       rowID = row.rowID.toString()
       
+      // Ready a div to become a row
       rowEl = document.createElement("div")
       
+      // Give it a class and an id
       rowEl.setAttribute("class","mainpage-row")
       rowEl.setAttribute("id","row-id-"+rowID)
       
+      // Add div to the container
       renderContainer.appendChild(rowEl)
       
+      // Loop through the rows
       row.columns.forEach(column=>{
         
-        // DEBUG
+        // DEBUGS
         // console.log(column)
-        console.log("In column:",rowID)
-
+        console.log("This is column",column.colID.toString(),"of row",rowID )
+        // console.log("GraphID =",column.graphID)
+        
+        // Get the column ID to a string
+        var colID = column.colID.toString()
+        // Get the graphs ID
         var typeOfGraph = column.graphID
+
+        // Get the row div that you are working in
         var insertRowEl = document.getElementById("row-id-"+rowID)
-        var columnEl = document.createElement("div")
+        
+        // Prepare a canvas element
+        var columnEl = document.createElement("canvas")
+        
+        // Give canvas a class and ID
         columnEl.setAttribute("class","mainpage-row-item")
-        columnEl.setAttribute("id","class-id-"+column.colID.toString())
+        columnEl.setAttribute("id","row-id-"+rowID+"col-id-"+colID)
+        
         insertRowEl.appendChild(columnEl)
-            //   var ctx = document.getElementById('guageChart').getContext('2d');
-            //   window.guageChart = new Chart(ctx, json);
-      
+
+        if(typeOfGraph == "gauge"){
+          fetch('../configs/graphs/gauge.json')
+            .then((response) => response.json())
+            .then((json) =>{ 
+              json.data.datasets[0].data=data
+              json.data.datasets[0].value = value
+              json.options.valueLabel.formatter = Math.round 
+
+              // DEBUG 
+              // console.log(json)
+              // console.log("data:",json.data.datasets[0].data=data)
+              // console.log("value",json.data.datasets[0].value = value)
+
+              var x = document.getElementById("row-id-"+rowID+"col-id-"+colID)
+              console.log(x)
+              var ctx = x.getContext("2d");
+              window.gauge = new Chart(ctx, json);
+          })}
+          else{
+            // console.log("not gauge")
+          }
       })
     })
   })
@@ -75,7 +109,7 @@ window.onload = () => {
   //   json.options.valueLabel.formatter = Math.round 
 
   //   // DEBUG 
-  //   // console.log(json)
+    // console.log(json)
   //   // console.log("data:",json.data.datasets[0].data=data)
   //   // console.log("value",json.data.datasets[0].value = value)
     
