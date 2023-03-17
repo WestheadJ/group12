@@ -105,8 +105,8 @@ window.onload = () => {
       // Get the graphs ID
       var canvas  = document.getElementById("row-id-"+rowID+"col-id-"+colID)
 
-      
-      fetch('../configs/graphs/gauge.json')
+      if(column.graphID==="gauge"){
+        fetch('../configs/graphs/gauge.json')
         .then((response) => response.json())
         .then((gaugeData) =>{ 
           gaugeData.data.datasets[0].data=data
@@ -121,6 +121,9 @@ window.onload = () => {
           var ctx = canvas.getContext('2d');
           return window.guageChart = new Chart(ctx, gaugeData);
         })
+      }
+      
+      
       })
     })
   })
