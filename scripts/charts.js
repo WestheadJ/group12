@@ -84,30 +84,45 @@ window.onload = () => {
     // For each row in the dashboard
     json.configs.forEach(row=>{
       
-      // DEBUG
-      // console.log("This is row:",row.rowID.toString())
+    // DEBUG
+    // console.log("This is row:",row.rowID.toString())
 
-      // Get the rowID
-      rowID = row.rowID.toString()
+    // Get the rowID
+    rowID = row.rowID.toString()
       
-      // Loop through the rows
-      row.columns.forEach(column=>{
+    // Loop through the rows
+    row.columns.forEach(column=>{
         
-        // DEBUGS
-        // console.log(column)
-        console.log("This is column",column.colID.toString(),"of row",rowID )
-        console.log("GraphID =",column.graphID)
+      // DEBUGS
+      // console.log(column)
+      // console.log("This is column",column.colID.toString(),"of row",rowID )
+      // console.log("GraphID =",column.graphID)
         
-        // Get the column ID to a string
-        var colID = column.colID.toString()
+      // Get the column ID to a string
+      var colID = column.colID.toString()
 
-        console.log("row-id-"+rowID+"col-id-"+colID)
-        // Get the graphs ID
-        console.log(document.getElementById("row-id-"+rowID+"col-id-"+colID))
-          // var ctx = document.getElementById("row-id-"+rowID+"col-id-"+colID).getContext('2d');
-          // window.guageChart = new Chart(ctx, json);
+      // console.log("row-id-"+rowID+"col-id-"+colID)
+      // Get the graphs ID
+      var canvas  = document.getElementById("row-id-"+rowID+"col-id-"+colID)
+
+      
+      fetch('../configs/graphs/gauge.json')
+        .then((response) => response.json())
+        .then((gaugeData) =>{ 
+          gaugeData.data.datasets[0].data=data
+          gaugeData.data.datasets[0].value = value
+          gaugeData.options.valueLabel.formatter = Math.round 
+
+          // DEBUG 
+          // console.log()
+          // console.log("data:",gaugeData.data.datasets[0].data=data)
+          // console.log("value",gaugeData.data.datasets[0].value = value)
+          console.log(canvas)
+          var ctx = canvas.getContext('2d');
+          return window.guageChart = new Chart(ctx, gaugeData);
+        })
       })
-  })
+    })
   })
   
 
@@ -185,7 +200,4 @@ window.onload = () => {
   //     return window.lineChart = new Chart(ctx, json);
   //   })
 
-};
-document.addEventListener("DOMContentLoaded",()=>{
-  
-})
+  };
