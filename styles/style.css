@@ -131,6 +131,7 @@ a.edit-graph{
   height: 100%;
 }
 
+
 @media screen and (max-width:750px) {
   .mainpage-row {
     flex-direction: column;

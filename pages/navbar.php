@@ -7,10 +7,10 @@
     <!-- <h4>Enviromental</h4>
     <h4>Climate Space</h4>
     <h4>H&S</h4> -->
-    <a <?php echo $x ?> href="overview.php">
+    <a  href="overview.php">
       <button class="nav-item">Overview</button>
     </a>
-    <a <?php echo $y ?> href="dashboard.php">
+    <a href="dashboard.php">
       <button class="nav-item" >Dashboard</button>
     </a>
   </div>

@@ -5,14 +5,12 @@
 -->
 
 <?php
-  $x = null;
-  $y = "class=\"selected\"";
   require 'navbar.php';
   ?>
 
 <script src="../scripts/addGraphBtn.js"></script>
 <div id="mainpage">
-
+  
   <div class="mainpage-row">
     <div class="mainpage-row-item">
       <canvas id="barChartR3"></canvas>

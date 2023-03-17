@@ -46,7 +46,17 @@ input[type=text], select, textarea{
     /* text-align: center; */
     
   }
-  
+
+  .col-251 {
+    /* float: left; */
+    width: 25%;
+    margin-top: 6px;
+    display:flex;
+    flex-direction: column;
+    /* text-align: center; */
+    
+  }  
+
   
   .col-75 {
     float: left;

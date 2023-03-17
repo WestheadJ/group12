@@ -48,6 +48,9 @@ window.onload = function () {
   
   var ctx = document.getElementById('guageChartR4').getContext('2d');
   window.guageChart = new Chart(ctx, config);
+
+  var ctx = document.getElementById('editBarChart').getContext('2d');
+  window.lineChart = new Chart(ctx, config1);
   
   
   
