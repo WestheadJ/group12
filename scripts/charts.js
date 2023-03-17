@@ -1,3 +1,5 @@
+
+
 var randomScalingFactor = function () {
   return Math.round(Math.random() * 100);
 };
@@ -52,13 +54,12 @@ window.onload = () => {
         
         // DEBUGS
         // console.log(column)
-        console.log("This is column",column.colID.toString(),"of row",rowID )
+        // console.log("This is column",column.colID.toString(),"of row",rowID )
         // console.log("GraphID =",column.graphID)
         
         // Get the column ID to a string
         var colID = column.colID.toString()
         // Get the graphs ID
-        var typeOfGraph = column.graphID
 
         // Get the row div that you are working in
         var insertRowEl = document.getElementById("row-id-"+rowID)
@@ -71,31 +72,45 @@ window.onload = () => {
         columnEl.setAttribute("id","row-id-"+rowID+"col-id-"+colID)
         
         insertRowEl.appendChild(columnEl)
-
-        if(typeOfGraph == "gauge"){
-          fetch('../configs/graphs/gauge.json')
-            .then((response) => response.json())
-            .then((json) =>{ 
-              json.data.datasets[0].data=data
-              json.data.datasets[0].value = value
-              json.options.valueLabel.formatter = Math.round 
-
-              // DEBUG 
-              // console.log(json)
-              // console.log("data:",json.data.datasets[0].data=data)
-              // console.log("value",json.data.datasets[0].value = value)
-
-              var x = document.getElementById("row-id-"+rowID+"col-id-"+colID)
-              console.log(x)
-              var ctx = x.getContext("2d");
-              window.gauge = new Chart(ctx, json);
-          })}
-          else{
-            // console.log("not gauge")
-          }
       })
     })
   })
+
+  fetch("../configs/dashboards/dashboard.json")
+  .then(response=>response.json())
+  .then((json)=>{
+    var rowID
+    
+    // For each row in the dashboard
+    json.configs.forEach(row=>{
+      
+      // DEBUG
+      // console.log("This is row:",row.rowID.toString())
+
+      // Get the rowID
+      rowID = row.rowID.toString()
+      
+      // Loop through the rows
+      row.columns.forEach(column=>{
+        
+        // DEBUGS
+        // console.log(column)
+        console.log("This is column",column.colID.toString(),"of row",rowID )
+        console.log("GraphID =",column.graphID)
+        
+        // Get the column ID to a string
+        var colID = column.colID.toString()
+
+        console.log("row-id-"+rowID+"col-id-"+colID)
+        // Get the graphs ID
+        console.log(document.getElementById("row-id-"+rowID+"col-id-"+colID))
+          // var ctx = document.getElementById("row-id-"+rowID+"col-id-"+colID).getContext('2d');
+          // window.guageChart = new Chart(ctx, json);
+      })
+  })
+  })
+  
+
 
 
   // // https://www.freecodecamp.org/news/how-to-read-json-file-in-javascript/w
@@ -171,3 +186,6 @@ window.onload = () => {
   //   })
 
 };
+document.addEventListener("DOMContentLoaded",()=>{
+  
+})
