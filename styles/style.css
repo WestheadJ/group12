@@ -126,28 +126,13 @@ a {
   height: 100%;
 }
 
-/* All for new sunburst charts */
-#chart-container{
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.sun label {
-  display: inline-block;
-  margin: 10px 0 0 10px;
-}
-
-/* Container for the second Sunburst */
-#container {  
-  width: 100%; 
-  height: 100%;
+a.active{
+  text-decoration: underline;
+  color: #245148;
 }
 
 @media screen and (max-width:750px) {
   .mainpage-row {
     flex-direction: column;
   }
-
 }
