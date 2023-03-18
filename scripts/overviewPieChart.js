@@ -8,7 +8,12 @@ FusionCharts.ready(function() {
       dataFormat: 'json',
       dataSource: {
         "chart": {
+          // "innerRadius": "100",
           "caption": "Waterman Group",
+          "exportEnabled": "1",
+          "autoRotateLabels": "1",
+          "useEllipsesWhenOverflow": "1",
+          "skipOverlapLabels": "1",
           "subcaption": "Overview",
           "showPlotBorder": "1",
           "piefillalpha": "100",
@@ -27,37 +32,55 @@ FusionCharts.ready(function() {
           [
             {
             "label": "Environment", // Category
-            "color": "#33ccff",
+            "color": "#0066ff",
             "value": "33",
             "category": 
               [
                 {
                   "label": "Legal {br}Register", // Legal
-                  "color": "#f8bd19",
+                  "color": "#0066ff",
                   "value": "11",
                   "category":[
-                    {"label": "2nd Environment", // Final Category
-                    "color": "#33ccff",
+                    {"label": "Completed", // G
+                    "color": "green",
+                    "value": "33",},
+                    {"label": "Due", // A
+                    "color": "#f8bd19",
+                    "value": "33",},
+                    {"label": "Outstanding", // R
+                    "color": "#ff0000",
                     "value": "33",}
                 ]
                 }, 
                 {
                   "label": "Compliance {br}Audits", // Comp
-                  "color": "#f8bd19",
+                  "color": "#0066ff",
                   "value": "11",
                   "category":[
-                    {"label": "2nd Environment", // Final Category
-                    "color": "#33ccff",
+                    {"label": "Completed", // G
+                    "color": "green",
+                    "value": "33",},
+                    {"label": "Due", // A
+                    "color": "#f8bd19",
+                    "value": "33",},
+                    {"label": "Outstanding", // R
+                    "color": "#ff0000",
                     "value": "33",}
                 ]
                 }, 
                 {
                   "label": "Aspect {br}Register", // Aspect
-                  "color": "#f8bd19",
+                  "color": "#0066ff",
                   "value": "11",
                   "category":[
-                    {"label": "2nd Environment", // Final Category
-                    "color": "#33ccff",
+                    {"label": "Completed", // G
+                    "color": "green",
+                    "value": "33",},
+                    {"label": "Due", // A
+                    "color": "#f8bd19",
+                    "value": "33",},
+                    {"label": "Outstanding", // R
+                    "color": "#ff0000",
                     "value": "33",}
                 ]
                 }
@@ -73,8 +96,14 @@ FusionCharts.ready(function() {
                 "color": "#33ccff",
                 "value": "11",
                 "category":[
-                  {"label": "2nd Environment", // Final Category
-                  "color": "#33ccff",
+                  {"label": "Completed", // G
+                  "color": "green",
+                  "value": "33",},
+                  {"label": "Due", // A
+                  "color": "#f8bd19",
+                  "value": "33",},
+                  {"label": "Outstanding", // R
+                  "color": "#ff0000",
                   "value": "33",}
               ]
             }, {
@@ -82,8 +111,14 @@ FusionCharts.ready(function() {
               "color": "#33ccff",
               "value": "11",
               "category":[
-                {"label": "2nd Environment", // Final Category
-                "color": "#33ccff",
+                {"label": "Completed", // G
+                "color": "green",
+                "value": "33",},
+                {"label": "Due", // A
+                "color": "#f8bd19",
+                "value": "33",},
+                {"label": "Outstanding", // R
+                "color": "#ff0000",
                 "value": "33",}
             ]
             }, {
@@ -91,42 +126,66 @@ FusionCharts.ready(function() {
               "color": "#33ccff",
               "value": "11",
               "category":[
-                {"label": "2nd Environment", // Final Category
-                "color": "#33ccff",
+                {"label": "Completed", // G
+                "color": "green",
+                "value": "33",},
+                {"label": "Due", // A
+                "color": "#f8bd19",
+                "value": "33",},
+                {"label": "Outstanding", // R
+                "color": "#ff0000",
                 "value": "33",}
             ]
             }]
           }, {
             "label": "Climatespace", // Category
-            "color": "#33ccff",
+            "color": "#99ccff",
             "value": "33",
             "tooltext": "Baby Products, $$valueK, $percentValue",
             "category": [{
               "label": "Legal {br}Register", // Legal
-              "color": "#ffcccc",
+              "color": "#99ccff",
               "value": "11",
               "tooltext": "Bath & Grooming, $$valueK, $percentValue",
               "category":[
-                {"label": "2nd Environment", // Final Category
-                "color": "#33ccff",
+                {"label": "Completed", // G
+                "color": "green",
+                "value": "33",},
+                {"label": "Due", // A
+                "color": "#f8bd19",
+                "value": "33",},
+                {"label": "Outstanding", // R
+                "color": "#ff0000",
                 "value": "33",}
             ]
             }, {
               "label": "Compliance {br}Audits", // Comp
-              "color": "#ffcccc",
+              "color": "#99ccff",
               "value": "11",
               "category":[
-                {"label": "2nd Environment", // Final Category
-                "color": "#33ccff",
+                {"label": "Completed", // G
+                "color": "green",
+                "value": "33",},
+                {"label": "Due", // A
+                "color": "#f8bd19",
+                "value": "33",},
+                {"label": "Outstanding", // R
+                "color": "#ff0000",
                 "value": "33",}
             ]
             }, {
               "label": "Aspect {br}Register", // Aspect
-              "color": "#ffcccc",
+              "color": "#99ccff",
               "value": "11",
               "category":[
-                {"label": "2nd Environment", // Final Category
-                "color": "#33ccff",
+                {"label": "Completed", // G
+                "color": "green",
+                "value": "33",},
+                {"label": "Due", // A
+                "color": "#f8bd19",
+                "value": "33",},
+                {"label": "Outstanding", // R
+                "color": "#ff0000",
                 "value": "33",}
             ]
             }]
