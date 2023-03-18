@@ -13,6 +13,9 @@
     <a href="dashboard.php">
       <button class="nav-item">Dashboard</button>
     </a>
+    <a href="gridStack.php">
+      <button class="nav-item">Grid Stack</button>
+    </a>
     <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="../scripts/currentPage.js"></script>
   </div>
