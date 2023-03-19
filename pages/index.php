@@ -8,8 +8,8 @@
   <title>Gauge Chart</title>
   <link rel="stylesheet" href="../styles/style.css">
   <link rel="stylesheet" href="../styles/navbar.css">
-  <script src="../scripts/index.js"></script>
-  <script src="../scripts/guageChart.js"></script>
+  <script src="../scripts/charts.js"></script>
+
 </head>
 
 <body>
