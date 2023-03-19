@@ -3,8 +3,8 @@ require 'navbar.php';
 ?>
 
 <div id="mainpage">
-    <div class="mainpage-row">
-        <div class="mainpage-row-item">
+    <div class="overview-row">
+        <div class="overview-row-item">
             <div id="chart-container">Overview chart will render here</div>
                 <script src="../scripts/overviewPieChart.js"></script>
             </div>
