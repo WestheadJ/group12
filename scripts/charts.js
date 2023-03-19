@@ -77,6 +77,17 @@ window.onload = () => {
         
         // Add to the row
         insertRowEl.appendChild(columnEl)
+
+        var columnE2 = document.createElement("a")
+
+        columnE2.href = 'editGraph.php';
+        columnE2.innerText = 'Edit';
+
+        columnE2.setAttribute("class","edit-graph")
+        columnE2.setAttribute("id","row-id-"+rowID+"-col-id-"+colID)
+
+        insertRowEl.appendChild(columnE2)
+
       })
     })
   })

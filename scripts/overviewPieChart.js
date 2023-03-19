@@ -3,21 +3,22 @@ FusionCharts.ready(function() {
       type: 'multilevelpie',
       renderAt: 'chart-container',
       id: "myChart",
-      width: '600',
-      height: '600',
+      width: '900',
+      height: '900',
       dataFormat: 'json',
       dataSource: {
         "chart": {
           // "innerRadius": "100",
+          "clickURL": "../pages/dashboard.php",
           "caption": "Waterman Group",
           "exportEnabled": "1",
           "autoRotateLabels": "1",
-          "useEllipsesWhenOverflow": "1",
+          "useEllipsesWhenOverflow": "0",
           "skipOverlapLabels": "1",
           "subcaption": "Overview",
           "showPlotBorder": "1",
           "piefillalpha": "100",
-          "pieborderthickness": "1",
+          "pieborderthickness": "3",
           "piebordercolor": "#FFFFFF",
           "hoverfillcolor": "#CCCCCC",
           "numberprefix": "$",
@@ -90,7 +91,7 @@ FusionCharts.ready(function() {
               "label": "Health &{br}Safety", // Category
               "color": "#33ccff",
               "value": "33",
-              "tooltext": "Apparel & Accessories, $$valueK, $percentValue",
+              "tooltext": "Health & Safety, $$valueK, $percentValue",
               "category": [{
                 "label": "Legal {br}Register", // Legal
                 "color": "#33ccff",
@@ -141,12 +142,12 @@ FusionCharts.ready(function() {
             "label": "Climatespace", // Category
             "color": "#99ccff",
             "value": "33",
-            "tooltext": "Baby Products, $$valueK, $percentValue",
+            "tooltext": "Climatespace, $$valueK, $percentValue",
             "category": [{
               "label": "Legal {br}Register", // Legal
               "color": "#99ccff",
               "value": "11",
-              "tooltext": "Bath & Grooming, $$valueK, $percentValue",
+              "tooltext": "Legal Register, $$valueK, $percentValue",
               "category":[
                 {"label": "Completed", // G
                 "color": "green",

@@ -24,7 +24,8 @@ a {
 }
 
 a.edit-graph{
-  
+  color: white;
+  display: flex;
 }
 
 
