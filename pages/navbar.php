@@ -7,12 +7,17 @@
     <!-- <h4>Enviromental</h4>
     <h4>Climate Space</h4>
     <h4>H&S</h4> -->
-    <a <?php echo $x ?> href="overview.php">
+    <a href="overview.php">
       <button class="nav-item">Overview</button>
     </a>
-    <a <?php echo $y ?> href="dashboard.php">
-      <button class="nav-item" >Dashboard</button>
+    <a href="dashboard.php">
+      <button class="nav-item">Dashboard</button>
     </a>
+    <a href="gridStack.php">
+      <button class="nav-item">Grid Stack</button>
+    </a>
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="../scripts/currentPage.js"></script>
   </div>
   
   </div>
