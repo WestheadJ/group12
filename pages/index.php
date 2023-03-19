@@ -8,7 +8,7 @@
   <title>Gauge Chart</title>
   <link rel="stylesheet" href="../styles/style.css">
   <link rel="stylesheet" href="../styles/navbar.css">
-  <script src="../scripts/charts.js"></script>
+  
   <script src="https://unpkg.com/chart.js@2.8.0/dist/Chart.bundle.js"></script>
   <script src="https://unpkg.com/chartjs-gauge@0.3.0/dist/chartjs-gauge.js"></script>
 
