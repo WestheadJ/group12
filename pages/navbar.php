@@ -1,4 +1,5 @@
 <?php require 'index.php';?>
+<script src="../scripts/charts.js"></script>
 <nav class="nav">
   <div id="nav-brand">
     <h1>Waterman Group</h1>
