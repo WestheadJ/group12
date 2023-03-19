@@ -14,11 +14,6 @@
                     "colID":2,
                     "graphID":"pie"
 
-                },
-                {
-                    "colID":3,
-                    "graphID":"line"
-
                 }
             ]
         },
