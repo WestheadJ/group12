@@ -16,6 +16,15 @@
   <div class="grid-stack-item" gs-w="2">
     <div class="grid-stack-item-content">Item 2 wider</div>
   </div>
+  <div class="grid-stack-item" gs-w="3">
+    <div class="grid-stack-item-content">Item 2 wider</div>
+  </div>
+  <div class="grid-stack-item" gs-w="2">
+    <div class="grid-stack-item-content">Item 2 wider</div>
+  </div>
+  <div class="grid-stack-item" gs-w="2">
+    <div class="grid-stack-item-content">Item 2 wider</div>
+  </div>
 </div>
 
 <script type="text/javascript">
