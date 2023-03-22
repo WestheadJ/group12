@@ -1,6 +1,6 @@
  <!-- Reference link: 
   https://www.w3schools.com/howto/howto_css_responsive_form.asp  -->
-
+  <link rel="stylesheet" href="../styles/editGraph.css">
 <?php
   require 'navbar.php';
 ?>

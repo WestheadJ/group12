@@ -6,7 +6,7 @@ require 'navbar.php';
     <div class="overview-row">
         <div class="overview-row-item">
             <div id="chart-container">Overview chart will render here</div>
-                <script src="../scripts/overviewPieChart.js"></script>
+                <script src="../scripts/overviewDrillChart.js"></script>
             </div>
         </div>
     </div>
