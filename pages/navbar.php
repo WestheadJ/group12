@@ -1,4 +1,9 @@
 <?php require 'index.php';?>
+<<<<<<< Updated upstream
+=======
+<script src="../scripts/charts.js"></script>
+<script src="../scripts/guageChart.js"></script>
+>>>>>>> Stashed changes
 <nav class="nav">
   <div id="nav-brand">
     <h1>Waterman Group</h1>

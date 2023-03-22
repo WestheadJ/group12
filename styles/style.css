@@ -58,6 +58,7 @@ a {
   margin: 1em;
 }
 
+<<<<<<< Updated upstream
 .mainpage-row-item {
   width: 100%;
   min-width: 1%;
@@ -66,6 +67,19 @@ a {
   border-radius: 20px;
   padding: 1em;
   /* border: solid black 1px; */
+=======
+.mainpage-row-item {
+  background-color: rgb(255, 255, 255);
+  /* min-width: 200px; */
+  /* max-width: 350px; */
+  /* display: flex; */
+  height: 100%;
+  min-width: 1%;
+  margin: 1em;
+  border-radius: 20px;
+  padding: 1em;
+  /* border: solid black 1px;  */
+>>>>>>> Stashed changes
 }
 
 /* Temp css for displaying a chart on a single row */
