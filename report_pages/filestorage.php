@@ -1,7 +1,7 @@
 
 <?php
 include("../connections/config.php");
-include("../pages/navbar.php");
+
 
 if(isset($_POST['create_folder'])) {
   $folder_name = $_POST['folder_name'];
