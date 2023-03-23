@@ -7,11 +7,17 @@
     <!-- <h4>Enviromental</h4>
     <h4>Climate Space</h4>
     <h4>H&S</h4> -->
-    <a href="overview.php">
+    <a href="../pages/overview.php">
       <button class="nav-item">Overview</button>
     </a>
-    <a href="dashboard.php">
+    <a href="../pages/dashboard.php">
       <button class="nav-item">Dashboard</button>
+    </a>
+    <a href="../report_pages/filestorage.php">
+      <button class="nav-item">File Storage</button>
+    </a>
+    <a href="../report_pages/report.php">
+      <button class="nav-item">Report</button>
     </a>
     <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="../scripts/currentPage.js"></script>

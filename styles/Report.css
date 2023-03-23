@@ -1,0 +1,25 @@
+
+  #container {
+    width: 400px;
+    height: 400px;
+    background-color: black;
+    margin: 0 auto;
+  }
+  
+  #button-container {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 20px;
+    margin-left: 600px;
+  }
+  
+  .nav-item {
+    margin: 0 10px;
+    padding: 10px 20px;
+    background-color: rgba(21, 116, 16, 0.764);
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
