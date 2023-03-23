@@ -1,4 +1,5 @@
 <?php require 'index.php';?>
+<script src="../scripts/charts.js"></script>
 <nav class="nav">
   <div id="nav-brand">
     <h1>Waterman Group</h1>
@@ -18,6 +19,11 @@
     </a>
     <a href="../report_pages/report.php">
       <button class="nav-item">Report</button>
+    <a href="gridStack.php">
+      <button class="nav-item">Grid Stack</button>
+    </a>
+    <a href="editGraph.php">
+      <button class="nav-item">Edit Graph</button>
     </a>
     <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="../scripts/currentPage.js"></script>
