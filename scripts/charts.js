@@ -57,31 +57,42 @@ function renderRowsAndColumns(json){
       var insertRowEl = document.getElementById("row-id-"+rowID)
       
       // Prepare a canvas element
-      var columnEl = document.createElement("canvas")
-      
-      // Give prepares canvas a class and ID
-      columnEl.setAttribute("class","mainpage-row-item")
-      columnEl.setAttribute("id","row-id-"+rowID+"-col-id-"+colID)
-      
-      // Add to the row
+
+      var columnEl = document.createElement("div")
+      columnEl.setAttribute("class","mainpage-row-item-container")
+      columnEl.setAttribute("id","container-row-id-"+rowID+"-col-id-"+colID)
+
       insertRowEl.appendChild(columnEl)
 
-      var columnE2 = document.createElement("a")
+      var container = document.getElementById("container-row-id-"+rowID+"-col-id-"+colID)
 
-      columnE2.href = 'editGraph.php';
-      columnE2.innerText = 'Edit';
+      var canvasEl = document.createElement("canvas")
 
-      columnE2.setAttribute("class","edit-graph")
-      columnE2.setAttribute("id","row-id-"+rowID+"-col-id-"+colID)
 
-      insertRowEl.appendChild(columnE2)
+      
+      // Give prepares canvas a class and ID
+      canvasEl.setAttribute("class","mainpage-row-item")
+      canvasEl.setAttribute("id","row-id-"+rowID+"-col-id-"+colID)
+      
+      // Add to the row
+      container.appendChild(canvasEl)
+
+      var containerLink = document.createElement("a")
+
+      containerLink.setAttribute('href','editGraph.php')  ;
+      containerLink.innerHTML = 'Edit';
+
+      containerLink.setAttribute("class","edit-graph")
+      containerLink.setAttribute("id","row-id-"+rowID+"-col-id-"+colID)
+
+      container.appendChild(containerLink)
 
     })
   })
 }
 
-function renderGraphContainers(){
-  
+function renderGraphContainers(json){
+
 }
 
 function renderGraphs(json){

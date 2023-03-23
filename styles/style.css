@@ -168,6 +168,10 @@ a.active{
   justify-content: center;
 }
 
+a{
+  color: gray;
+}
+
 @media screen and (max-width:750px) {
   .mainpage-row {
     flex-direction: column;
