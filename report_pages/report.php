@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Empty Black Background</title>
+    <title>Report</title>
     <link rel="stylesheet" href="../styles/Report.css">
 
   </head>
