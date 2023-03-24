@@ -42,7 +42,9 @@ window.onload = () => {
       // console.log("This is row:",row.rowID.toString())
 
       // Gets the rowID (Converts to string as in the JSON it is an int)
-      var rowID = row.rowID.toString()
+      var stackAr = row.stack.toString()
+      stackAr = text.replace(","," ")
+
       
       // Ready a div to become a row
       var rowEl = document.createElement("div")

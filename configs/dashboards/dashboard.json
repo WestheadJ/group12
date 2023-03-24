@@ -1,67 +1,149 @@
 {
-    "userID":"watermangrp",
-    "configs":
-    [
+    "userID": "watermangrp",
+    "configs": [
         {
-            "rowID":1,
-            "columns":
-            [
-                {
-                    "colID":1,
-                    "graphID":"bar"
-                },
-                {
-                    "colID":2,
-                    "graphID":"pie"
-
+            "stack":[
+                "gs-w = 4",
+                "gs-h = 4",
+                "gs-x = 5",
+                "gs=y = 5"
+            ],
+            "type": "bar",
+            "data": {
+                "labels": [
+                    "Green",
+                    "Amber",
+                    "Red"
+                ],
+                "datasets": [
+                    {
+                        "label": "Chart",
+                        "data": "data",
+                        "backgroundColor": [
+                            "green",
+                            "orange",
+                            "red"
+                        ],
+                        "borderWidth": 1
+                    }
+                ]
+            },
+            "options": {
+                "scales": {
+                    "yAxes": [
+                        {
+                            "ticks": {
+                                "beginAtZero": true
+                            }
+                        }
+                    ]
                 }
-            ]
+            }
         },
         {
-            "rowID":2,
-            "columns":
-            [
-                {
-                    "colID":1,
-                    "graphID":"gauge"
+            "type": "gauge",
+            "data": {
+                "datasets": [
+                    {
+                        "data": "data",
+                        "value": "value",
+                        "backgroundColor": [
+                            "green",
+                            "orange",
+                            "red"
+                        ],
+                        "borderWidth": 2
+                    }
+                ]
+            },
+            "options": {
+                "responsive": true,
+                "title": {
+                    "display": true,
+                    "text": "Gauge chart"
                 },
-                {
-                    "colID":2,
-                    "graphID":"bar"
+                "layout": {
+                    "padding": {
+                        "bottom": 30
+                    }
                 },
-                {
-                    "colID":3,
-                    "graphID":"line"
+                "needle": {
+                    "radiusPercentage": 2,
+                    "widthPercentage": 3.2,
+                    "lengthPercentage": 80,
+                    "color": "rgba(0, 0, 0, 1)"
+                },
+                "valueLabel": {
+                    "formatter": "Math.round"
                 }
-            ]
+            }
         },
         {
-            "rowID":3,
-            "columns":
-            [
-                {
-                    "colID":1,
-                    "graphID":"gauge"
-                },
-                {
-                    "colID":2,
-                    "graphID":"bar"
-                },
-                {
-                    "colID":3,
-                    "graphID":"pie"
+            "type": "line",
+            "data": {
+                "labels": [
+                    "Green",
+                    "Amber",
+                    "Red"
+                ],
+                "datasets": [
+                    {
+                        "label": "Chart",
+                        "data": "data",
+                        "fill": false,
+                        "backgroundColor": [
+                            "green",
+                            "orange",
+                            "red"
+                        ],
+                        "borderWidth": 1
+                    }
+                ]
+            },
+            "options": {
+                "scales": {
+                    "yAxes": [
+                        {
+                            "ticks": {
+                                "beginAtZero": true
+                            }
+                        }
+                    ]
                 }
-            ]
+            }
         },
         {
-            "rowID":4,
-            "columns":
-            [
-                {
-                    "colID":1,
-                    "graphID":"gauge"
+            "type": "pie",
+            "data": {
+                "labels": [
+                    "Green",
+                    "Amber",
+                    "Red"
+                ],
+                "datasets": [
+                    {
+                        "label": "Chart",
+                        "data": "data",
+                        "backgroundColor": [
+                            "green",
+                            "orange",
+                            "red"
+                        ],
+                        "borderWidth": 1
+                    }
+                ]
+            },
+            "options": {
+                "scales": {
+                    "yAxes": [
+                        {
+                            "ticks": {
+                                "beginAtZero": true
+                            }
+                        }
+                    ]
                 }
-            ]
+            }
         }
     ]
 }
