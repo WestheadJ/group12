@@ -26,6 +26,8 @@ a {
 a.edit-graph{
   color: gray;
   display: flex;
+  float: right;
+  margin: 5px 5px 5px 5px ;
 }
 
 a.edit-graph:hover{
