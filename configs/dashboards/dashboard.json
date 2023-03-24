@@ -2,156 +2,164 @@
     "userID": "watermangrp",
     "configs": [
         {
-            "type": "bar",
-            "data": {
-                "labels": [
-                    "Green",
-                    "Amber",
-                    "Red"
-                ],
-                "datasets": [
-                    {
-                        "label": "Chart",
-                        "data": "data",
-                        "backgroundColor": [
-                            "green",
-                            "orange",
-                            "red"
-                        ],
-                        "borderWidth": 1
-                    }
-                ]
-            },
-            "stack":[
+            "stack": [
                 "gs-w=\"4\"",
                 "gs-h=\"4\""
             ],
-            "options": {
-                "scales": {
-                    "yAxes": [
+            "graphData": {
+                "type": "bar",
+                "data": {
+                    "labels": [
+                        "Green",
+                        "Amber",
+                        "Red"
+                    ],
+                    "datasets": [
                         {
-                            "ticks": {
-                                "beginAtZero": true
-                            }
+                            "label": "Chart",
+                            "data": "data",
+                            "backgroundColor": [
+                                "green",
+                                "orange",
+                                "red"
+                            ],
+                            "borderWidth": 1
                         }
                     ]
+                },
+                "options": {
+                    "scales": {
+                        "yAxes": [
+                            {
+                                "ticks": {
+                                    "beginAtZero": true
+                                }
+                            }
+                        ]
+                    }
                 }
             }
         },
         {
-            "type": "gauge",
-            "data": {
-                "datasets": [
-                    {
-                        "data": "data",
-                        "value": "value",
-                        "backgroundColor": [
-                            "green",
-                            "orange",
-                            "red"
-                        ],
-                        "borderWidth": 2
-                    }
-                ]
-            },
-            "stack":[
+            "stack": [
                 "gs-w=\"4\"",
                 "gs-h=\"4\""
             ],
-            "options": {
-                "responsive": true,
-                "title": {
-                    "display": true,
-                    "text": "Gauge chart"
+            "graphData": {
+                "type": "gauge",
+                "data": {
+                    "datasets": [
+                        {
+                            "data": "data",
+                            "value": "value",
+                            "backgroundColor": [
+                                "green",
+                                "orange",
+                                "red"
+                            ],
+                            "borderWidth": 2
+                        }
+                    ]
                 },
-                "layout": {
-                    "padding": {
-                        "bottom": 30
+                "options": {
+                    "responsive": true,
+                    "title": {
+                        "display": true,
+                        "text": "Gauge chart"
+                    },
+                    "layout": {
+                        "padding": {
+                            "bottom": 30
+                        }
+                    },
+                    "needle": {
+                        "radiusPercentage": 2,
+                        "widthPercentage": 3.2,
+                        "lengthPercentage": 80,
+                        "color": "rgba(0, 0, 0, 1)"
+                    },
+                    "valueLabel": {
+                        "formatter": "Math.round"
                     }
-                },
-                "needle": {
-                    "radiusPercentage": 2,
-                    "widthPercentage": 3.2,
-                    "lengthPercentage": 80,
-                    "color": "rgba(0, 0, 0, 1)"
-                },
-                "valueLabel": {
-                    "formatter": "Math.round"
                 }
             }
         },
         {
-            "type": "line",
-            "data": {
-                "labels": [
-                    "Green",
-                    "Amber",
-                    "Red"
-                ],
-                "datasets": [
-                    {
-                        "label": "Chart",
-                        "data": "data",
-                        "fill": false,
-                        "backgroundColor": [
-                            "green",
-                            "orange",
-                            "red"
-                        ],
-                        "borderWidth": 1
-                    }
-                ]
-            },
-            "stack":[
+            "stack": [
                 "gs-w=\"4\"",
                 "gs-h=\"4\""
             ],
-            "options": {
-                "scales": {
-                    "yAxes": [
+            "graphData": {
+                "type": "line",
+                "data": {
+                    "labels": [
+                        "Green",
+                        "Amber",
+                        "Red"
+                    ],
+                    "datasets": [
                         {
-                            "ticks": {
-                                "beginAtZero": true
-                            }
+                            "label": "Chart",
+                            "data": "data",
+                            "fill": false,
+                            "backgroundColor": [
+                                "green",
+                                "orange",
+                                "red"
+                            ],
+                            "borderWidth": 1
                         }
                     ]
+                },
+                "options": {
+                    "scales": {
+                        "yAxes": [
+                            {
+                                "ticks": {
+                                    "beginAtZero": true
+                                }
+                            }
+                        ]
+                    }
                 }
             }
         },
         {
-            "type": "pie",
-            "data": {
-                "labels": [
-                    "Green",
-                    "Amber",
-                    "Red"
-                ],
-                "datasets": [
-                    {
-                        "label": "Chart",
-                        "data": "data",
-                        "backgroundColor": [
-                            "green",
-                            "orange",
-                            "red"
-                        ],
-                        "borderWidth": 1
-                    }
-                ]
-            },
-            "stack":[
+            "stack": [
                 "gs-w=\"4\"",
                 "gs-h=\"4\""
             ],
-            "options": {
-                "scales": {
-                    "yAxes": [
+            "graphData": {
+                "type": "pie",
+                "data": {
+                    "labels": [
+                        "Green",
+                        "Amber",
+                        "Red"
+                    ],
+                    "datasets": [
                         {
-                            "ticks": {
-                                "beginAtZero": true
-                            }
+                            "label": "Chart",
+                            "data": "data",
+                            "backgroundColor": [
+                                "green",
+                                "orange",
+                                "red"
+                            ],
+                            "borderWidth": 1
                         }
                     ]
+                },
+                "options": {
+                    "scales": {
+                        "yAxes": [
+                            {
+                                "ticks": {
+                                    "beginAtZero": true
+                                }
+                            }
+                        ]
+                    }
                 }
             }
         }
