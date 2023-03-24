@@ -2,12 +2,6 @@
     "userID": "watermangrp",
     "configs": [
         {
-            "stack":[
-                "gs-w = 4",
-                "gs-h = 4",
-                "gs-x = 5",
-                "gs=y = 5"
-            ],
             "type": "bar",
             "data": {
                 "labels": [
@@ -28,6 +22,10 @@
                     }
                 ]
             },
+            "stack":[
+                "gs-w=\"4\"",
+                "gs-h=\"4\""
+            ],
             "options": {
                 "scales": {
                     "yAxes": [
@@ -56,6 +54,10 @@
                     }
                 ]
             },
+            "stack":[
+                "gs-w=\"4\"",
+                "gs-h=\"4\""
+            ],
             "options": {
                 "responsive": true,
                 "title": {
@@ -100,6 +102,10 @@
                     }
                 ]
             },
+            "stack":[
+                "gs-w=\"4\"",
+                "gs-h=\"4\""
+            ],
             "options": {
                 "scales": {
                     "yAxes": [
@@ -133,6 +139,10 @@
                     }
                 ]
             },
+            "stack":[
+                "gs-w=\"4\"",
+                "gs-h=\"4\""
+            ],
             "options": {
                 "scales": {
                     "yAxes": [

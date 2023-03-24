@@ -33,52 +33,32 @@ window.onload = () => {
   .then((json)=>{
 
     // Get the render container
-    var renderContainer = document.getElementById('render')
+    var renderContainer = document.getElementById('gird-stack')
     
     // *For each row* in the dashboard ->  
-    json.configs.forEach(row=>{
+    json.configs.forEach(item=>{
       
       // DEBUG
       // console.log("This is row:",row.rowID.toString())
 
       // Gets the rowID (Converts to string as in the JSON it is an int)
-      var stackAr = row.stack.toString()
-      stackAr = text.replace(","," ")
+      var stack = item.stack.toString()
+      stack = text.replace(","," ")
+      console.log(stack)
 
       
       // Ready a div to become a row
-      var rowEl = document.createElement("div")
+      var item = document.createElement("div")
       
       // Give it a class and an id
-      rowEl.setAttribute("class","mainpage-row")
-      rowEl.setAttribute("id","row-id-"+rowID)
+      item.setAttribute("class","grid-stack-item")
       
       // Add div to the container
-      renderContainer.appendChild(rowEl)
+      renderContainer.appendChild(item)
       
       // *For each column* in the row ->
-      row.columns.forEach(column=>{
-        
-        // DEBUGS
-        // console.log(column)
-        // console.log("This is column",column.colID.toString(),"of row",rowID )
-        // console.log("GraphID =",column.graphID)
-        
-        // Get the column ID (Needs converting to a string because it's an int)
-        var colID = column.colID.toString()
-
-        // Get the current rows div
-        var insertRowEl = document.getElementById("row-id-"+rowID)
-        
-        // Prepare a canvas element
-        var columnEl = document.createElement("canvas")
-        
-        // Give prepares canvas a class and ID
-        columnEl.setAttribute("class","mainpage-row-item")
-        columnEl.setAttribute("id","row-id-"+rowID+"-col-id-"+colID)
-        
-        // Add to the row
-        insertRowEl.appendChild(columnEl)
+      row.columns.forEach(graph=>{
+               
 
         var columnE2 = document.createElement("a")
 
@@ -105,11 +85,11 @@ window.onload = () => {
   .then((json)=>{
 
     // *For each row* in the dashboard ->  
-    json.configs.forEach(row=>{
+    json.configs.forEach(widget=>{
       
     // DEBUG:
     // console.log("This is row:",row.rowID.toString())
-
+    console.log("This is stack data:",widget.stack.toString().replace(","," "))
     // Get the rowID
     var rowID = row.rowID.toString()
       
