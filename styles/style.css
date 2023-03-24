@@ -24,7 +24,12 @@ a {
 }
 
 a.edit-graph{
-  color: white;
+  color: gray;
+  display: flex;
+}
+
+a.edit-graph:hover{
+  color:cornflowerblue;
   display: flex;
 }
 
@@ -166,10 +171,6 @@ a.active{
   height: 100%;
   display: flex;
   justify-content: center;
-}
-
-a{
-  color: gray;
 }
 
 @media screen and (max-width:750px) {
