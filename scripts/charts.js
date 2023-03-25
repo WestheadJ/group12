@@ -47,7 +47,6 @@ window.onload = () => {
       // var rowTB = document.getElementById("myPopup")
       // var historyChart = document.createElement("canvas")
       // historyChart.setAttribute("id", "historyChart")
-      // // rowTB.setAttribute("id","row-id-"+rowID)
       // rowTB.appendChild(historyChart)
 
       // renderContainer.appendChild(rowTB)
