@@ -4,6 +4,7 @@
 <?php
   require 'navbar.php';
 ?>
+
 <script src="../scripts/editChart.js"></script>
 <link rel="stylesheet" href="../styles/editGraph.css"/>
 
