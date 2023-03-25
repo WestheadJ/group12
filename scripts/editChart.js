@@ -48,5 +48,5 @@ window.onload = ()=>{
 function updatePreview(title){
   console.log("Update!")
   graph.data.datasets[0].label
-  graph.update()
+  graph.update() 
 }

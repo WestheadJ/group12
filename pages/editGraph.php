@@ -32,8 +32,10 @@
       
       <a href="dashboard.php">Cancel</a>
       <input id="submit-button" type="submit" value="Save">
+
+      <button type="button" onclick="updatePreview(title)">Update</button>
       
     </form>
-    <button onclick="updatePreview(title)">Update</button>
+    
   </div>
 </div>
