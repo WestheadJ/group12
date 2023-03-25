@@ -1,0 +1,83 @@
+{
+    "cellHeight": 50,
+    "margin": 5,
+    "minRow": 2,
+    "acceptWidgets": true,
+    "subGrid": {
+        "cellHeight": 50,
+        "column": "auto",
+        "acceptWidgets": true,
+        "margin": 5,
+        "subGridDynamic": true
+    },
+    "subGridDynamic": true,
+    "children": [
+        {
+            "x": 0,
+            "y": 0,
+            "content": "0",
+            "id": "0"
+        },
+        {
+            "x": 0,
+            "y": 1,
+            "content": "1",
+            "id": "1"
+        },
+        {
+            "x": 1,
+            "y": 0,
+            "content": "2",
+            "id": "2"
+        },
+        {
+            "x": 2,
+            "y": 0,
+            "w": 2,
+            "h": 3,
+            "id": "sub0",
+            "subGrid": {
+                "children": [
+                    {
+                        "x": 0,
+                        "y": 0,
+                        "content": "3",
+                        "id": "3"
+                    },
+                    {
+                        "x": 1,
+                        "y": 0,
+                        "content": "4",
+                        "id": "4"
+                    }
+                ],
+                "cellHeight": 50,
+                "column": "auto",
+                "acceptWidgets": true,
+                "margin": 5,
+                "subGridDynamic": true
+            }
+        },
+        {
+            "x": 4,
+            "y": 0,
+            "h": 2,
+            "id": "sub1",
+            "subGrid": {
+                "children": [
+                    {
+                        "x": 0,
+                        "y": 0,
+                        "content": "5",
+                        "id": "5"
+                    }
+                ],
+                "cellHeight": 50,
+                "column": "auto",
+                "acceptWidgets": true,
+                "margin": 5,
+                "subGridDynamic": true
+            }
+        }
+    ]
+}

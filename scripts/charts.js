@@ -1,5 +1,37 @@
 // https://www.freecodecamp.org/news/how-to-read-json-file-in-javascript/
 
+const fs = require("fs")
+// create and load it all from JSON above
+document.querySelector('#saved').value = JSON.stringify(options);
+let grid = GridStack.addGrid(document.querySelector('.container-fluid'), options);
+
+function addWidget() {
+  grid.addWidget({ x: 0, y: 100, content: "new item" });
+}
+
+function save(content = true, full = true) {
+  options = grid?.save(content, full);
+  console.log(options);
+  const jsonString = JSON.stringify(optoins).fs.writeFile('../configs/dashboards/stack.json', jsonString, err => {
+    if (err) {
+      console.log('Error writing file', err)
+    } else {
+      console.log('Successfully wrote file')
+    }
+  })
+}
+
+function load(full = true) {
+  fs.readFile("../configs/dashboards/stack.json", (err, jsonString) => {
+    if (err) {
+      console.log("File read failed:", err);
+      return;
+    }
+    console.log("File data:", jsonString);
+    grid.load(jsonString);
+  });
+}
+
 var randomScalingFactor = function () {
   return Math.round(Math.random() * 100);
 };
@@ -22,61 +54,18 @@ var value = randomValue(data);
 
 window.onload = () => {
 
-  // --- Create the layout of the dashboard ---
-
-  // Gets the config file using the JS Fetch API (It's a promise function)
-  // Promises: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
+  t / Reference / Global_Objects / Promise
   fetch("../configs/dashboards/dashboard.json")
-  // Gets the data and converts it to a JSON object to work with
-  .then(response=>response.json())
-  // Render function
-  .then((json)=>{
 
-    var grid = document.getElementById("render")
-    var render = document.createElement("div") 
-    render.setAttribute("class","grid-stack")
+    .then(response => response.json())
 
-    json.configs.forEach(item=>{
+    .then((json) => {
 
-      var stack = item.stack.toString()
-      stack = stack.replace(","," ")
-      console.log(stack)
+      json.configs.forEach(item => {
 
-      var graphData = item.graphData
 
-      graphData = JSON.stringify(graphData)
-      console.log(graphData)
-
-   
-      
-      var widget = document.createElement("div")
-      widget.setAttribute("class","grid-stack-item")
-      widget.setAttribute("gs-w","3")
-
-            // widget.createElement("h4")
-      //widget.textContent(graphData)
-
-      var content = document.createElement("div") 
-      content.setAttribute("class","grid-stack-item-content")
-      content.textContent = graphData
-
-      
-      
-      grid.appendChild(render)
-      
-      render.appendChild(widget)
-
-      widget.appendChild(content)
-
-      
-      // var graph = document.getElementById("graph")
-
-      // var graphItem = document.createElement("h4")
-      // graphItem.textContent = graphData
-      // graph.appendChild(graphItem)
-
+      })
     })
-  })
 }
 
 

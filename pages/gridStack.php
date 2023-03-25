@@ -1,13 +1,19 @@
 <?php require 'navbar.php'; ?>
-<link href="../node_modules/gridstack/dist/gridstack.min.css" rel="stylesheet" />
-<script src="../node_modules/gridstack/dist/gridstack-all.js"></script>
+<!-- <link href="../node_modules/gridstack/dist/gridstack.min.css" rel="stylesheet" />
+<script src="../node_modules/gridstack/dist/gridstack-all.js"></script> -->
+<link href="../node_modules/gridstack/dist/gridstack.min.css" rel="stylesheet"/>
+<script src="../node_modules/gridstack/dist/es5/gridstack-poly.js"></script>
+<script src="../node_modules/gridstack/dist/es5/gridstack-all.js"></script>
 <style type="text/css">
     .grid-stack {
         background: #FAFAD2;
     }
 </style>
+
+<a class="btn btn-primary" onclick="addMainWidget()" href="#">Add Widget</a>
+<a class="btn btn-primary" onclick="save()" href="#">Save Full</a>
 <!-- Why does this line code not work, It prints to the html in the form below!!!! Just doesn't render-->
-<div id="render"></div>
+<!-- <div id="render"></div> -->
 
 <!-- THIS WORKS -->
 <!-- <div class="grid-stack">
@@ -25,6 +31,13 @@
     </div>
 </div> -->
 
-<script type="text/javascript">
+
+<div class="grid-stack"></div>
+
+<script src="scripts\charts.js"></script> 
+
+
+
+<!-- <script type="text/javascript">
     GridStack.init();
-</script>
+</script> -->
