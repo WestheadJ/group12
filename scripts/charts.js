@@ -56,7 +56,7 @@ function renderRowsAndColumns(json){
       // Get the current rows div
       var insertRowEl = document.getElementById("row-id-"+rowID)
       
-      // Prepare a canvas element
+
 
       var columnEl = document.createElement("div")
       columnEl.setAttribute("class","mainpage-row-item-container")
@@ -79,7 +79,7 @@ function renderRowsAndColumns(json){
 
       var containerLink = document.createElement("a")
 
-      containerLink.setAttribute('href','editGraph.php')  ;
+      containerLink.setAttribute('href','editGraph.php?graph_id='+column.graphID)  ;
       containerLink.innerHTML = 'Edit';
 
       containerLink.setAttribute("class","edit-graph")
