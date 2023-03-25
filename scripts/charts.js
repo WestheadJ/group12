@@ -56,11 +56,17 @@ window.onload = () => {
             // widget.createElement("h4")
       //widget.textContent(graphData)
 
+      var content = document.createElement("div") 
+      content.setAttribute("class","grid-stack-item-content")
+      content.textContent = graphData
+
       
       
       grid.appendChild(render)
       
       render.appendChild(widget)
+
+      widget.appendChild(content)
 
       
       // var graph = document.getElementById("graph")
@@ -72,4 +78,6 @@ window.onload = () => {
     })
   })
 }
+
+
 
