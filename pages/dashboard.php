@@ -5,6 +5,19 @@ require 'navbar.php';
 
 <script src="../scripts/addGraphBtn.js"></script>
 <div id="mainpage">
+  
+  <!-- <div class="toolbar">
+    <div class="toolbar-item">
+      <div class="popup" onclick="popout()">History
+        <span class="popuptext" id="myPopup">
+          <script src="../scripts/historyChart.js"></script>
+          <canvas id="historyChart"></canvas>
+        </span>
+        <script src="../scripts/popout.js"></script>
+      </div>
+    </div>
+  </div> -->
+  
   <div id="render">
     
   </div>

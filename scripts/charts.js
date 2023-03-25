@@ -44,6 +44,17 @@ window.onload = () => {
       // Gets the rowID (Converts to string as in the JSON it is an int)
       var rowID = row.rowID.toString()
       
+      // var rowTB = document.getElementById("myPopup")
+      // var historyChart = document.createElement("canvas")
+      // historyChart.setAttribute("id", "historyChart")
+      // // rowTB.setAttribute("id","row-id-"+rowID)
+      // rowTB.appendChild(historyChart)
+
+      // renderContainer.appendChild(rowTB)
+      
+      // Add div to the container
+      // renderContainer.appendChild(rowEl)
+
       // Ready a div to become a row
       var rowEl = document.createElement("div")
       
