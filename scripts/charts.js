@@ -67,7 +67,7 @@ function renderRowsAndColumns(json){
       var container = document.getElementById("container-row-id-"+rowID+"-col-id-"+colID)
 
       var canvasEl = document.createElement("canvas")
-            
+
       // Give prepares canvas a class and ID
       canvasEl.setAttribute("class","mainpage-row-item")
       canvasEl.setAttribute("id","row-id-"+rowID+"-col-id-"+colID)
