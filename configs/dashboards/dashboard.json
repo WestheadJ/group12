@@ -7,7 +7,7 @@
                 {"gs_w":"4"},
                 {"gs_h":"4"}
             ],
-            "graphData": {
+            "graph_data": {
                 "type": "bar",
                 "data": {
                     "labels": [
@@ -47,7 +47,7 @@
                 {"gs_w":"4"},
                 {"gs_h":"4"}
             ],
-            "graphData": {
+            "graph_data": {
                 "type": "gauge",
                 "data": {
                     "datasets": [
@@ -92,7 +92,7 @@
                 {"gs_w":"4"},
                 {"gs_h":"4"}
             ],
-            "graphData": {
+            "graph_data": {
                 "type": "line",
                 "data": {
                     "labels": [
@@ -133,7 +133,7 @@
                 {"gs_w":"4"},
                 {"gs_h":"4"}
             ],
-            "graphData": {
+            "graph_data": {
                 "type": "pie",
                 "data": {
                     "labels": [

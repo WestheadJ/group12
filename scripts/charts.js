@@ -53,7 +53,12 @@ window.onload = () => {
       gridstack.appendChild(gridItem)
 
       let canvas = document.createElement('canvas')
-      canvas.setAttribute('id','poo')
+      canvas.setAttribute('id',item.graph_id)
+      gridItem.appendChild(canvas)
+      
+      let ctx = document.getElementById(item.graph_id).getContext('2d');
+      window.lineChart = new Chart(ctx, item.graph_data);
+
       // var stack = item.stack.toString()
       // stack = stack.replace(","," ")
       // console.log(stack)
