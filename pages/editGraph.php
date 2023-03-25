@@ -10,9 +10,11 @@
 <h1 id="title">Edit Graph OR Chart</h1>
 <div id="main-content">
   <div id="graph-container">
+    <h3>Preview:</h3>
     <canvas id="editBarChart"></canvas>
   </div>
   <div id="form-container">
+    <h3>Options:</h3>
     <form action="../scripts/editConfigs.php" method ="post">
       <input cla type="text" id="gTitle" name="graphTitle" placeholder="Your Graph Title..">
       <input type="text" id="xAxis" name="XAxis" placeholder="Your Graph X Axis Label..">

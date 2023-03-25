@@ -1,5 +1,5 @@
 
-input[type=text], select, textarea{
+input[type=text], select{
     width: 50%;
     padding: 10px;
     border: 1px solid #ccc;
@@ -15,7 +15,6 @@ input[type=text], select, textarea{
     display: inline-block;
     width: 100%;
     text-align: left;
-   
   }
   
   
@@ -29,6 +28,18 @@ input[type=text], select, textarea{
     
   }
 
+#main-content{
+  display: flex;
+  width: 100%;
+}
+
+#graph-container{
+  width: 50%;
+}
+
+#form-container{
+  width: 50%;
+}
   
   @media screen and (max-width: 600px) {
     .col-25, .col-75, input[type=submit] {
