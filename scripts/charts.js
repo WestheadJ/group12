@@ -46,27 +46,35 @@ window.onload = () => {
 
     json.configs.forEach(item=>{
       console.log(item)
-      var stack = item.stack.toString()
-      stack = stack.replace(","," ")
-      console.log(stack)
+      let gridItem = document.createElement('div')
+      gridItem.setAttribute('class','grid-stack-item')
+      gridItem.setAttribute("gs-w",item.stack[0].gs_w)
+      gridItem.setAttribute("gs-h",item.stack[0].gs_h)
+      gridstack.appendChild(gridItem)
 
-      var graphData = item.graphData
+      let canvas = document.createElement('canvas')
+      canvas.setAttribute('id','poo')
+      // var stack = item.stack.toString()
+      // stack = stack.replace(","," ")
+      // console.log(stack)
 
-      graphData = JSON.stringify(graphData)
-      console.log(graphData)
+      // var graphData = item.graphData
+
+      // graphData = JSON.stringify(graphData)
+      // console.log(graphData)
 
    
       
-      var widget = document.createElement("div")
-      widget.setAttribute("class","grid-stack-item")
-      widget.setAttribute("gs-w","3")
+      // var widget = document.createElement("div")
+      // widget.setAttribute("class","grid-stack-item")
+      // widget.setAttribute("gs-w","3")
 
-            // widget.createElement("h4")
-      //widget.textContent(graphData)
+      //       // widget.createElement("h4")
+      // //widget.textContent(graphData)
 
-      var content = document.createElement("div") 
-      content.setAttribute("class","grid-stack-item-content")
-      content.textContent = graphData
+      // var content = document.createElement("div") 
+      // content.setAttribute("class","grid-stack-item-content")
+      // content.textContent = graphData
 
       
       // TOMS' CODE
@@ -84,6 +92,8 @@ window.onload = () => {
       // graph.appendChild(graphItem)
 
     })
+    GridStack.init();
+
   })
 }
 

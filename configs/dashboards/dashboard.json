@@ -2,9 +2,10 @@
     "userID": "watermangrp",
     "configs": [
         {
+            "graph_id":"bar",
             "stack": [
-                {"gs-w":"4"},
-                {"gs-h":"4"}
+                {"gs_w":"4"},
+                {"gs_h":"4"}
             ],
             "graphData": {
                 "type": "bar",
@@ -41,9 +42,10 @@
             }
         },
         {
+            "graph_id":"gauge",
             "stack": [
-                {"gs-w":"4"},
-                {"gs-h":"4"}
+                {"gs_w":"4"},
+                {"gs_h":"4"}
             ],
             "graphData": {
                 "type": "gauge",
@@ -85,9 +87,10 @@
             }
         },
         {
+            "graph_id":"line",
             "stack": [
-                "gs-w=\"4\"",
-                "gs-h=\"4\""
+                {"gs_w":"4"},
+                {"gs_h":"4"}
             ],
             "graphData": {
                 "type": "line",
@@ -125,9 +128,10 @@
             }
         },
         {
+            "graph_id":"pie",
             "stack": [
-                "gs-w=\"4\"",
-                "gs-h=\"4\""
+                {"gs_w":"4"},
+                {"gs_h":"4"}
             ],
             "graphData": {
                 "type": "pie",

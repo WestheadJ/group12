@@ -26,7 +26,3 @@
         <div class="grid-stack-item-content">{"type":"pie","data":{"labels":["Green","Amber","Red"],"datasets":[{"label":"Chart","data":"data","backgroundColor":["green","orange","red"],"borderWidth":1}]},"options":{"scales":{"yAxes":[{"ticks":{"beginAtZero":true}}]}}}</div>
     </div>
 </div> -->
-
-<script type="text/javascript">
-    GridStack.init();
-</script>
