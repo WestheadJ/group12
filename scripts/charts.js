@@ -32,12 +32,20 @@ window.onload = () => {
   // Render function
   .then((json)=>{
 
-    var grid = document.getElementById("render")
-    var render = document.createElement("div") 
-    render.setAttribute("class","grid-stack")
+    // TOMS' CODE:
+    // var grid = document.getElementById("render")
+    // var render = document.createElement("div") 
+    // render.setAttribute("class","grid-stack")
+
+    // JAMES' CODE:
+    var render = document.getElementById("render")
+    var gridstack = document.createElement("div") 
+    gridstack.setAttribute("class","grid-stack")
+
+    render.appendChild(gridstack)
 
     json.configs.forEach(item=>{
-
+      console.log(item)
       var stack = item.stack.toString()
       stack = stack.replace(","," ")
       console.log(stack)
@@ -61,12 +69,12 @@ window.onload = () => {
       content.textContent = graphData
 
       
+      // TOMS' CODE
+      // grid.appendChild(render)
       
-      grid.appendChild(render)
-      
-      render.appendChild(widget)
+      // render.appendChild(widget)
 
-      widget.appendChild(content)
+      // widget.appendChild(content)
 
       
       // var graph = document.getElementById("graph")

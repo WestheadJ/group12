@@ -7,7 +7,9 @@
     }
 </style>
 <!-- Why does this line code not work, It prints to the html in the form below!!!! Just doesn't render-->
-<div id="render"></div>
+<div id="render">
+
+</div>
 
 <!-- THIS WORKS -->
 <!-- <div class="grid-stack">

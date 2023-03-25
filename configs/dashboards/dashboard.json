@@ -3,8 +3,8 @@
     "configs": [
         {
             "stack": [
-                "gs-w=\"4\"",
-                "gs-h=\"4\""
+                {"gs-w":"4"},
+                {"gs-h":"4"}
             ],
             "graphData": {
                 "type": "bar",
@@ -42,8 +42,8 @@
         },
         {
             "stack": [
-                "gs-w=\"4\"",
-                "gs-h=\"4\""
+                {"gs-w":"4"},
+                {"gs-h":"4"}
             ],
             "graphData": {
                 "type": "gauge",
