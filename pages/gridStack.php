@@ -3,7 +3,11 @@
 <script src="../node_modules/gridstack/dist/gridstack-all.js"></script>
 <style type="text/css">
     .grid-stack {
-        background: #FAFAD2;
+        background-color: gray;
+    }
+    .grid-stack-item{
+      background-color: white;
+      border: black solid 1px ;
     }
 </style>
 <!-- Why does this line code not work, It prints to the html in the form below!!!! Just doesn't render-->
