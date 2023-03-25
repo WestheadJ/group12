@@ -8,3 +8,6 @@
   </form>
 </div>
 <script src="../scripts/popout.js"></script>
+
+<!-- REFERENCE FOR CODE -->
+<!-- https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_popup_form -->
