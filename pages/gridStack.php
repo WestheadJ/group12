@@ -9,9 +9,7 @@
     }
 </style>
 
-<div class="grid-stack">
-
-</div>
+<div id="render"></div>
 
 <script type="text/javascript">
       GridStack.init();
