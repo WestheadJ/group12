@@ -5,6 +5,7 @@
   require 'navbar.php';
 ?>
 <script src="../scripts/editChart.js"></script>
+<link rel="stylesheet" href="../styles/editGraph.css"/>
 
 <h1 id="title">Edit Graph OR Chart</h1>
 <div id="main-content">
@@ -21,10 +22,8 @@
         <option value="Pie Chart">Pie Chart</option>
         <option value="Gauge Chart">Gauge Chart</option>
       </select>
-      <textarea id="Graph Description" name="Graph Description" placeholder="Enter any details.." style="height:200px"></textarea>
-      <input type="submit" value="Update">
+      <input id="submit-button" type="submit" value="Update">
       <a href="dashboard.php">Cancel</a>
     </form>
   </div>
 </div>
-  
