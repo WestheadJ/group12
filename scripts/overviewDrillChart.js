@@ -36,7 +36,103 @@ FusionCharts.ready(function() {
           "link": "newchart-xml-climatespace"
         }],
         "linkeddata": [{
-          "id": "environment",
+          "id": "environment", // Drill 1
+          "linkedchart": {
+            "chart": {
+              "caption": "Environment",
+              "subcaption": "Departments",
+              "xaxisname": "Category",
+              "yaxisname": "Actions:",
+              "numberprefix": "",
+              "theme": "fusion",
+              "showPlotBorder": "1",
+              "exportEnabled": "1",
+              "pieborderthickness": "4",
+              "pieborderColor": "#ffffff",
+              "numberPrefix": "",
+              "numberSuffix": "",
+              "rotateValues": "0"
+            },
+            "data": [{
+                "label": "Category 1",
+                "color": "#0f6054",
+                "value": "157000"
+              }, {
+                "label": "Category 2",
+                "color": "#0f6054",
+                "value": "172000"
+              }, {
+                "label": "Category 3",
+                "color": "#0f6054",
+                "value": "206000"
+              }]
+          }
+        },{
+          "id": "hs",
+          "linkedchart": {
+            "chart": {
+              "caption": "Health & Safety", // Drill 1
+              "subcaption": "Departments",
+              "xaxisname": "Category",
+              "yaxisname": "Actions:",
+              "numberprefix": "",
+              "theme": "fusion",
+              "showPlotBorder": "1",
+              "exportEnabled": "1",
+              "pieborderthickness": "4",
+              "pieborderColor": "#ffffff",
+              "numberPrefix": "",
+              "numberSuffix": "",
+              "rotateValues": "0"
+            },
+            "data": [{
+              "label": "Category 1",
+              "color": "#445753",
+              "value": "157000"
+            }, {
+              "label": "Category 2",
+              "color": "#445753",
+              "value": "172000"
+            }, {
+              "label": "Category 3",
+              "color": "#445753",
+              "value": "206000"
+            }]
+        }
+        },{
+          "id": "climatespace",
+          "linkedchart": {
+            "chart": {
+              "caption": "Climatespace", // Drill 1
+              "subcaption": "Departments",
+              "xaxisname": "Category",
+              "yaxisname": "Actions:",
+              "numberprefix": "",
+              "theme": "fusion",
+              "showPlotBorder": "1",
+              "exportEnabled": "1",
+              "pieborderthickness": "4",
+              "pieborderColor": "#ffffff",
+              "numberPrefix": "",
+              "numberSuffix": "",
+              "rotateValues": "0"
+            },
+            "data": [{
+              "label": "Category 1",
+              "color": "#0fe6e6",
+              "value": "157000"
+            }, {
+              "label": "Category 2",
+              "color": "#0fe6e6",
+              "value": "172000"
+            }, {
+              "label": "Category 3",
+              "color": "#0fe6e6",
+              "value": "206000"
+            }]
+        }
+        },{
+          "id": "environment2", // Drill 2
           "linkedchart": {
             "chart": {
               "caption": "Environment",
@@ -45,6 +141,12 @@ FusionCharts.ready(function() {
               "yaxisname": "Actions:",
               "numberprefix": "",
               "theme": "fusion",
+              "showPlotBorder": "1",
+              "exportEnabled": "1",
+              "pieborderthickness": "4",
+              "pieborderColor": "#ffffff",
+              "numberPrefix": "",
+              "numberSuffix": "",
               "rotateValues": "0"
             },
             "data": [{
@@ -62,15 +164,21 @@ FusionCharts.ready(function() {
             }]
           }
         }, {
-          "id": "hs",
+          "id": "hs2",
           "linkedchart": {
             "chart": {
-              "caption": "Health & Safety",
+              "caption": "Health & Safety", // Drill 2
               "subcaption": "Waterman",
               "xaxisname": "Category",
               "yaxisname": "Actions:",
               "numberprefix": "",
               "theme": "fusion",
+              "showPlotBorder": "1",
+              "exportEnabled": "1",
+              "pieborderthickness": "4",
+              "pieborderColor": "#ffffff",
+              "numberPrefix": "",
+              "numberSuffix": "",
               "rotateValues": "0"
             },
             "data": [{
@@ -88,15 +196,21 @@ FusionCharts.ready(function() {
               }]
           }
         }, {
-          "id": "climatespace",
+          "id": "climatespace2",
           "linkedchart": {
             "chart": {
-              "caption": "Climatespace",
+              "caption": "Climatespace", // Drill 2
               "subcaption": "Waterman Group",
               "xaxisname": "Category",
               "yaxisname": "Actions:",
               "numberprefix": "",
               "theme": "fusion",
+              "showPlotBorder": "1",
+              "exportEnabled": "1",
+              "pieborderthickness": "4",
+              "pieborderColor": "#ffffff",
+              "numberPrefix": "",
+              "numberSuffix": "",
               "rotateValues": "0"
             },
             "data": [{
