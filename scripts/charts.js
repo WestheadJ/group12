@@ -76,6 +76,9 @@ window.onload = () => {
         item.graph_data.data.datasets[0].value = value
         item.graph_data.options.valueLabel.formatter = Math.round 
       }
+      else{
+        item.graph_data.data.datasets[0].data=data
+      }
 
       let canvas = document.createElement('canvas')
       canvas.setAttribute('id',item.graph_id)
