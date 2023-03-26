@@ -10,14 +10,16 @@
 </style>
 
 <div class="grid-stack">
-  <div class="grid-stack-item">
-    <div class="grid-stack-item-content">Item 1</div>
+  <div class="grid-stack-item" gs-w="8" gs-h="4">
+    <div class="chart-container" style="position: relative;">
+      <canvas id="barChartR3"></canvas>
+    </div>
   </div>
   <div class="grid-stack-item" gs-w="2">
-    <div class="grid-stack-item-content">Item 2 wider</div>
+    <canvas id="pieChartR3"></canvas>
   </div>
   <div class="grid-stack-item" gs-w="3">
-    <div class="grid-stack-item-content">Item 2 wider</div>
+    <canvas id="guageChart"></canvas>
   </div>
   <div class="grid-stack-item" gs-w="2">
     <div class="grid-stack-item-content">Item 2 wider</div>
