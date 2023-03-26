@@ -33,7 +33,7 @@
       <a href="dashboard.php">Cancel</a>
       <input id="submit-button" type="submit" value="Save">
 
-      <button type="button" onclick="updatePreview">Update</button>
+      <button type="button" onclick="updatePreview()">Update</button>
       
     </form>
     

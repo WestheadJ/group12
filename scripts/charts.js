@@ -134,7 +134,8 @@ function renderGraphs(json){
 
           // Render the graph
           var ctx = canvas.getContext('2d');
-          return window.guageChart = new Chart(ctx, gaugeData);
+          let guageChart = new Chart(ctx, gaugeData);
+          return
         })
       }
       else{
@@ -149,7 +150,8 @@ function renderGraphs(json){
           
           // Render the graph
           var ctx = canvas.getContext('2d');
-          return window.graph = new Chart(ctx, graphData)
+          let graph = new Chart(ctx, graphData)
+          return graph
         })
       }
       
