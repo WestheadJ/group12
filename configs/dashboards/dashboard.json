@@ -2,11 +2,12 @@
     "userID": "watermangrp",
     "configs": [
         {
+            "graph_id":"bar",
             "stack": [
-                "gs-w=\"4\"",
-                "gs-h=\"4\""
+                {"gs_w":"4"},
+                {"gs_h":"4"}
             ],
-            "graphData": {
+            "graph_data": {
                 "type": "bar",
                 "data": {
                     "labels": [
@@ -41,11 +42,12 @@
             }
         },
         {
+            "graph_id":"gauge",
             "stack": [
-                "gs-w=\"4\"",
-                "gs-h=\"4\""
+                {"gs_w":"4"},
+                {"gs_h":"4"}
             ],
-            "graphData": {
+            "graph_data": {
                 "type": "gauge",
                 "data": {
                     "datasets": [
@@ -85,11 +87,12 @@
             }
         },
         {
+            "graph_id":"line",
             "stack": [
-                "gs-w=\"4\"",
-                "gs-h=\"4\""
+                {"gs_w":"4"},
+                {"gs_h":"4"}
             ],
-            "graphData": {
+            "graph_data": {
                 "type": "line",
                 "data": {
                     "labels": [
@@ -125,11 +128,12 @@
             }
         },
         {
+            "graph_id":"pie",
             "stack": [
-                "gs-w=\"4\"",
-                "gs-h=\"4\""
+                {"gs_w":"4"},
+                {"gs_h":"4"}
             ],
-            "graphData": {
+            "graph_data": {
                 "type": "pie",
                 "data": {
                     "labels": [

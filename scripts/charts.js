@@ -57,16 +57,36 @@ window.onload = () => {
   t / Reference / Global_Objects / Promise
   fetch("../configs/dashboards/dashboard.json")
 
-    .then(response => response.json())
+    var render = document.getElementById("render")
+    var gridstack = document.createElement("div") 
+    gridstack.setAttribute("class","grid-stack")
 
-    .then((json) => {
+    render.appendChild(gridstack)
 
-      json.configs.forEach(item => {
+    json.configs.forEach(item=>{
+      console.log(item)
+      let gridItem = document.createElement('div')
+      gridItem.setAttribute('class','grid-stack-item')
+      gridItem.setAttribute("gs-w",item.stack[0].gs_w)
+      gridItem.setAttribute("gs-h",item.stack[0].gs_h)
+      gridstack.appendChild(gridItem)
 
+      let canvas = document.createElement('canvas')
+      canvas.setAttribute('id',item.graph_id)
+      gridItem.appendChild(canvas)
 
-      })
+      if(item.graph_id === "gauge"){
+        item.graph_data.data.datasets[0].data=data
+        item.graph_data.data.datasets[0].value = value
+        item.graph_data.options.valueLabel.formatter = Math.round 
+      }
+
+      
+      let ctx = document.getElementById(item.graph_id).getContext('2d');
+      window.lineChart = new Chart(ctx, item.graph_data);
+
     })
+    GridStack.init();
+
+  })
 }
-
-
-

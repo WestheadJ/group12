@@ -6,7 +6,11 @@
 <script src="../node_modules/gridstack/dist/es5/gridstack-all.js"></script>
 <style type="text/css">
     .grid-stack {
-        background: #FAFAD2;
+        background-color: gray;
+    }
+    .grid-stack-item{
+      background-color: white;
+      border: black solid 1px ;
     }
 </style>
 
