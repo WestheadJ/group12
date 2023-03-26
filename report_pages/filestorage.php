@@ -7,6 +7,8 @@ include("../pages/navbar.php");
 if(isset($_POST['create_folder'])) {
   $folder_name = $_POST['folder_name'];
   
+ 
+ 
   if(!empty($folder_name)) {
     $sql = "INSERT INTO folders (name) VALUES ('$folder_name')";
     mysqli_query($conn, $sql);
@@ -16,6 +18,7 @@ if(isset($_POST['create_folder'])) {
 $folder_sql = "SELECT * FROM folders";
 $folder_result = mysqli_query($conn, $folder_sql);
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">

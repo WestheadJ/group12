@@ -3,8 +3,9 @@ require 'navbar.php';
 ?>
 
 <?php
-require 'report.php';
+require 'reporttest.php';
 ?>
+
 
 
 <script src="../scripts/addGraphBtn.js"></script>

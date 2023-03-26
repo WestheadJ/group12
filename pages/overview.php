@@ -2,6 +2,7 @@
 require 'navbar.php'; 
 ?>
 
+
 <div id="mainpage">
     <div class="overview-row">
         <div class="overview-row-item">
