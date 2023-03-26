@@ -12,7 +12,7 @@ FusionCharts.ready(function() {
           "xaxisName": "Department",
           "yaxisName": "Actions:",
           "showPlotBorder": "1",
-          "exportEnabled": "1",
+          "exportEnabled": "0",
           "pieborderthickness": "4",
           "pieborderColor": "#ffffff",
           "numberPrefix": "",
@@ -46,7 +46,7 @@ FusionCharts.ready(function() {
               "numberprefix": "",
               "theme": "fusion",
               "showPlotBorder": "1",
-              "exportEnabled": "1",
+              "exportEnabled": "0",
               "pieborderthickness": "4",
               "pieborderColor": "#ffffff",
               "numberPrefix": "",
@@ -54,18 +54,155 @@ FusionCharts.ready(function() {
               "rotateValues": "0"
             },
             "data": [{
-                "label": "Category 1",
+                "label": "Legal Register",
                 "color": "#0f6054",
-                "value": "157000"
+                "value": "1",
+                "link": "newchart-xml-lr"
               }, {
-                "label": "Category 2",
+                "label": "Risk Manager",
                 "color": "#0f6054",
-                "value": "172000"
+                "value": "1",
+                "link": "newchart-xml-rm"
               }, {
-                "label": "Category 3",
+                "label": "Compliance Auditor",
                 "color": "#0f6054",
-                "value": "206000"
-              }]
+                "value": "1",
+                "link": "newchart-xml-ca"
+              }, {
+                "label": "Improvement Tracker",
+                "color": "#0f6054",
+                "value": "1",
+                "link": "newchart-xml-it"
+              }],
+              "linkeddata": [{
+                "id": "lr", // Environment RAG
+                "linkedchart": {
+                  "chart": {
+                    "caption": "Environment - Legal Register",
+                    "subcaption": "Actions",
+                    "xaxisname": "Category",
+                    "yaxisname": "Actions:",
+                    "numberprefix": "",
+                    "theme": "fusion",
+                    "showPlotBorder": "1",
+                    "exportEnabled": "0",
+                    "pieborderthickness": "4",
+                    "pieborderColor": "#ffffff",
+                    "numberPrefix": "",
+                    "numberSuffix": "",
+                    "rotateValues": "0"
+                  },
+                  "data": [{
+                      "label": "Outstanding",
+                      "color": "#fc2c03",
+                      "value": "10"
+                    }, {
+                      "label": "Due",
+                      "color": "#fcba03",
+                      "value": "2"
+                    }, {
+                      "label": "Complete",
+                      "color": "#03fc20",
+                      "value": "8"
+                    }]
+                }
+              },{
+                "id": "rm", // Environment RAG
+                "linkedchart": {
+                  "chart": {
+                    "caption": "Environment - Risk Manager",
+                    "subcaption": "Actions",
+                    "xaxisname": "Category",
+                    "yaxisname": "Actions:",
+                    "numberprefix": "",
+                    "theme": "fusion",
+                    "showPlotBorder": "1",
+                    "exportEnabled": "0",
+                    "pieborderthickness": "4",
+                    "pieborderColor": "#ffffff",
+                    "numberPrefix": "",
+                    "numberSuffix": "",
+                    "rotateValues": "0"
+                  },
+                  "data": [{
+                      "label": "Outstanding",
+                      "color": "#fc2c03",
+                      "value": "1"
+                    }, {
+                      "label": "Due",
+                      "color": "#fcba03",
+                      "value": "1"
+                    }, {
+                      "label": "Complete",
+                      "color": "#03fc20",
+                      "value": "1"
+                    }]
+                }
+              },{
+                "id": "ca", // Environment RAG
+                "linkedchart": {
+                  "chart": {
+                    "caption": "Environment - Compliance Auditor",
+                    "subcaption": "Actions",
+                    "xaxisname": "Category",
+                    "yaxisname": "Actions:",
+                    "numberprefix": "",
+                    "theme": "fusion",
+                    "showPlotBorder": "1",
+                    "exportEnabled": "0",
+                    "pieborderthickness": "4",
+                    "pieborderColor": "#ffffff",
+                    "numberPrefix": "",
+                    "numberSuffix": "",
+                    "rotateValues": "0"
+                  },
+                  "data": [{
+                      "label": "Outstanding",
+                      "color": "#fc2c03",
+                      "value": "1"
+                    }, {
+                      "label": "Due",
+                      "color": "#fcba03",
+                      "value": "1"
+                    }, {
+                      "label": "Complete",
+                      "color": "#03fc20",
+                      "value": "1"
+                    }]
+                }
+              },{
+                "id": "it", // Environment RAG
+                "linkedchart": {
+                  "chart": {
+                    "caption": "Environment - Improvement Tracker",
+                    "subcaption": "Actions",
+                    "xaxisname": "Category",
+                    "yaxisname": "Actions:",
+                    "numberprefix": "",
+                    "theme": "fusion",
+                    "showPlotBorder": "1",
+                    "exportEnabled": "0",
+                    "pieborderthickness": "4",
+                    "pieborderColor": "#ffffff",
+                    "numberPrefix": "",
+                    "numberSuffix": "",
+                    "rotateValues": "0"
+                  },
+                  "data": [{
+                      "label": "Outstanding",
+                      "color": "#fc2c03",
+                      "value": "1"
+                    }, {
+                      "label": "Due",
+                      "color": "#fcba03",
+                      "value": "1"
+                    }, {
+                      "label": "Complete",
+                      "color": "#03fc20",
+                      "value": "1"
+                    }]
+                }
+              },]
           }
         },{
           "id": "hs",
@@ -78,7 +215,7 @@ FusionCharts.ready(function() {
               "numberprefix": "",
               "theme": "fusion",
               "showPlotBorder": "1",
-              "exportEnabled": "1",
+              "exportEnabled": "0",
               "pieborderthickness": "4",
               "pieborderColor": "#ffffff",
               "numberPrefix": "",
@@ -86,17 +223,17 @@ FusionCharts.ready(function() {
               "rotateValues": "0"
             },
             "data": [{
-              "label": "Category 1",
-              "color": "#445753",
-              "value": "157000"
+              "label": "Outstanding",
+              "color": "#fc2c03",
+              "value": "1"
             }, {
-              "label": "Category 2",
-              "color": "#445753",
-              "value": "172000"
+              "label": "Due",
+              "color": "#fcba03",
+              "value": "1"
             }, {
-              "label": "Category 3",
-              "color": "#445753",
-              "value": "206000"
+              "label": "Complete",
+              "color": "#03fc20",
+              "value": "1"
             }]
         }
         },{
@@ -110,39 +247,7 @@ FusionCharts.ready(function() {
               "numberprefix": "",
               "theme": "fusion",
               "showPlotBorder": "1",
-              "exportEnabled": "1",
-              "pieborderthickness": "4",
-              "pieborderColor": "#ffffff",
-              "numberPrefix": "",
-              "numberSuffix": "",
-              "rotateValues": "0"
-            },
-            "data": [{
-              "label": "Category 1",
-              "color": "#0fe6e6",
-              "value": "157000"
-            }, {
-              "label": "Category 2",
-              "color": "#0fe6e6",
-              "value": "172000"
-            }, {
-              "label": "Category 3",
-              "color": "#0fe6e6",
-              "value": "206000"
-            }]
-        }
-        },{
-          "id": "environment2", // Drill 2
-          "linkedchart": {
-            "chart": {
-              "caption": "Environment",
-              "subcaption": "Waterman Group",
-              "xaxisname": "Category",
-              "yaxisname": "Actions:",
-              "numberprefix": "",
-              "theme": "fusion",
-              "showPlotBorder": "1",
-              "exportEnabled": "1",
+              "exportEnabled": "0",
               "pieborderthickness": "4",
               "pieborderColor": "#ffffff",
               "numberPrefix": "",
@@ -151,82 +256,18 @@ FusionCharts.ready(function() {
             },
             "data": [{
               "label": "Outstanding",
-              "color": "#ff5050",
-              "value": "157000"
+              "color": "#fc2c03",
+              "value": "1"
             }, {
               "label": "Due",
-              "color": "#ffcc00",
-              "value": "172000"
+              "color": "#fcba03",
+              "value": "1"
             }, {
-              "label": "Completed",
-              "color": "#33cc33 ",
-              "value": "206000"
+              "label": "Complete",
+              "color": "#03fc20",
+              "value": "1"
             }]
-          }
-        }, {
-          "id": "hs2",
-          "linkedchart": {
-            "chart": {
-              "caption": "Health & Safety", // Drill 2
-              "subcaption": "Waterman",
-              "xaxisname": "Category",
-              "yaxisname": "Actions:",
-              "numberprefix": "",
-              "theme": "fusion",
-              "showPlotBorder": "1",
-              "exportEnabled": "1",
-              "pieborderthickness": "4",
-              "pieborderColor": "#ffffff",
-              "numberPrefix": "",
-              "numberSuffix": "",
-              "rotateValues": "0"
-            },
-            "data": [{
-                "label": "Outstanding",
-                "color": "#ff5050",
-                "value": "157000"
-              }, {
-                "label": "Due",
-                "color": "#ffcc00",
-                "value": "172000"
-              }, {
-                "label": "Completed",
-                "color": "#33cc33 ",
-                "value": "206000"
-              }]
-          }
-        }, {
-          "id": "climatespace2",
-          "linkedchart": {
-            "chart": {
-              "caption": "Climatespace", // Drill 2
-              "subcaption": "Waterman Group",
-              "xaxisname": "Category",
-              "yaxisname": "Actions:",
-              "numberprefix": "",
-              "theme": "fusion",
-              "showPlotBorder": "1",
-              "exportEnabled": "1",
-              "pieborderthickness": "4",
-              "pieborderColor": "#ffffff",
-              "numberPrefix": "",
-              "numberSuffix": "",
-              "rotateValues": "0"
-            },
-            "data": [{
-                "label": "Outstanding",
-                "color": "#ff5050",
-                "value": "157000"
-              }, {
-                "label": "Due",
-                "color": "#ffcc00",
-                "value": "172000"
-              }, {
-                "label": "Completed",
-                "color": "#33cc33 ",
-                "value": "206000"
-              }]
-          }
+        }
         }]
       }
     });
