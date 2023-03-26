@@ -34,20 +34,20 @@ window.onload = ()=>{
         titleInput.setAttribute('id','graph-title')
         titleInput.setAttribute('name',"graph-title")
         titleInput.setAttribute('value',graphData.data.datasets[0].label)
+        titleInput.setAttribute('oninput',"updatePreview()")
 
         form.appendChild(titleInput)
-        
+          
         graph = new Chart(ctx, graphData)
         return graph
       })
     }
-
-  }
+  }  
 }
 // https://stackoverflow.com/questions/7056669/how-to-prevent-default-event-handling-in-an-onclick-method
 function updatePreview(){
   let currentTitle = document.getElementById('graph-title').value
-  console.log('Value:',document.getElementById('graph-title').value)
+
   graph.data.datasets[0].label = currentTitle
   graph.update() 
 }
