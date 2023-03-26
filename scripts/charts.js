@@ -124,8 +124,8 @@ window.onload = () => {
     })
     GridStack.init();
 
-  })
-}
+  }
+
 
 
 
