@@ -13,7 +13,7 @@
   <div class="grid-stack-item" gs-w="8" gs-h="4">
     <div class="chart-container" style="position: relative;">
       <canvas id="barChartR3"></canvas>
-      <a href="editGraph.php">Edit</a>
+      <a class="cancel" href="editGraph.php">Edit</a>
     </div>
   </div>
   <div class="grid-stack-item" gs-w="3" gs-x="2" gs-y="8" gs-h="2">
