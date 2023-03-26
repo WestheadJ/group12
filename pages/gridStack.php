@@ -4,6 +4,7 @@
 <link href="../node_modules/gridstack/dist/gridstack.min.css" rel="stylesheet"/>
 <script src="../node_modules/gridstack/dist/es5/gridstack-poly.js"></script>
 <script src="../node_modules/gridstack/dist/es5/gridstack-all.js"></script>
+<script src="../scripts/charts.js"></script> 
 <style type="text/css">
     .grid-stack {
         background-color: gray;
@@ -13,7 +14,6 @@
       border: black solid 1px ;
     }
 </style>
-
 <a class="btn btn-primary" onclick="addMainWidget()" href="#">Add Widget</a>
 <a class="btn btn-primary" onclick="save()" href="#">Save Full</a>
 <!-- Why does this line code not work, It prints to the html in the form below!!!! Just doesn't render-->
@@ -36,10 +36,7 @@
 </div> -->
 
 
-<div class="grid-stack"></div>
-
-<script src="scripts\charts.js"></script> 
-
+<div id="render"></div>
 
 
 <!-- <script type="text/javascript">
