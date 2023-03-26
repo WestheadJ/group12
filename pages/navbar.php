@@ -11,11 +11,11 @@
     <a href="overview.php">
       <button class="nav-item">Overview</button>
     </a>
-    <a href="dashboard.php">
+    <!-- <a href="dashboard.php">
       <button class="nav-item">Dashboard</button>
-    </a>
+    </a> -->
     <a href="gridStack.php">
-      <button class="nav-item">Grid Stack</button>
+      <button class="nav-item">Dashboard</button>
     </a>
     <a href="editGraph.php">
       <button class="nav-item">Edit Graph</button>
