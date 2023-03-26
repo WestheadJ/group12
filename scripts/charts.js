@@ -57,6 +57,12 @@ window.onload = () => {
   t / Reference / Global_Objects / Promise
   fetch("../configs/dashboards/dashboard.json")
 
+    // TOMS' CODE:
+    // var grid = document.getElementById("render")
+    // var render = document.createElement("div") 
+    // render.setAttribute("class","grid-stack")
+
+    // JAMES' CODE:
     var render = document.getElementById("render")
     var gridstack = document.createElement("div") 
     gridstack.setAttribute("class","grid-stack")
@@ -77,6 +83,43 @@ window.onload = () => {
       
       let ctx = document.getElementById(item.graph_id).getContext('2d');
       window.lineChart = new Chart(ctx, item.graph_data);
+
+      // var stack = item.stack.toString()
+      // stack = stack.replace(","," ")
+      // console.log(stack)
+
+      // var graphData = item.graphData
+
+      // graphData = JSON.stringify(graphData)
+      // console.log(graphData)
+
+   
+      
+      // var widget = document.createElement("div")
+      // widget.setAttribute("class","grid-stack-item")
+      // widget.setAttribute("gs-w","3")
+
+      //       // widget.createElement("h4")
+      // //widget.textContent(graphData)
+
+      // var content = document.createElement("div") 
+      // content.setAttribute("class","grid-stack-item-content")
+      // content.textContent = graphData
+
+      
+      // TOMS' CODE
+      // grid.appendChild(render)
+      
+      // render.appendChild(widget)
+
+      // widget.appendChild(content)
+
+      
+      // var graph = document.getElementById("graph")
+
+      // var graphItem = document.createElement("h4")
+      // graphItem.textContent = graphData
+      // graph.appendChild(graphItem)
 
     })
     GridStack.init();
