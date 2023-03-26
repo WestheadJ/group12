@@ -2,6 +2,10 @@
 require 'navbar.php';
 ?>
 
+<?php
+require 'report.php';
+?>
+
 
 <script src="../scripts/addGraphBtn.js"></script>
 <div id="mainpage">
