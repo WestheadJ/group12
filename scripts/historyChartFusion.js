@@ -23,15 +23,6 @@ FusionCharts.ready(function() {
               "label": "Wed"
             },
             {
-              "vline": "true",
-              "lineposition": "0",
-              "color": "#62B58F",
-              "labelHAlign": "center",
-              "labelPosition": "0",
-              "label": "National holiday",
-              "dashed": "1"
-            },
-            {
               "label": "Thu"
             },
             {
@@ -46,65 +37,89 @@ FusionCharts.ready(function() {
           ]
         }],
         "dataset": [{
-            "seriesname": "Bakersfield Central",
+            "seriesname": "RED",
+            "anchorBgColor": "#FF2D00",
+            "color": "#FF2D00",
             "data": [{
-                "value": "15123"
+                "value": "10"
               },
               {
-                "value": "14233"
+                "value": "9"
               },
               {
-                "value": "25507"
+                "value": "12"
               },
               {
-                "value": "9110"
+                "value": "20"
               },
               {
-                "value": "15529"
+                "value": "18"
               },
               {
-                "value": "20803"
+                "value": "8"
               },
               {
-                "value": "19202"
+                "value": "1"
               }
             ]
           },
           {
-            "seriesname": "Los Angeles Topanga",
+            "seriesname": "GREEN",
+            "anchorBgColor": "#00CC16",
+            "color": "#00CC16",
             "data": [{
-                "value": "13400"
+                "value": "18"
               },
               {
-                "value": "12800"
+                "value": "30"
               },
               {
-                "value": "22800"
+                "value": "10"
               },
               {
-                "value": "12400"
+                "value": "2"
               },
               {
-                "value": "15800"
+                "value": "12"
               },
               {
-                "value": "19800"
+                "value": "11"
               },
               {
-                "value": "21800"
+                "value": "12"
               }
             ]
-          }
+          },
+          {
+            "seriesname": "AMBER",
+            "anchorBgColor": "#FFB900",
+            "color": "#FFB900",
+            "data": [{
+                "value": "12"
+              },
+              {
+                "value": "27"
+              },
+              {
+                "value": "5"
+              },
+              {
+                "value": "1"
+              },
+              {
+                "value": "6"
+              },
+              {
+                "value": "9"
+              },
+              {
+                "value": "10"
+              }
+            ]
+          },
         ],
-        "trendlines": [{
-          "line": [{
-            "startvalue": "17022",
-            "color": "#62B58F",
-            "valueOnRight": "1",
-            "displayvalue": "Average"
-          }]
-        }]
-      }
+      },
+      
     }).render();
   });
   
