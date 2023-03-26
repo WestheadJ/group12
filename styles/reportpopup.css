@@ -3,7 +3,7 @@
 
 /* Button used to open the contact form - fixed at the bottom of the page */
 .open-button {
-    background-color: #555;
+    background-color: #2d8069;;
     color: white;
     padding: 16px 20px;
     border: none;
@@ -82,4 +82,16 @@
         border: none;
         border-radius: 4px;
         width: 120px;
+      }
+
+      .close-button {
+        position: absolute;
+        top: 0px;
+        right: 10px;
+        height: 20px;
+        width: 50px;
+        background-color: #2d8069;
+        color: #fefefe;
+        border: none;
+        border-radius: 4px;
       }

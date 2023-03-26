@@ -9,7 +9,6 @@
   <link rel="stylesheet" href="../styles/style.css">
   <link rel="stylesheet" href="../styles/navbar.css">
   <link rel="stylesheet" href="../styles/editGraph.css">
-  <link rel="stylesheet" href="../styles/reportpopout.css">
 
   
   <script src="https://unpkg.com/chart.js@2.8.0/dist/Chart.bundle.js"></script>

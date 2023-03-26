@@ -3,7 +3,7 @@ require 'navbar.php';
 ?>
 
 <?php
-require 'reporttest.php';
+require 'report.php';
 ?>
 
 
