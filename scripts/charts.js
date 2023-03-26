@@ -20,17 +20,17 @@ var data = randomData();
 var value = randomValue(data);
 
 function renderRowsAndColumns(json){
+  console.log(json)
   // Get the render container
   var renderContainer = document.getElementById('render')
     
   // *For each row* in the dashboard ->  
   json.configs.forEach(row=>{
-    
     // DEBUG
     // console.log("This is row:",row.rowID.toString())
 
     // Gets the rowID (Converts to string as in the JSON it is an int)
-    var rowID = row.rowID.toString()
+    var rowID = row.rowID
     
     // Ready a div to become a row
     var rowEl = document.createElement("div")

@@ -45,8 +45,9 @@ window.onload = ()=>{
   }
 }
 // https://stackoverflow.com/questions/7056669/how-to-prevent-default-event-handling-in-an-onclick-method
-function updatePreview(title){
+function updatePreview(){
+  let currentTitle = document.getElementById('graph-title').value
   console.log("Update!")
-  graph.data.datasets[0].label
+  graph.config.data.datasets[0].label = currentTitle
   graph.update() 
 }
