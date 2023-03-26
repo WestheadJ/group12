@@ -5,54 +5,20 @@ require 'navbar.php';
 
 <script src="../scripts/addGraphBtn.js"></script>
 <div id="mainpage">
+  
+<?php
+require 'popout.php';
+?>
 
-  <script src="node_modules/gridstack/dist/gridstack-h5.js"></script>
-  <link href="node_modules/gridstack/dist/gridstack.min.css" rel="stylesheet" />
-
-
-  <div class="mainpage-row">
-    <div class="mainpage-row-item">
-      <canvas id="barChartR3"></canvas>
-    </div>
-    <div class="mainpage-row-item">
-      <canvas id="pieChartR3"></canvas>
-    </div>
   </div>
 
-  <div class="mainpage-row">
-    <div class="mainpage-row-item">
-      <canvas id="guageChart"></canvas>
-    </div>
-    <div class="mainpage-row-item">
-      <canvas id="barChart"></canvas>
-    </div>
-    <div class="mainpage-row-item">
-      <canvas id="pieChart"></canvas>
-    </div>
-    <div class="mainpage-row-item">
-      <canvas id="lineChart"></canvas>
-    </div>
+  <div id="render">
+
+    
   </div>
 
-  <div class="mainpage-row">
-    <div class="mainpage-row-item">
-      <canvas id="guageChartR2"></canvas>
-    </div>
-    <div class="mainpage-row-item">
-      <canvas id="barChartR2"></canvas>
-    </div>
-    <div class="mainpage-row-item">
-      <canvas id="pieChartR2"></canvas>
-    </div>
-  </div>
+  <div class = "abutton">
 
-  <div class="single-mainpage-row">
-    <div class="single-mainpage-row-item">
-      <canvas id="guageChartR4"></canvas>
-    </div>
-  </div>
-
-  <div class="abutton">
     <button onclick="buttonClickityClick()">+</button>
   </div>
 
@@ -63,4 +29,17 @@ require 'navbar.php';
       <!-- </a> -->
     </div>
   </div>
+  <!-- <div class="toolbar">
+    <div class="toolbar-item">
+      <div class="popup" onclick="popout()">History
+      <button class="popup" onclick="popout()">History</button>
+        <span class="popuptext" id="myPopup"> -->
+          <!-- <script src="../scripts/historyChart.js"></script>
+          <canvas id="historyChart"></canvas> -->
+          <!-- <script src="../scripts/historyChartFusion.js"></script>
+          <div id="chart-container">FusionCharts XT will load here!</div>
+        </span>
+        <script src="../scripts/popout.js"></script>
+      </div>
+    </div> -->
 </div>

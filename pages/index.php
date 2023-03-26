@@ -10,6 +10,14 @@
   <script src="https://unpkg.com/chartjs-gauge@0.3.0/dist/chartjs-gauge.js"></script>
   <link rel="stylesheet" href="../styles/style.css">
   <link rel="stylesheet" href="../styles/navbar.css">
-  <script src="../scripts/index.js"></script>
-  <script src="../scripts/guageChart.js"></script>
+  <link rel="stylesheet" href="../styles/editGraph.css">
+  <link rel="stylesheet" href="../styles/popout.css">
+  
+  <script src="https://unpkg.com/chart.js@2.8.0/dist/Chart.bundle.js"></script>
+  <script src="https://unpkg.com/chartjs-gauge@0.3.0/dist/chartjs-gauge.js"></script>
+  <script src="https://cdn.fusioncharts.com/fusioncharts/latest/fusioncharts.js"></script>
+  <script src="https://cdn.fusioncharts.com/fusioncharts/latest/themes/fusioncharts.theme.fusion.js"></script>
+
 </head>
+
+<body>
