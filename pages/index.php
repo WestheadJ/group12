@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="../styles/editGraph.css">
   <link rel="stylesheet" href="../styles/popout.css">
 
+
   <script src="../scripts/simpleCharts.js"></script>
   
   <script src="https://unpkg.com/chart.js@2.8.0/dist/Chart.bundle.js"></script>

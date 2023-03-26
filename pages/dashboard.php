@@ -6,9 +6,6 @@ require 'navbar.php';
 <script src="../scripts/addGraphBtn.js"></script>
 <div id="mainpage">
   
-<?php
-require 'popout.php';
-?>
 
   </div>
 
