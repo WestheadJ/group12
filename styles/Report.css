@@ -1,25 +1,73 @@
 
-  #container {
-    width: 400px;
-    height: 400px;
-    background-color: black;
-    margin: 0 auto;
-  }
-  
-  #button-container {
-    display: flex;
-    justify-content: flex-start;
-    margin-top: 20px;
-    margin-left: 600px;
-  }
-  
-  .nav-item {
-    margin: 0 10px;
-    padding: 10px 20px;
-    background-color: rgba(21, 116, 16, 0.764);
-    color: black;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
+
+.report-menu {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in-out;
+  border: 1px solid black;
+  border-radius: 10px;
+  z-index: 10;
+  background-color: white;
+  width: 500px;
+  max-width: 80%;
+}
+
+.report-menu.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.menu-header {
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid black;
+}
+
+.menu-header .title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.menu-body {
+  padding: 10px 15px;
+}
+
+/* Style for the overlay */
+
+#overlay {
+  position: fixed;
+  opacity: 0;
+  transition: 200ms ease-in-out;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .5);
+  pointer-events: none;
+}
+
+#overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+
+.menu-body {
+  padding: 10px 15px;
+}
+
+.menu-body a {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  color: #333;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-body a:hover {
+  color: #007bff;
+}
