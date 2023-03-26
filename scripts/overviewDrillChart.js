@@ -21,17 +21,17 @@ FusionCharts.ready(function() {
         },
         "data": [{
           "label": "Environment",
-          "value": "810000",
+          "value": "1",
           "color": "#0f6054",
           "link": "newchart-xml-environment"
         }, {
           "label": "Health & Safety",
-          "value": "620000",
+          "value": "1",
           "color": "#445753",
           "link": "newchart-xml-hs"
         }, {
           "label": "Climatespace",
-          "value": "350000",
+          "value": "1",
           "color": "#0fe6e6",
           "link": "newchart-xml-climatespace"
         }],
@@ -51,6 +51,8 @@ FusionCharts.ready(function() {
               "pieborderColor": "#ffffff",
               "numberPrefix": "",
               "numberSuffix": "",
+              "showLables": "0",
+              "showValues": "1",
               "rotateValues": "0"
             },
             "data": [{
@@ -127,15 +129,15 @@ FusionCharts.ready(function() {
                   "data": [{
                       "label": "Outstanding",
                       "color": "#fc2c03",
-                      "value": "1"
+                      "value": "5"
                     }, {
                       "label": "Due",
                       "color": "#fcba03",
-                      "value": "1"
+                      "value": "10"
                     }, {
                       "label": "Complete",
                       "color": "#03fc20",
-                      "value": "1"
+                      "value": "7"
                     }]
                 }
               },{
@@ -159,15 +161,15 @@ FusionCharts.ready(function() {
                   "data": [{
                       "label": "Outstanding",
                       "color": "#fc2c03",
-                      "value": "1"
+                      "value": "4"
                     }, {
                       "label": "Due",
                       "color": "#fcba03",
-                      "value": "1"
+                      "value": "3"
                     }, {
                       "label": "Complete",
                       "color": "#03fc20",
-                      "value": "1"
+                      "value": "11"
                     }]
                 }
               },{
@@ -191,15 +193,15 @@ FusionCharts.ready(function() {
                   "data": [{
                       "label": "Outstanding",
                       "color": "#fc2c03",
-                      "value": "1"
+                      "value": "6"
                     }, {
                       "label": "Due",
                       "color": "#fcba03",
-                      "value": "1"
+                      "value": "10"
                     }, {
                       "label": "Complete",
                       "color": "#03fc20",
-                      "value": "1"
+                      "value": "9"
                     }]
                 }
               },]
