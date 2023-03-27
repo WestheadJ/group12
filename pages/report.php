@@ -22,7 +22,6 @@
         <button class="preview-btn" onclick="window.open('../pdf/Environmental-report.pdf', '_blank')">Preview</button>
         <a href="../pdf/Environmental-Report.pdf" download><button type="button" class="download-btn">Download</button></a>
       </div>
-      <div id="chart-container"></div>
     </form>
   </div>
 
