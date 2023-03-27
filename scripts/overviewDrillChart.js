@@ -97,15 +97,19 @@ FusionCharts.ready(function() {
                   "data": [{
                       "label": "Outstanding",
                       "color": "#fc2c03",
-                      "value": "10"
+                      "value": "10",
+                      "link": "../pages/actionLink.php"
                     }, {
                       "label": "Due",
                       "color": "#fcba03",
-                      "value": "2"
+                      "value": "2",
+                      "link": "../pages/actionLink.php"
                     }, {
                       "label": "Complete",
                       "color": "#03fc20",
-                      "value": "8"
+                      "value": "8",
+                      "value": "2",
+
                     }]
                 }
               },{
@@ -129,15 +133,18 @@ FusionCharts.ready(function() {
                   "data": [{
                       "label": "Outstanding",
                       "color": "#fc2c03",
-                      "value": "5"
+                      "value": "5",
+                      "link": "../pages/actionLink.php"
                     }, {
                       "label": "Due",
                       "color": "#fcba03",
-                      "value": "10"
+                      "value": "10",
+                      "link": "../pages/actionLink.php"
                     }, {
                       "label": "Complete",
                       "color": "#03fc20",
-                      "value": "7"
+                      "value": "7",
+                      "link": "../pages/actionLink.php"
                     }]
                 }
               },{
@@ -161,15 +168,18 @@ FusionCharts.ready(function() {
                   "data": [{
                       "label": "Outstanding",
                       "color": "#fc2c03",
-                      "value": "4"
+                      "value": "4",
+                      "link": "../pages/actionLink.php"
                     }, {
                       "label": "Due",
                       "color": "#fcba03",
-                      "value": "3"
+                      "value": "3",
+                      "link": "../pages/actionLink.php"
                     }, {
                       "label": "Complete",
                       "color": "#03fc20",
-                      "value": "11"
+                      "value": "11",
+                      "link": "../pages/actionLink.php"
                     }]
                 }
               },{
@@ -193,15 +203,18 @@ FusionCharts.ready(function() {
                   "data": [{
                       "label": "Outstanding",
                       "color": "#fc2c03",
-                      "value": "6"
+                      "value": "6",
+                      "link": "../pages/actionLink.php"
                     }, {
                       "label": "Due",
                       "color": "#fcba03",
-                      "value": "10"
+                      "value": "10",
+                      "link": "../pages/actionLink.php"
                     }, {
                       "label": "Complete",
                       "color": "#03fc20",
-                      "value": "9"
+                      "value": "9",
+                      "link": "../pages/actionLink.php"
                     }]
                 }
               },]
