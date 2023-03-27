@@ -4,13 +4,13 @@ $reportId = $_GET['report'];
 $reportFile = '';
 switch ($reportId) {
   case 'hs-report':
-    $reportFile = 'pdf/H&S-report.pdf';
+    $reportFile = '../pdf/H&S-report.pdf';
     break;
   case 'climate-report':
-    $reportFile = 'pdf/ClimateSpace-report.pdf';
+    $reportFile = '../pdf/ClimateSpace-report.pdf';
     break;
   case 'env-report':
-    $reportFile = 'pdf/Environmental-report.pdf';
+    $reportFile = '../pdf/Environmental-report.pdf';
     break;
 }
 
