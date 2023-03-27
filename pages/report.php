@@ -10,23 +10,22 @@
       <div class="report">
         <div class="report-title">H&amp;S Report</div>
         <button class="preview-btn" onclick="window.open('../pdf/H&S-Report.pdf', '_blank')">Preview</button>
-        <button class="download-btn" data-report-id="hs-report">Download</button>
+        <a href="../pdf/H&S-Report.pdf" download><button type="button" class="download-btn">Download</button></a>
       </div>
       <div class="report">
         <div class="report-title">ClimateSpace Report</div>
         <button class="preview-btn" onclick="window.open('../pdf/ClimateSpace-report.pdf', '_blank')">Preview</button>
-        <button class="download-btn" data-report-id="climate-report">Download</button>
+        <a href="../pdf/ClimateSpace-Report.pdf" download><button type="button" class="download-btn">Download</button></a>     
       </div>
       <div class="report">
         <div class="report-title">Environmental Report</div>
         <button class="preview-btn" onclick="window.open('../pdf/Environmental-report.pdf', '_blank')">Preview</button>
-        <button class="download-btn" data-report-id="env-report">Download</button>
+        <a href="../pdf/Environmental-Report.pdf" download><button type="button" class="download-btn">Download</button></a>
       </div>
       <div id="chart-container"></div>
     </form>
   </div>
 
-  <script src="../scripts/download-report.js"></script>
   <script src="../scripts/reportpopup.js"></script>
 </body>
 
