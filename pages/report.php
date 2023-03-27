@@ -2,10 +2,10 @@
   <link rel="stylesheet" type="text/css" href="../styles/reportpopup.css">
 </head>
 <body>
-  <button class="open-button" onclick="openForm()">Reports</button>
+<button class="my-custom-open-button" onclick="openForm()">Reports</button>
 
-  <div class="form-popup" id="myForm">
-    <form class="form-container">
+<div class="my-custom-form-popup" id="myNewForm">
+  <form class="my-custom-form">
       <button class="close-button" onclick="closeForm()">Close</button>
       <div class="report">
         <div class="report-title">H&amp;S Report</div>
