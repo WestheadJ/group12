@@ -1,0 +1,67 @@
+
+{box-sizing: border-box;}
+
+/* Button used to open the contact form - fixed at the bottom of the page */
+.my-custom-open-button {
+    background-color: #2d8069;;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+    position: absolute;
+    top: 50px;
+    right: 28px;
+    width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,.2);
+  }
+
+/* The popup form - hidden by default */
+.my-custom-form-popup {
+    display: none;
+    position: fixed;
+    border: 7px solid #f1f1f1;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,.2);
+    top: 50px;
+    right: 50px;
+  }
+
+/* Add styles to the form container */
+.my-custom-form {
+  /* max-width: 300px; */
+  padding: 10px;
+  background-color: white;
+}
+
+/* Set a style for the submit/login button */
+.my-custom-form .btn {
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+    .preview-btn, .download-btn {
+        height: 38px;
+        margin: 0px 0px 0px auto;
+        background-color: #2d8069;
+        color: #fefefe;
+        border: none;
+        border-radius: 4px;
+        width: 120px;
+      }
+
+      .close-button {
+        position: absolute;
+        top: 0px;
+        right: 10px;
+        height: 20px;
+        width: 50px;
+        background-color: #2d8069;
+        color: #fefefe;
+        border: none;
+        border-radius: 4px;
+      }
