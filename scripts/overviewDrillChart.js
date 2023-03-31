@@ -15,6 +15,7 @@ FusionCharts.ready(function() {
           "exportEnabled": "0",
           "pieborderthickness": "4",
           "pieborderColor": "#ffffff",
+          "bgColor": "#e8e8e8",
           "numberPrefix": "",
           "numberSuffix": "",
           "theme": "fusion"

@@ -16,6 +16,10 @@
     <a href="gridStack.php">
       <button class="nav-item">Dashboard</button>
     </a>
+
+    <a href="embed2Test.php">
+      <button class="nav-item">Embedding</button>
+    </a>
     <!-- <a href="editGraph.php">
       <button class="nav-item">Edit Graph</button>
     </a> -->
