@@ -16,24 +16,10 @@
   </div>
   <div id="form-container">
     <h3>Options:</h3>
-    <form action="../scripts/editConfigs.php" method ="post" id="form">
-      <!-- <input cla type="text" id="gTitle" name="graphTitle" placeholder="Your Graph Title..">
-      <input type="text" id="xAxis" name="XAxis" placeholder="Your Graph X Axis Label..">
-      <input type="text" id="yAxis" name="YAxis" placeholder="Your Graph Y Axis Label..">
-      <select id="Graph Type" name="Graph Type">
-        <option value="Bar Chart">Bar Chart</option>
-        <option value="Pie Chart">Pie Chart</option>
-        <option value="Gauge Chart">Gauge Chart</option>
-      </select> -->
-
-      <!-- https://stackoverflow.com/questions/7056669/how-to-prevent-default-event-handling-in-an-onclick-method -->
-      
-
-      
+    <form onsubmit="return save(event)" method ="post" id="form">
       <a href="dashboard.php">Cancel</a>
       <input id="submit-button" type="submit" value="Save">
-      
     </form>
-    
   </div>
 </div>
+
