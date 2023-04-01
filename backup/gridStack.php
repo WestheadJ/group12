@@ -1,7 +1,5 @@
 <?php 
-
-//require 'navbar.php';
-require 'watermanTop.php';
+require '../pages/navbar.php';
 ?>
 <!-- <script src="http://localhost/greenSpace/group12/node_modules/gridstack/dist/gridstack-h5.js"></script>
 <link href=" http://localhost/greenSpace/group12/node_modules/gridstack/dist/gridstack.min.css" rel="stylesheet" /> -->
@@ -42,14 +40,9 @@ require 'watermanTop.php';
 </div>
 
 <?php
-  require 'popout.php';
+  require '../pages/popout.php';
 ?>
 
 <script type="text/javascript">
       GridStack.init();
 </script>
-
-<?php 
-require 'watermanBottom.php';
-?>
-

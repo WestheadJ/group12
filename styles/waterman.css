@@ -9670,9 +9670,9 @@ table.report-background tbody tr {
     background-color: #245148
 }
 
-.main-nav__link--active>a {
+/* .main-nav__link--active>a {
     color: #38f902
-}
+} */
 
 .main-nav__dropdown {
     margin-top: -1px

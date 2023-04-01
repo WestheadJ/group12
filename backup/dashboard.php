@@ -1,11 +1,10 @@
 <?php 
 
-//require 'navbar.php';
-require 'watermanTop.php';
+require '../pages/navbar.php';
 ?>
 
 <?php
-require 'report.php';
+require '../pages/report.php';
 ?>
 
 <script src="../scripts/addGraphBtn.js"></script>
@@ -45,7 +44,3 @@ require 'report.php';
       </div>
     </div> -->
 </div>
-
-<?php 
-require 'watermanBottom.php';
-?>

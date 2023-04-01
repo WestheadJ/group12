@@ -2,8 +2,7 @@
   https://www.w3schools.com/howto/howto_css_responsive_form.asp  -->
 <?php 
 
-//require 'navbar.php';
-require 'watermanTop.php';
+require '../pages/navbar.php';
 ?>
  <link rel="stylesheet" href="../styles/editGraph.css">
 
@@ -60,7 +59,3 @@ require 'watermanTop.php';
 
    </div>
  </div>
-
-<?php 
-require 'watermanBottom.php';
-?>

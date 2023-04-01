@@ -3,7 +3,7 @@
 
 /* Button used to open the contact form - fixed at the bottom of the page */
 .open-button {
-  background-color: #555;
+  background-color: #35967c;
   color: white;
   padding: 16px 20px;
   border: none;
@@ -51,7 +51,7 @@
 }
 
 .form-container .timestamp {
-  background-color: rgb(32, 130, 221);
+  background-color: #35967c;
 }
 
 

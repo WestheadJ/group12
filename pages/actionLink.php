@@ -13,7 +13,7 @@
     }
 
     .demo-container a{
-        background-color: #2b50e3;
+        background-color: #35967c;
         color: white;
         padding: .35rem;
         text-decoration: none;

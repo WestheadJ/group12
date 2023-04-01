@@ -50,6 +50,7 @@ FusionCharts.ready(function() {
               "exportEnabled": "0",
               "pieborderthickness": "4",
               "pieborderColor": "#ffffff",
+              "bgColor": "#e8e8e8",
               "numberPrefix": "",
               "numberSuffix": "",
               "showLables": "0",
@@ -91,6 +92,7 @@ FusionCharts.ready(function() {
                     "exportEnabled": "0",
                     "pieborderthickness": "4",
                     "pieborderColor": "#ffffff",
+                    "bgColor": "#e8e8e8",
                     "numberPrefix": "",
                     "numberSuffix": "",
                     "rotateValues": "0"
@@ -127,6 +129,7 @@ FusionCharts.ready(function() {
                     "exportEnabled": "0",
                     "pieborderthickness": "4",
                     "pieborderColor": "#ffffff",
+                    "bgColor": "#e8e8e8",
                     "numberPrefix": "",
                     "numberSuffix": "",
                     "rotateValues": "0"
@@ -162,6 +165,7 @@ FusionCharts.ready(function() {
                     "exportEnabled": "0",
                     "pieborderthickness": "4",
                     "pieborderColor": "#ffffff",
+                    "bgColor": "#e8e8e8",
                     "numberPrefix": "",
                     "numberSuffix": "",
                     "rotateValues": "0"
@@ -197,6 +201,7 @@ FusionCharts.ready(function() {
                     "exportEnabled": "0",
                     "pieborderthickness": "4",
                     "pieborderColor": "#ffffff",
+                    "bgColor": "#e8e8e8",
                     "numberPrefix": "",
                     "numberSuffix": "",
                     "rotateValues": "0"
@@ -234,6 +239,7 @@ FusionCharts.ready(function() {
               "exportEnabled": "0",
               "pieborderthickness": "4",
               "pieborderColor": "#ffffff",
+              "bgColor": "#e8e8e8",
               "numberPrefix": "",
               "numberSuffix": "",
               "rotateValues": "0"
@@ -266,6 +272,7 @@ FusionCharts.ready(function() {
               "exportEnabled": "0",
               "pieborderthickness": "4",
               "pieborderColor": "#ffffff",
+              "bgColor": "#e8e8e8",
               "numberPrefix": "",
               "numberSuffix": "",
               "rotateValues": "0"

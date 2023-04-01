@@ -1,5 +1,5 @@
-<link rel="stylesheet" href="../styles/embed.css">
-<link rel="javascript" href="../styles/embed.js">
+<link rel="stylesheet" href="../styles/waterman.css">
+<link rel="javascript" href="../scripts/waterman.js">
 <?php require 'index.php';?>
 
 
@@ -11,7 +11,7 @@
             <!-- Your page content lives here -->
             <div class="logo-bar">
                 <div class="flex-container align-justify hide-for-medium">
-                    <a href="/">
+                    <a href="../pages/overview.php">
 
                         <img class="image" alt="Greenspace logo"
                             src="../assets/greenspace-logo-flat-7b54662802b6947761cccb212c0a2e48b501b723985204e87b0693b16c316898.svg">
@@ -28,7 +28,7 @@
                             Welcome <span>Bob Smith</span>
                         </div>
                         <div class="nav-buttons flex-container align-middle">
-                            <form class="button_to" method="post" action="/logout"><input type="hidden" name="_method"
+                            <form class="button_to" method="post" action=""><input type="hidden" name="_method"
                                     value="delete"><input class="button button--primary" type="submit"
                                     value="Log out"><input type="hidden" name="authenticity_token"
                                     value="m5jqHMT+7U4W00XX1/aAIdb+i4DZJCllU3jciEm+1qtnhwJlpbfc4xrvv2RqObllGQwIGqf3iJdq3PL0b+8UXA==">
@@ -48,7 +48,7 @@
                 <div class="grid-default fluid">
                     <div class="grid-default__aside show-for-medium">
                         <div class="left-img flex-container align-center align-middle">
-                            <a href="/"><img class="greenspace-logo"
+                            <a href="../pages/overview.php"><img class="greenspace-logo"
                                     src="../assets/greenspace-logo-bd8c3b7e64d18b0bd0993784edfa49defe89d9dd55f1bf88aecaff44989e528e.svg"
                                     alt="" width="141"></a>
                         </div>
@@ -97,7 +97,7 @@
                 <ul class="menu align-center dropdown main-nav" id="improvement" data-dropdown-menu=""
                     data-hover-delay="0" data-closing-time="0" role="menubar" data-e="k7v9v4-e">
                     <li class="main-nav__link" role="menuitem">
-                        <a href="/bulletin_board/watermangrp" class="">
+                        <a href="" class="">
                             Bulletin Board
                         </a>
                     </li>
@@ -106,7 +106,7 @@
         Improvement Tracker
           
         " data-is-click="false">
-                        <a href="/improvement_tracker/my_actions/assigned_actions/watermangrp" class="">
+                        <a href="" class="">
                             Improvement Tracker
                             <i class="fa-solid fa-angle-down"></i>
                         </a>
@@ -114,21 +114,21 @@
                             data-submenu="" role="menu" style="visibility: hidden;">
                             <li class="main-nav__dropdown__link is-submenu-item is-dropdown-submenu-item"
                                 role="menuitem">
-                                <a href="/improvement_tracker/planner/watermangrp" class="">&nbsp;Planner&nbsp;</a>
+                                <a href="" class="">&nbsp;Planner&nbsp;</a>
                             </li>
                             <li class="main-nav__dropdown__link is-submenu-item is-dropdown-submenu-item"
                                 role="menuitem">
-                                <a href="/improvement_tracker/my_actions/assigned_actions/watermangrp" class="">Manage
+                                <a href="" class="">Manage
                                     Actions</a>
                             </li>
                             <li class="main-nav__dropdown__link is-submenu-item is-dropdown-submenu-item"
                                 role="menuitem">
-                                <a href="/improvement_tracker/watermangrp/settings" class="">&nbsp;Settings&nbsp;</a>
+                                <a href="" class="">&nbsp;Settings&nbsp;</a>
                             </li>
                         </ul>
                     </li>
                     <li class="main-nav__link" role="menuitem">
-                        <a href="/my_dashboard/watermangrp" class="">
+                        <a href="" class="">
                             Performance Dashboard
                         </a>
                     </li>
@@ -137,7 +137,7 @@
         Docs
           
         " data-is-click="false">
-                        <a href="/ims_docs/watermangrp" class="">
+                        <a href="" class="">
                             Docs
                             <i class="fa-solid fa-angle-down"></i>
                         </a>
@@ -145,7 +145,7 @@
                             data-submenu="" role="menu" style="visibility: hidden;">
                             <li class="main-nav__dropdown__link is-submenu-item is-dropdown-submenu-item"
                                 role="menuitem">
-                                <a href="/ims_docs/watermangrp/categories" class="">&nbsp;Admin&nbsp;</a>
+                                <a href="" class="">&nbsp;Admin&nbsp;</a>
                             </li>
                         </ul>
                     </li>
@@ -164,7 +164,7 @@
                                 <span class="title">
                                     <div>
                                         <span class="name indent-0">
-                                            <a href="/bulletin_board/watermangrp" class="">
+                                            <a href="" class="">
                                                 Bulletin Board
                                             </a>
                                         </span>
@@ -180,7 +180,7 @@
                                     <div>
                                         <span class="name indent-0">
                                             <strong>
-                                                <a href="/improvement_tracker/my_actions/assigned_actions/watermangrp"
+                                                <a href=""
                                                     class="">
                                                     Improvement Tracker
                                                 </a>
@@ -196,7 +196,7 @@
                                         <span class="title">
                                             <div>
                                                 <span class="name indent-1">
-                                                    <a href="/improvement_tracker/planner/watermangrp"
+                                                    <a href=""
                                                         class="">&nbsp;Planner&nbsp;</a>
                                                 </span>
                                             </div>
@@ -208,7 +208,7 @@
                                         <span class="title">
                                             <div>
                                                 <span class="name indent-1">
-                                                    <a href="/improvement_tracker/my_actions/assigned_actions/watermangrp"
+                                                    <a href=""
                                                         class="">Manage Actions</a>
                                                 </span>
                                             </div>
@@ -220,7 +220,7 @@
                                         <span class="title">
                                             <div>
                                                 <span class="name indent-1">
-                                                    <a href="/improvement_tracker/watermangrp/settings"
+                                                    <a href=""
                                                         class="">&nbsp;Settings&nbsp;</a>
                                                 </span>
                                             </div>
@@ -234,7 +234,7 @@
                                 <span class="title">
                                     <div>
                                         <span class="name indent-0">
-                                            <a href="/my_dashboard/watermangrp" class="">
+                                            <a href="" class="">
                                                 Performance Dashboard
                                             </a>
                                         </span>
@@ -249,7 +249,7 @@
                                 <span class="title">
                                     <div>
                                         <span class="name indent-0">
-                                            <a href="/ims_docs/watermangrp" class="">
+                                            <a href="" class="">
                                                 Docs
                                             </a>
                                         </span>
@@ -263,7 +263,7 @@
                                         <span class="title">
                                             <div>
                                                 <span class="name indent-1">
-                                                    <a href="/ims_docs/watermangrp/categories"
+                                                    <a href=""
                                                         class="">&nbsp;Admin&nbsp;</a>
                                                 </span>
                                             </div>
@@ -310,45 +310,19 @@
                                     <div id="aspect_nav">
                                         <ul>
                                             <li class="button button--primary button-stack" id="my_dashboard"><a
-                                                    class="selected" href="../pages/embed2Test.php">Overview</a></li>
+                                                    class="selected" href="../pages/overview.php">Overview</a></li>
                                             <li class="button button--primary button-stack" id="client_dashboard"><a
-                                                    href="../pages/embed2Dash.php">Dashboard</a></li>
+                                                    href="../pages/gridStack.php">Dashboard</a></li>
+                                            <li class="button button--primary button-stack" id="old_dashboard"><a
+                                                    href="../pages/dashboard.php">Old Dashboard</a></li>        
                                         </ul>
                                     </div>
 
                                     <div class="auto-overlay-horiz-scrollbar">
-                                        <div
-                                            class="flex-container align-top small-flex-direction-column medium-flex-direction-column">
+                                        <div>
                                             
                                             <!-- Dash Content HERE! -->
 
-                                        </div>
-                                    </div>
-
-                                </main>
-                            </div>
-                        </div>
-                    </main>
-                </div>
-
-            </div>
-
-
-            <!-- Footer Partials -->
-
-            <footer class="footer">
-                <div class="footer_image flex-container align-middle align-center flex-wrap">
-                    <img alt="Waterman" class="footer_image__waterman"
-                        src="../assets/waterman_logo-7ee8a096fed1be8b185aa78b45dba1e8113980450621fbeb4e9dec2569bfb0a9.png">
-                    <img alt="Greenspace"
-                        src="../assets/footer-logo-2-e432795cbe97f2f8c66d3fef26454420fcd20cbad28bb867e11826911402d2ae.svg">
-                </div>
-            </footer>
-
-        </div>
-    </div>
-
-    <div class="fusioncharts-smartlabel-container" aria-hidden="true" role="presentation"
-        style="position: absolute; top: -9999em; white-space: nowrap; padding: 0px; width: 1px; height: 1px; overflow: hidden;">
-    </div>
-</body>
+                                            <!-- Removed stuff
+                                        
+                                            class="flex-container align-top small-flex-direction-column medium-flex-direction-column" -->
