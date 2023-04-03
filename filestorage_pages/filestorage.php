@@ -27,7 +27,7 @@ $folder_result = mysqli_query($conn, $folder_sql);
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>File Storage</title>
-  <link rel="stylesheet" href="../styles/File.css">
+  <link rel="stylesheet" href="../styles/filestorage.css">
 
 </head>
 <body>
