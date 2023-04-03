@@ -8603,7 +8603,7 @@ ul.ui-autocomplete li {
 }
 
 .auto-overlay-horiz-scrollbar {
-    overflow-x: overlay
+    /* overflow-x: overlay */
 }
 
 @media screen and (max-width: 47.9375em) {
