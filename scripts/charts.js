@@ -77,7 +77,7 @@ function renderRowsAndColumns(json){
 
       var containerLink = document.createElement("a")
 
-      containerLink.setAttribute('href','editGraph.php?graph_id='+column.graphID)  ;
+      containerLink.setAttribute('href','editGraph.php?graph_id='+column.graphType)  ;
       containerLink.innerHTML = 'Edit';
 
       containerLink.setAttribute("class","edit-graph")
@@ -140,7 +140,7 @@ function renderGraphs(json){
       }
       else{
         // Get the graphs config using JS Fetch API
-        fetch(`../configs/graphs/${column.graphID}.json`)
+        fetch(`../configs/graphs/${column.graphType}.json`)
         // Gets the data and converts it to a JSON object to work with
         .then(response=>response.json())
         // Render function
