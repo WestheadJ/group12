@@ -1,5 +1,5 @@
 <?php
-require_once("../configs/dbConnection.php");
+require("../configs/dbConnection.php");
 
 $graph_id = $_GET['graph_id'];
 $result = mysqli_query($con, "SELECT * FROM graph WHERE graph_id ='" . $graph_id . "';");
