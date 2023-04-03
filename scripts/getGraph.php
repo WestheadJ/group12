@@ -1,17 +1,14 @@
-<?php 
-  require_once("../configs/dbConnection.php");
-  //create sql statment
-  // $sql = "SELECT * FROM graph";
-  // $result = mysqli_query($con, $sql);
+<?php
+require_once("../configs/dbConnection.php");
 
-  // //prints result object
-  // print_r($result);
-  // echo("<br>");
-  $result = mysqli_query($con,"SELECT * FROM graph");
+$graph_id = $_GET['graph_id'];
+$result = mysqli_query($con, "SELECT * FROM graph WHERE graph_id ='" . $graph_id . "';");
 $to_encode = array();
-while($row = mysqli_fetch_assoc($result)) {
+
+while ($row = mysqli_fetch_assoc($result)) {
   $to_encode[] = $row;
 }
+
 echo json_encode($to_encode);
 
 ?>
