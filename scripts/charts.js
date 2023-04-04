@@ -20,7 +20,6 @@ var data = randomData();
 var value = randomValue(data);
 
 function renderRowsAndColumns(json) {
-  console.log(json)
   // Get the render container
   var renderContainer = document.getElementById('render')
 
@@ -55,8 +54,6 @@ function renderRowsAndColumns(json) {
 
       // Get the current rows div
       var insertRowEl = document.getElementById("row-id-" + rowID)
-
-
 
       var columnEl = document.createElement("div")
       columnEl.setAttribute("class", "mainpage-row-item-container")
@@ -113,47 +110,37 @@ function renderGraphs(json) {
       // Get the canvas element using it's rowID and colID
       var canvas = document.getElementById("row-id-" + rowID + "-col-id-" + colID)
 
-      // If the graphs ID is gauge get the gauge data (This is because the gauge data has the value section)
-      if (column.graphID === "gauge") {
+      console.log(column)
 
-        // Get the graphs config using JS Fetch API
-        fetch('../configs/graphs/gauge.json')
-          // Gets the data and converts it to a JSON object to work with
-          .then((response) => response.json())
-          // Render function
-          .then((gaugeData) => {
-            // Prepare the configs for the graphs
-            gaugeData.data.datasets[0].data = data
-            gaugeData.data.datasets[0].value = value
-            gaugeData.options.valueLabel.formatter = Math.round
+      fetch('../scripts/getGraph.php?graph_id=' + column.graphID)
+        .then((res) => res.json())
+        .then((responseData) => {
 
-            // DEBUG 
-            // console.log()
-            // console.log("data:",gaugeData.data.datasets[0].data=data)
-            // console.log("value",gaugeData.data.datasets[0].value = value)
+          // DEBUG:
+          // console.log(responseData)
+          graph_id = JSON.parse(responseData[0].graph_id)
+          responseData = JSON.parse(responseData[0].graph_data)
 
-            // Render the graph
-            var ctx = canvas.getContext('2d');
-            let graph = new Chart(ctx, gaugeData);
-            return graph
-          })
-      }
-      else {
-        // Get the graphs config using JS Fetch API
-        fetch(`../configs/graphs/${column.graphType}.json`)
-          // Gets the data and converts it to a JSON object to work with
-          .then(response => response.json())
-          // Render function
-          .then(graphData => {
-            // Prepare the configs for the graphs
-            graphData.data.datasets[0].data = data
+          // DEBUG:
+          // console.log(responseData)
 
-            // Render the graph
-            var ctx = canvas.getContext('2d');
-            let graph = new Chart(ctx, graphData)
-            return graph
-          })
-      }
+          let graphType = responseData.type
+
+          if (graphType === "gauge") {
+            responseData.data.datasets[0].data = data
+            responseData.data.datasets[0].value = value
+            responseData.options.valueLabel.formatter = Math.round
+          }
+          else {
+            responseData.data.datasets[0].data = data
+          }
+
+          var ctx = canvas.getContext('2d')
+          graph = new Chart(ctx, responseData)
+          return graph
+        })
+
+
 
     })
   })
