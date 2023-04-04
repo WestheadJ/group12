@@ -1,1 +1,0 @@
-{"data": {"labels": ["Green", "Amber", "Red"], "datasets": [{"data": "data", "label": "Chart", "borderWidth": 1, "backgroundColor": ["green", "orange", "red"]}]}, "type": "bar", "options": {"scales": {"yAxes": [{"ticks": {"beginAtZero": true}}]}}}
