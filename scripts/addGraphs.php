@@ -4,9 +4,8 @@
 require("../configs/dbConnection.php");
 
 // UNCOMMENT AND CHANGE THESE VALUES 
-// $json = file_get_contents("../configs/graphs/example.json");
-// $graph_id = example graph id;
-
+$json = file_get_contents("../configs/graphs/gauge.json");
+$graph_id = 4;
 $query = $con->prepare("INSERT INTO graph(graph_id,graph_data) VALUES (?,?)");
 $query->bind_param("is", $graph_id, $json);
 $query->execute();

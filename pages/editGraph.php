@@ -23,7 +23,7 @@ require_once("../configs/dbConnection.php");
   <div id="form-container">
     <h3>Options:</h3>
     <form onsubmit="return save(event)" method="post" id="form">
-      <input type="text" id="graph-title" name="graph-title" value="Chart" oninput="updatePreview()">
+      <input type="text" id="graph-title" name="graph-title" oninput="updateTitle()">
       <a href="dashboard.php">Cancel</a>
       <input id="submit-button" type="submit" value="Save">
     </form>

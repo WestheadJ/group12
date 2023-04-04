@@ -42,14 +42,25 @@ function getGraphData() {
       let canvas = document.getElementById("edit-bar-chart")
       var ctx = canvas.getContext('2d')
       graph = new Chart(ctx, responseData)
+
+      document.getElementById('graph-title').setAttribute('value', responseData.options.title.text)
       return graph
     })
 }
 
 // https://stackoverflow.com/questions/7056669/how-to-prevent-default-event-handling-in-an-onclick-method
-function updatePreview() {
+function updateTitle() {
   let currentTitle = document.getElementById('graph-title').value
-  graph.data.datasets[0].label = currentTitle
+  graph.options.title.text = currentTitle
   graph.update()
 }
 
+function save(e) {
+  e.preventDefault()
+  console.log("Saving")
+  fetch(`../scripts/saveGraph.php?graph_id=${graph_id}&json=${graph}`)
+    .then(res => res.json())
+    .then((res) => {
+      console.log(res)
+    })
+}
