@@ -49,7 +49,11 @@ function getGraphData() {
 // https://stackoverflow.com/questions/7056669/how-to-prevent-default-event-handling-in-an-onclick-method
 function updatePreview() {
   let currentTitle = document.getElementById('graph-title').value
-  graph.data.datasets[0].label = currentTitle
+  graph.options.title.text = currentTitle
   graph.update()
 }
 
+function save(e) {
+  e.preventDefault();
+  fetch("../scripts/saveGraph.php").then(res => console.log(res))
+}
