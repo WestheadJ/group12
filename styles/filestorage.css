@@ -19,46 +19,27 @@
 }
 
 .create-folder-input {
-    background-color: #04AA6D;
-    padding: 12px 18px !important;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    width: 170px !important; 
     margin-right: 16px;
     margin-top: 20px;
 }
 
 .create-folder-input::placeholder {
     color: white; 
-    font-size: 16px;
+    font-size: 14px;
   }
 
   .create-folder-btn {
-    background-color: #04AA6D!important;
-    border: none;
-    padding: 12px 18px !important;
-    text-align: center;
-    font-size: 16px;
     float: right;
     margin-right: 25px;
     margin-top: 20px;
 }
 
 .file-input input[type="file"] {
-    background-color: #04AA6D;
     color: white;
-    padding: 12px 18px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-    margin-top: 10px;
-    margin-right: 10px;
     float: left;
     margin-top: 20px;
     margin-left: 20px;
-    width: 220px;
+    height: 15px; 
 } 
 
   .files-link{
@@ -75,41 +56,17 @@
     margin-left: 34px;
   }
   
-  
-  #container {
-    width: 400px;
-    height: 400px;
-    background-color: black;
-    margin: 0 auto;
-  }
-  
-  #button-container {
-    display: flex;
-    justify-content: flex-start;
-    margin-top: 20px;
-    margin-left: 600px;
-  }
-  
   .folder-select select {
-    background-color: #04AA6D;
     color: white;
-    padding: 12px 18px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
     float: left;
     margin-top: 20px;
     margin-left: 20px;
-    width: 150px; 
-    height: 48px; 
-    font-size: 16px;
+    height: 39px; 
 }
   
   .submit-button {
     margin-left: 20px;
     vertical-align: top;
-    font-size: 16px !important;
-    height: 48px; 
   }
 
   .file-container {
@@ -121,4 +78,14 @@
     margin-left: auto;
     margin-right: auto;
     border-radius: 4px !important;
+  }
+
+  .create-folder-input, .create-folder-btn, .submit-button, .folder-select select,.file-input input[type="file"] {
+    background-color: #04AA6D!important;
+    padding: 12px 18px !important;
+    border: none!important;
+    border-radius: 4px!important;
+    cursor: pointer!important;
+    width: 170px !important;
+    font-size: 14px!important;
   }

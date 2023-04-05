@@ -1,4 +1,3 @@
-
 <?php
 include("../connections/config.php");
 include("../pages/navbar.php");

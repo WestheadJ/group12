@@ -22,7 +22,7 @@ $file_result = mysqli_query($conn, $file_sql);
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>View Files</title>
-  <link rel="stylesheet" href="../styles/File.css">
+  <link rel="stylesheet" href="../styles/filestorage.css">
 </head>
 <body>
 <h1 class="file-header">Files in <?php echo $folder_name; ?></h1>
