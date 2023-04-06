@@ -110,7 +110,7 @@ function renderGraphs(json) {
       // Get the canvas element using it's rowID and colID
       var canvas = document.getElementById("row-id-" + rowID + "-col-id-" + colID)
 
-      console.log(column)
+      // console.log(column)
 
       fetch('../scripts/getGraph.php?graph_id=' + column.graphID)
         .then((res) => res.json())
