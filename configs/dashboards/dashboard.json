@@ -1,65 +1,68 @@
 {
-    "userID":"watermangrp",
-    "configs":
-    [
+    "userID": "watermangrp",
+    "configs": [
         {
-            "rowID":1,
-            "columns":
-            [
+            "rowID": 1,
+            "columns": [
                 {
-                    "colID":1,
-                    "graphID":"bar"
+                    "colID": 1,
+                    "graphID": 1,
+                    "graphType": "bar"
                 },
                 {
-                    "colID":2,
-                    "graphID":"pie"
-
+                    "colID": 2,
+                    "graphID": 2,
+                    "graphType": "pie"
                 }
             ]
         },
         {
-            "rowID":2,
-            "columns":
-            [
+            "rowID": 2,
+            "columns": [
                 {
-                    "colID":1,
-                    "graphID":"gauge"
+                    "colID": 1,
+                    "graphID": 4,
+                    "graphType": "gauge"
                 },
                 {
-                    "colID":2,
-                    "graphID":"bar"
+                    "colID": 2,
+                    "graphID": 1,
+                    "graphType": "bar"
                 },
                 {
-                    "colID":3,
-                    "graphID":"line"
+                    "colID": 3,
+                    "graphID": 3,
+                    "graphType": "line"
                 }
             ]
         },
         {
-            "rowID":3,
-            "columns":
-            [
+            "rowID": 3,
+            "columns": [
                 {
-                    "colID":1,
-                    "graphID":"gauge"
+                    "colID": 1,
+                    "graphID": 4,
+                    "graphType": "gauge"
                 },
                 {
-                    "colID":2,
-                    "graphID":"bar"
+                    "colID": 2,
+                    "graphID": 1,
+                    "graphType": "bar"
                 },
                 {
-                    "colID":3,
-                    "graphID":"pie"
+                    "colID": 3,
+                    "graphID": 2,
+                    "graphType": "pie"
                 }
             ]
         },
         {
-            "rowID":4,
-            "columns":
-            [
+            "rowID": 4,
+            "columns": [
                 {
-                    "colID":1,
-                    "graphID":"gauge"
+                    "colID": 1,
+                    "graphID": 4,
+                    "graphType": "gauge"
                 }
             ]
         }

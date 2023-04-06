@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="../styles/waterman.css">
 <link rel="javascript" href="../scripts/waterman.js">
-<?php require 'index.php';?>
+<?php require 'index.php'; ?>
 
 
 <body id="main" data-new-gr-c-s-check-loaded="14.1028.0" data-gr-ext-installed="">
@@ -180,8 +180,7 @@
                                     <div>
                                         <span class="name indent-0">
                                             <strong>
-                                                <a href=""
-                                                    class="">
+                                                <a href="" class="">
                                                     Improvement Tracker
                                                 </a>
                                             </strong>
@@ -196,8 +195,7 @@
                                         <span class="title">
                                             <div>
                                                 <span class="name indent-1">
-                                                    <a href=""
-                                                        class="">&nbsp;Planner&nbsp;</a>
+                                                    <a href="" class="">&nbsp;Planner&nbsp;</a>
                                                 </span>
                                             </div>
                                         </span>
@@ -208,8 +206,7 @@
                                         <span class="title">
                                             <div>
                                                 <span class="name indent-1">
-                                                    <a href=""
-                                                        class="">Manage Actions</a>
+                                                    <a href="" class="">Manage Actions</a>
                                                 </span>
                                             </div>
                                         </span>
@@ -220,8 +217,7 @@
                                         <span class="title">
                                             <div>
                                                 <span class="name indent-1">
-                                                    <a href=""
-                                                        class="">&nbsp;Settings&nbsp;</a>
+                                                    <a href="" class="">&nbsp;Settings&nbsp;</a>
                                                 </span>
                                             </div>
                                         </span>
@@ -263,8 +259,7 @@
                                         <span class="title">
                                             <div>
                                                 <span class="name indent-1">
-                                                    <a href=""
-                                                        class="">&nbsp;Admin&nbsp;</a>
+                                                    <a href="" class="">&nbsp;Admin&nbsp;</a>
                                                 </span>
                                             </div>
                                         </span>
@@ -314,13 +309,13 @@
                                             <li class="button button--primary button-stack" id="client_dashboard"><a
                                                     href="../pages/gridStack.php">Dashboard</a></li>
                                             <li class="button button--primary button-stack" id="old_dashboard"><a
-                                                    href="../pages/dashboard.php">Old Dashboard</a></li>        
+                                                    href="../pages/dashboard.php">UPDATED Dashboard</a></li>
                                         </ul>
                                     </div>
 
                                     <div class="auto-overlay-horiz-scrollbar">
                                         <div>
-                                            
+
                                             <!-- Dash Content HERE! -->
 
                                             <!-- Removed stuff
