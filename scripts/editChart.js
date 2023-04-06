@@ -39,6 +39,8 @@ function getGraphData() {
         responseData.data.datasets[0].data = randomDataVar
       }
 
+      document.getElementById("graph-title").value = responseData.options.title.text
+
       let canvas = document.getElementById("edit-bar-chart")
       var ctx = canvas.getContext('2d')
       graph = new Chart(ctx, responseData)
@@ -55,5 +57,25 @@ function updatePreview() {
 
 function save(e) {
   e.preventDefault();
-  fetch("../scripts/saveGraph.php").then(res => console.log(res))
+  return fetch('../scripts/getGraph.php?graph_id=' + graph_id)
+    .then((response) => response.json())
+    .then((responseData) => {
+      let json = JSON.parse(responseData[0].graph_data)
+      let title = document.getElementById('graph-title').value
+      json.options.title.text = title
+      fetch('../scripts/saveGraph.php?graph_id=' + graph_id, {
+        method: "POST",
+        body: JSON.stringify(json)
+      })
+        .then(res => res.json())
+        .then(res => {
+          console.log(res)
+          if (JSON.parse(res).status === 200) {
+            return window.location.replace("dashboard.php")
+          }
+          else {
+            return alert("There was an error updating")
+          }
+        })
+    })
 }
