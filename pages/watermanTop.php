@@ -7,7 +7,6 @@
     <div>
         <!-- Header Section -->
         <div>
-
             <!-- Your page content lives here -->
             <div class="logo-bar">
                 <div class="flex-container align-justify hide-for-medium">
@@ -18,9 +17,7 @@
                     </a>
                 </div>
             </div>
-
             <!-- Header Partial -->
-
             <header class="header">
                 <div class="grid-container fluid">
                     <nav class="flex-container align-justify align-middle">
@@ -28,21 +25,16 @@
                             Welcome <span>Bob Smith</span>
                         </div>
                         <div class="nav-buttons flex-container align-middle">
-                            <form class="button_to" method="post" action=""><input type="hidden" name="_method"
-                                    value="delete"><input class="button button--primary" type="submit"
-                                    value="Log out"><input type="hidden" name="authenticity_token"
+                            <form class="button_to" method="post" action="">
+                                <input type="hidden" name="_method" value="delete">
+                                <input class="button button--primary" type="submit" value="Log out">
+                                <input type="hidden" name="authenticity_token"
                                     value="m5jqHMT+7U4W00XX1/aAIdb+i4DZJCllU3jciEm+1qtnhwJlpbfc4xrvv2RqObllGQwIGqf3iJdq3PL0b+8UXA==">
                             </form>
                         </div>
                     </nav>
                 </div>
             </header>
-
-
-
-
-
-
             <!-- Hero Section -->
             <section class="hero">
                 <div class="grid-default fluid">
@@ -53,7 +45,6 @@
                                     alt="" width="141"></a>
                         </div>
                     </div>
-
                     <div class="grid-default__main">
                         <div class="right-img">
                             <img class=""
@@ -61,7 +52,6 @@
                                 alt="">
                         </div>
                     </div>
-
                     <!-- Hero Buttons Link -->
                     <div class="hero-buttons">
                         <div class="hero-title show-for-medium">
@@ -84,14 +74,8 @@
                             </ul>
                         </div>
                     </div>
-
                 </div>
             </section>
-
-
-
-
-
             <!-- Main Nav Section -->
             <section class="main-nav__section show-for-medium">
                 <ul class="menu align-center dropdown main-nav" id="improvement" data-dropdown-menu=""
@@ -102,10 +86,7 @@
                         </a>
                     </li>
                     <li class="main-nav__link main-nav__link--active is-dropdown-submenu-parent opens-right"
-                        role="menuitem" aria-haspopup="true" aria-label="
-        Improvement Tracker
-          
-        " data-is-click="false">
+                        role="menuitem" aria-haspopup="true" aria-label="Improvement Tracker" data-is-click="false">
                         <a href="" class="">
                             Improvement Tracker
                             <i class="fa-solid fa-angle-down"></i>
@@ -133,14 +114,8 @@
                         </a>
                     </li>
                     <li class="main-nav__link  is-dropdown-submenu-parent opens-right" role="menuitem"
-                        aria-haspopup="true" aria-label="
-        Docs
-          
-        " data-is-click="false">
-                        <a href="" class="">
-                            Docs
-                            <i class="fa-solid fa-angle-down"></i>
-                        </a>
+                        aria-haspopup="true" aria-label="Docs" data-is-click="false">
+                        <a href="" class="">Docs<i class="fa-solid fa-angle-down"></i></a>
                         <ul class="menu main-nav__dropdown submenu is-dropdown-submenu vertical first-sub"
                             data-submenu="" role="menu" style="visibility: hidden;">
                             <li class="main-nav__dropdown__link is-submenu-item is-dropdown-submenu-item"
@@ -151,10 +126,6 @@
                     </li>
                 </ul>
             </section>
-
-
-
-
             <!-- Mobile View Section -->
             <section class="show-for-small-only">
                 <div id="mobile-menu">
@@ -163,40 +134,28 @@
                             <div>
                                 <span class="title">
                                     <div>
-                                        <span class="name indent-0">
-                                            <a href="" class="">
-                                                Bulletin Board
-                                            </a>
-                                        </span>
+                                        <span class="name indent-0"><a href="" class="">Bulletin Board</a></span>
                                     </div>
                                 </span>
                             </div>
-
                         </li>
                         <li class="folder closed">
                             <div>
                                 <a class="mobile-toggler toggler closed">»</a>
                                 <span class="title">
                                     <div>
-                                        <span class="name indent-0">
-                                            <strong>
-                                                <a href="" class="">
-                                                    Improvement Tracker
-                                                </a>
-                                            </strong>
-                                        </span>
+                                        <span class="name indent-0"><strong><a href="" class="">Improvement
+                                                    Tracker</a></strong></span>
                                     </div>
                                 </span>
                             </div>
-
                             <ul>
                                 <li>
                                     <div>
                                         <span class="title">
                                             <div>
-                                                <span class="name indent-1">
-                                                    <a href="" class="">&nbsp;Planner&nbsp;</a>
-                                                </span>
+                                                <span class="name indent-1"><a href=""
+                                                        class="">&nbsp;Planner&nbsp;</a></span>
                                             </div>
                                         </span>
                                     </div>
@@ -270,11 +229,6 @@
                     </ul>
                 </div>
             </section>
-
-
-
-
-
             <!-- Main Section -->
 
             <div class="grid-default grid-default--contents">
@@ -292,16 +246,11 @@
                                     </div>
                                 </div>
                             </aside>
-
-
-
-
                             <div class="cell medium-auto grid-default__main full-width" id="main-content">
                                 <main class="content-container">
                                     <h1 class="page-title"></h1>
                                     <h1 class="legal-reg__title">My Performance Dashboard</h1>
                                     <h2 class="page-subtitle"></h2>
-
                                     <div id="aspect_nav">
                                         <ul>
                                             <li class="button button--primary button-stack" id="my_dashboard"><a
@@ -312,12 +261,4 @@
                                                     href="../pages/dashboard.php">UPDATED Dashboard</a></li>
                                         </ul>
                                     </div>
-
-                                    <div class="auto-overlay-horiz-scrollbar">
-                                        <div>
-
-                                            <!-- Dash Content HERE! -->
-
-                                            <!-- Removed stuff
-                                        
-                                            class="flex-container align-top small-flex-direction-column medium-flex-direction-column" -->
+                                    <div class="auto-overlay-horiz-scrollbar"></div>

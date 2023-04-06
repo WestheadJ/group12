@@ -34,7 +34,7 @@ require 'watermanTop.php';
     <div class="item1">
       <h1>Edit Graph OR Chart</h1>
 
-      <script src="../scripts/editChart.js"></script>
+      <script src="../scripts/editChart.js"></scrip>
       <div class="graphItem">
         <canvas id="editBarChart"></canvas>
       </div>

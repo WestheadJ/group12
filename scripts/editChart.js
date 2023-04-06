@@ -12,6 +12,22 @@ window.onload = () => {
   }
 }
 
+var randomScalingFactor = function () {
+  return Math.round(Math.random() * 100);
+};
+
+var randomData = function () {
+  return [
+    randomScalingFactor(),
+    randomScalingFactor(),
+    randomScalingFactor()
+  ];
+};
+
+var randomValue = function (data) {
+  return Math.max.apply(null, data) * Math.random();
+};
+
 var randomDataVar = randomData();
 var randomValueVar = randomValue(randomDataVar);
 
