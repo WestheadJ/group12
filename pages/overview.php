@@ -1,13 +1,12 @@
 <?php 
-require 'navbar.php'; 
-?>
 
-<div id="mainpage">
-    <div class="overview-row">
-        <div class="overview-row-item">
+//require 'navbar.php';
+require 'watermanTop.php';
+?>
             <div id="chart-container">Overview chart will render here</div>
-                <script src="../scripts/overviewPieChart.js"></script>
-            </div>
-        </div>
-    </div>
-</div>
+                <script src="../scripts/overviewDrillChart.js"></script>
+
+
+<?php 
+require 'watermanBottom.php';
+?>

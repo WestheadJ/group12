@@ -1,8 +1,7 @@
-<!-- Reference link: 
-  https://www.w3schools.com/howto/howto_css_responsive_form.asp  -->
-
 <?php
+require 'watermanTop.php';
 require 'navbar.php';
+
 ?>
 
 <script src="../scripts/editChart.js"></script>
@@ -29,3 +28,7 @@ require_once("../configs/dbConnection.php");
     </form>
   </div>
 </div>
+
+<?php 
+require 'watermanBottom.php';
+?>
