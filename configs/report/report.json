@@ -1,0 +1,89 @@
+{
+  "charts": [
+    {
+      "chartTitle": "Chart Title 1",
+      "tableData": [
+        {
+          "category": "Legal Register",
+          "statusColor": "#FF0000"
+        },
+        {
+          "category": "Compliance Auditor",
+          "statusColor": "#00FF00"
+        },
+        {
+          "category": "Risk Register",
+          "statusColor": "#00FF00"
+        }
+      ]
+    },
+    {
+      "chartTitle": "Chart Title 2",
+      "tableData": [
+        {
+          "category": "Legal Register",
+          "statusColor": "#00FF00"
+        },
+        {
+          "category": "Compliance Auditor",
+          "statusColor": "#00FF00"
+        },
+        {
+          "category": "Risk Register",
+          "statusColor": "#FFFF00"
+        }
+      ]
+    },
+    {
+      "chartTitle": "Chart Title 3",
+      "tableData": [
+        {
+          "category": "Legal Register",
+          "statusColor": "#FFFF00"
+        },
+        {
+          "category": "Compliance Auditor",
+          "statusColor": "#FF0000"
+        },
+        {
+          "category": "Risk Register",
+          "statusColor": "#FFFF00"
+        }
+      ]
+    },
+    {
+      "chartTitle": "Chart Title 4",
+      "tableData": [
+        {
+          "category": "Legal Register",
+          "statusColor": "#00FF00"
+        },
+        {
+          "category": "Compliance Auditor",
+          "statusColor": "#FFFF00"
+        },
+        {
+          "category": "Risk Register",
+          "statusColor": "#FFFF00"
+        }
+      ]
+    },
+    {
+      "chartTitle": "Chart Title 5",
+      "tableData": [
+        {
+          "category": "Legal Register",
+          "statusColor": "#FF0000"
+        },
+        {
+          "category": "Compliance Auditor",
+          "statusColor": "#FFFF00"
+        },
+        {
+          "category": "Risk Register",
+          "statusColor": "#FFFF00"
+        }
+      ]
+    }
+  ]
+}
