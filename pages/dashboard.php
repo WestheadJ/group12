@@ -1,6 +1,6 @@
 <?php
 require 'watermanTop.php';
-require 'report.php';
+
 ?>
 
 <script src="../scripts/charts.js"></script>
