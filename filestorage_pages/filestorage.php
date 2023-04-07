@@ -6,10 +6,8 @@ include("../pages/navbar.php");
 if(isset($_POST['create_folder'])) {
   $folder_name = $_POST['folder_name'];
   
- 
- 
   if(!empty($folder_name)) {
-    $sql = "INSERT INTO folders (name) VALUES ('$folder_name')";
+    $sql = "INSERT INTO folders (folder_name) VALUES ('$folder_name')";
     mysqli_query($conn, $sql);
   }
 }
@@ -48,7 +46,7 @@ $folder_result = mysqli_query($conn, $folder_sql);
             <select name="folder_id">
                 <option value="" disabled selected>Select folder</option>
                 <?php while($row = mysqli_fetch_assoc($folder_result)) { ?>
-                    <option value="<?php echo $row['id']; ?>"><?php echo $row['name']; ?></option>
+                    <option value="<?php echo $row['folder_id']; ?>"><?php echo $row['folder_name']; ?></option>
                 <?php } ?>
             </select>
         </div>
@@ -73,7 +71,7 @@ $folder_result = mysqli_query($conn, $folder_sql);
     //https://stackoverflow.com/questions/18929178/move-uploaded-file-function-is-not-working
     //The source I used to help me move the uploaded files into the uploads folder. 
 
-    $sql = "INSERT INTO uploads (name, folder_id) VALUES ('$name', '$folder_id')";
+    $sql = "INSERT INTO files (file_name, folder_id) VALUES ('$name', '$folder_id')";
     mysqli_query($conn, $sql);
   }
   include("view_folders.php");

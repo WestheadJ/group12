@@ -2,16 +2,14 @@
 include("../connections/config.php");
 include("../pages/navbar.php");
 
-
-
 $folder_id = $_GET['folder_id'];
 
-$folder_sql = "SELECT name FROM folders WHERE id = $folder_id";
+$folder_sql = "SELECT folder_name FROM folders WHERE folder_id = $folder_id";
 $folder_result = mysqli_query($conn, $folder_sql);
 $folder_row = mysqli_fetch_assoc($folder_result);
-$folder_name = $folder_row['name'];
+$folder_name = $folder_row['folder_name'];
 
-$file_sql = "SELECT * FROM uploads WHERE folder_id = $folder_id";
+$file_sql = "SELECT * FROM files WHERE folder_id = $folder_id";
 $file_result = mysqli_query($conn, $file_sql);
 ?>
 
@@ -28,10 +26,8 @@ $file_result = mysqli_query($conn, $file_sql);
 <h1 class="file-header">Files in <?php echo $folder_name; ?></h1>
     <?php while($file_row = mysqli_fetch_assoc($file_result)) { ?>
       <div class="file-container">
-      <p><a href="../uploads/<?php echo $file_row['name']; ?>" class="files-link"><?php echo $file_row['name']; ?></a></p>
+      <p><a href="../uploads/<?php echo $file_row['file_name']; ?>" class="files-link"><?php echo $file_row['file_name']; ?></a></p>
       </div>
     <?php } ?>
 </body>
 </html>
-
-
