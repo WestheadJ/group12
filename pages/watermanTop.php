@@ -259,6 +259,8 @@
                                                     href="../pages/gridStack.php">Dashboard</a></li>
                                             <li class="button button--primary button-stack" id="old_dashboard"><a
                                                     href="../pages/dashboard.php">UPDATED Dashboard</a></li>
+                                            <li class="button button--primary button-stack" id="old_dashboard"><a
+                                                    href="../filestorage_pages/filestorage.php">File storage</a></li>
                                         </ul>
                                     </div>
                                     <div class="auto-overlay-horiz-scrollbar"></div>

@@ -1,0 +1,101 @@
+.folder-container{
+    background-color: white;
+    padding: 10px;
+    border: 3px solid  #04AA6D;
+    max-width: 200px;
+    min-height: 70px;
+    margin-left: 20px; 
+    border-radius: 4px;
+    position: relative;
+}
+
+.folders-heading{
+    margin-left: 20px; 
+    margin-top: 120px;
+}  
+
+.folder-link {
+    color: black;
+    font-size: 25px;
+}
+
+.create-folder-input {
+    margin-right: 16px;
+    margin-top: 20px;
+}
+
+.create-folder-input::placeholder {
+    color: white; 
+    font-size: 14px;
+  }
+
+  .create-folder-btn {
+    float: right;
+    margin-right: 25px;
+    margin-top: 20px;
+}
+
+.file-input input[type="file"] {
+    color: white;
+    float: left;
+    margin-top: 20px;
+    margin-left: 20px;
+    height: 15px; 
+} 
+
+  .files-link{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .file-header {
+    font-family: "IBM Plex Sans", sans-serif;
+    color: black;
+    font-weight: normal;
+    margin-left: 34px;
+  }
+  
+  .folder-select select {
+    color: white;
+    float: left;
+    margin-top: 20px;
+    margin-left: 20px;
+    height: 39px; 
+}
+  
+  .submit-button {
+    margin-left: 20px;
+    vertical-align: top;
+  }
+
+  .file-container {
+    border: 3px solid  #04AA6D;;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: white;
+    max-width: 1290px; 
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 4px !important;
+  }
+
+  .create-folder-input, .create-folder-btn, .submit-button, .folder-select select,.file-input input[type="file"] {
+    background-color: #04AA6D!important;
+    padding: 12px 18px !important;
+    border: none!important;
+    border-radius: 4px!important;
+    cursor: pointer!important;
+    width: 170px !important;
+    font-size: 14px!important;
+  }
+
+  .delete-button {
+    font-size: 10px; 
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    height: 9px;
+    line-height: 10px;
+  }
