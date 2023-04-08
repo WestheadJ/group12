@@ -26,6 +26,22 @@ a {
 a.edit-graph{
   color: black;
   display: flex;
+  display: none;
+}
+
+a.edit-graph:hover{
+  text-decoration: underline;
+}
+
+.configure-btn{
+  background-color: #35967c;
+  color: white;
+  padding: .75em;
+  margin-left: 2%;
+}
+
+.configure-btn:hover{
+  box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.2);
 }
 
 
