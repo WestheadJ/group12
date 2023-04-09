@@ -31,7 +31,7 @@ function renderRowsAndColumns(json) {
     // Gets the rowID (Converts to string as in the JSON it is an int)
     var rowID = row.rowID
 
-    // Ready a div to become a row
+  // Ready a div to become a row
     var rowEl = document.createElement("div")
 
     // Give it a class and an id
