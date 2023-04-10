@@ -20,7 +20,7 @@ var randomValue = function (data) {
 var data = randomData();
 var value = randomValue(data);
 
-function renderGridstack(json) {
+function render(json) {
   // Get the render container
   var renderContainer = document.getElementById('render')
 
@@ -120,47 +120,6 @@ function renderGridstack(json) {
 
   })
 }
-
-function renderContent(json) {
-  var dashboardConfigs = JSON.parse(json[0].dashboard_data).configs
-  console.log(dashboardConfigs)
-}
-
-function renderGraphs(json) {
-  // *For each row* in the dashboard ->  
-  json.configs.forEach(row => {
-
-    // DEBUG:
-    // console.log("This is row:",row.rowID.toString())
-
-    // Get the rowID
-    var rowID = row.rowID.toString()
-
-    // *For each column* in the row ->
-    row.columns.forEach(column => {
-
-      // DEBUGS
-      // console.log(column)
-      // console.log("This is column",column.colID.toString(),"of row",rowID )
-      // console.log("GraphID =",column.graphID)
-
-      // Get the column ID
-      var colID = column.colID.toString()
-
-      // Get the canvas element using it's rowID and colID
-      var canvas = document.getElementById("row-id-" + rowID + "-col-id-" + colID)
-
-      // console.log(column)
-
-
-
-
-
-    })
-  })
-}
-
-
 window.onload = () => {
 
   // --- Create the layout of the dashboard ---
@@ -172,8 +131,7 @@ window.onload = () => {
     .then(response => response.json())
     // Render function
     .then((json) => {
-      renderGridstack(json)
-      renderContent(json)
+      render(json)
       GridStack.init();
     })
 
