@@ -254,7 +254,7 @@
                                     <div id="aspect_nav">
                                         <ul>
                                             <li class="button button--primary button-stack" id="my_dashboard"><a
-                                                    class="selected" href="../pages/overview.php">Overview</a></li>
+                                                    class="" href="../pages/overview.php">Overview</a></li>
                                             <li class="button button--primary button-stack" id="client_dashboard"><a
                                                     href="../pages/gridStack.php">Dashboard</a></li>
                                             <li class="button button--primary button-stack" id="old_dashboard"><a
@@ -262,5 +262,6 @@
                                             <li class="button button--primary button-stack" id="old_dashboard"><a
                                                     href="../filestorage_pages/filestorage.php">File storage</a></li>
                                         </ul>
+                                        <script src="../scripts/currentPage.js"></script>
                                     </div>
                                     <div class="auto-overlay-horiz-scrollbar"></div>
