@@ -40,8 +40,11 @@ function render(json) {
     gridItem.setAttribute("id", widget.widget_id)
     gridItem.setAttribute("gs-h", widget.gs_h)
     gridItem.setAttribute("gs-w", widget.gs_w)
-    gridItem.style.border = "solid black 1px"
-    gridItem.style.backgroundColor = "gray"
+
+    // DEBUG
+    // gridItem.style.border = "solid black 1px"
+    // gridItem.style.backgroundColor = "gray"
+
     if (!widget.gs_x) {
       // LEFT EMPTY AS NEEDS TO PASS
 
