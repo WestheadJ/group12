@@ -2,53 +2,53 @@
     "userID": "watermangrp",
     "configs": [
         {
-            "widgetID": 1,
-            "gs-w": 2,
-            "gs-h": 2,
-            "gs-x": 0,
-            "gs-y": 5,
+            "widget_id": 1,
+            "gs_w": 2,
+            "gs_h": 2,
+            "gs_x": 0,
+            "gs_y": 5,
             "content": {
                 "comment": "test comment"
             }
         },
         {
-            "widgetID": 2,
-            "gs-w": 5,
-            "gs-h": 2,
-            "gs-x": 0,
-            "gs-y": 0,
+            "widget_id": 2,
+            "gs_w": 5,
+            "gs_h": 2,
+            "gs_x": 0,
+            "gs_y": 0,
             "content": {
                 "title": "test title"
             }
         },
         {
-            "widgetID": 3,
-            "gs-w": 3,
-            "gs-h": 3,
+            "widget_id": 3,
+            "gs_w": 3,
+            "gs_h": 3,
             "content": {
                 "graphId": 1
             }
         },
         {
-            "widgetID": 4,
-            "gs-w": 3,
-            "gs-h": 3,
+            "widget_id": 4,
+            "gs_w": 3,
+            "gs_h": 3,
             "content": {
                 "graphId": 2
             }
         },
         {
-            "widgetID": 5,
-            "gs-w": 3,
-            "gs-h": 3,
+            "widget_id": 5,
+            "gs_w": 3,
+            "gs_h": 3,
             "content": {
                 "graphId": 3
             }
         },
         {
-            "widgetID": 4,
-            "gs-w": 3,
-            "gs-h": 3,
+            "widget_id": 4,
+            "gs_w": 3,
+            "gs_h": 3,
             "content": {
                 "graphId": 4
             }

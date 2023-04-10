@@ -17,6 +17,8 @@
   <script src="https://unpkg.com/chartjs-gauge@0.3.0/dist/chartjs-gauge.js"></script>
   <script src="https://cdn.fusioncharts.com/fusioncharts/latest/fusioncharts.js"></script>
   <script src="https://cdn.fusioncharts.com/fusioncharts/latest/themes/fusioncharts.theme.fusion.js"></script>
+  <script src="../node_modules/gridstack/dist/gridstack-all.js"></script>
+  <link href="../node_modules/gridstack/dist/gridstack.min.css" rel="stylesheet" />
 
 </head>
 

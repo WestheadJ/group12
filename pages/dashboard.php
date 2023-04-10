@@ -10,6 +10,7 @@ require 'watermanTop.php';
   <div class="toolbar">
     <button class="configure-btn" onclick="editToggle()">Configure</button>
   </div>
+  <!-- GRIDSTACK RENDER DIV -->
   <div id="render" class="grid-stack">
 
   </div>
@@ -17,6 +18,8 @@ require 'watermanTop.php';
     <button onclick="buttonClickityClick()">+</button>
   </div> -->
 </div>
+
+
 
 <?php
 require 'watermanBottom.php';

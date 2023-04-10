@@ -1,5 +1,6 @@
 // https://www.freecodecamp.org/news/how-to-read-json-file-in-javascript/
 
+
 var randomScalingFactor = function () {
   return Math.round(Math.random() * 100);
 };
@@ -25,8 +26,35 @@ function renderHTML(json) {
   var dashboardConfigs = JSON.parse(json[0].dashboard_data).configs
   console.log(dashboardConfigs)
 
-  dashboardConfigs.forEach(item => {
-    console.log(item)
+  dashboardConfigs.forEach(widget => {
+    console.log(widget)
+    console.log(widget.gs_h)
+
+    let gridItem = document.createElement('div')
+    gridItem.setAttribute('class', 'grid-stack-item')
+    gridItem.setAttribute("widget-id", widget.widget_id)
+    gridItem.setAttribute("gs-h", widget.gs_h)
+    gridItem.setAttribute("gs-w", widget.gs_w)
+    gridItem.style.border = "solid black 1px"
+    gridItem.style.backgroundColor = "gray"
+    if (!widget.gs_x) {
+
+    }
+    else {
+      gridItem.setAttribute("gs-x", widget.gs_x)
+
+    }
+
+    if (!widget.gs_y) {
+    }
+    else {
+      gridItem.setAttribute("gs-y", widget.gs_y)
+
+    }
+
+    renderContainer.appendChild(gridItem)
+
+
 
   })
 
@@ -164,9 +192,8 @@ window.onload = () => {
     // Render function
     .then((json) => {
       renderHTML(json)
+      GridStack.init();
     })
-
-  var grid = GridStack.init();
 
 
   // // --- Add the graphs to the dashboard --- 
