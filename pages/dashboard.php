@@ -10,7 +10,9 @@ require 'watermanTop.php';
   <div class="toolbar">
     <button class="configure-btn" onclick="editToggle()">Configure</button>
   </div>
-  <div id="render"></div>
+  <div id="render" class="grid-stack">
+
+  </div>
   <!-- <div class="abutton">
     <button onclick="buttonClickityClick()">+</button>
   </div> -->

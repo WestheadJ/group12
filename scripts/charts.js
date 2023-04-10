@@ -19,71 +19,78 @@ var randomValue = function (data) {
 var data = randomData();
 var value = randomValue(data);
 
-function renderRowsAndColumns(json) {
+function renderHTML(json) {
   // Get the render container
   var renderContainer = document.getElementById('render')
+  var dashboardConfigs = JSON.parse(json[0].dashboard_data).configs
+  console.log(dashboardConfigs)
+
+  dashboardConfigs.forEach(item => {
+    console.log(item)
+
+  })
 
   // *For each row* in the dashboard ->  
-  json.configs.forEach(row => {
-    // DEBUG
-    // console.log("This is row:",row.rowID.toString())
+  // json.configs.forEach(row => {
+  // DEBUG
+  // console.log("This is row:",row.rowID.toString())
 
-    // Gets the rowID (Converts to string as in the JSON it is an int)
-    var rowID = row.rowID
+  // // Gets the rowID (Converts to string as in the JSON it is an int)
+  // var rowID = row.rowID
 
-  // Ready a div to become a row
-    var rowEl = document.createElement("div")
+  // // Ready a div to become a row
+  // var rowEl = document.createElement("div")
 
-    // Give it a class and an id
-    rowEl.setAttribute("class", "mainpage-row")
-    rowEl.setAttribute("id", "row-id-" + rowID)
+  // // Give it a class and an id
+  // rowEl.setAttribute("class", "mainpage-row")
+  // rowEl.setAttribute("id", "row-id-" + rowID)
 
-    // Add div to the container
-    renderContainer.appendChild(rowEl)
+  // // Add div to the container
+  // renderContainer.appendChild(rowEl)
 
-    // *For each column* in the row ->
-    row.columns.forEach(column => {
+  // // *For each column* in the row ->
+  // row.columns.forEach(column => {
 
-      // DEBUGS
-      // console.log(column)
-      // console.log("This is column",column.colID.toString(),"of row",rowID )
-      // console.log("GraphID =",column.graphID)
+  //   // DEBUGS
+  //   // console.log(column)
+  //   // console.log("This is column",column.colID.toString(),"of row",rowID )
+  //   // console.log("GraphID =",column.graphID)
 
-      // Get the column ID (Needs converting to a string because it's an int)
-      var colID = column.colID.toString()
+  //   // Get the column ID (Needs converting to a string because it's an int)
+  //   var colID = column.colID.toString()
 
-      // Get the current rows div
-      var insertRowEl = document.getElementById("row-id-" + rowID)
+  //   // Get the current rows div
+  //   var insertRowEl = document.getElementById("row-id-" + rowID)
 
-      var columnEl = document.createElement("div")
-      columnEl.setAttribute("class", "mainpage-row-item-container")
-      columnEl.setAttribute("id", "container-row-id-" + rowID + "-col-id-" + colID)
+  //   var columnEl = document.createElement("div")
+  //   columnEl.setAttribute("class", "mainpage-row-item-container")
+  //   columnEl.setAttribute("id", "container-row-id-" + rowID + "-col-id-" + colID)
 
-      insertRowEl.appendChild(columnEl)
+  //   insertRowEl.appendChild(columnEl)
 
-      var container = document.getElementById("container-row-id-" + rowID + "-col-id-" + colID)
+  //   var container = document.getElementById("container-row-id-" + rowID + "-col-id-" + colID)
 
-      var canvasEl = document.createElement("canvas")
+  //   var canvasEl = document.createElement("canvas")
 
-      // Give prepares canvas a class and ID
-      canvasEl.setAttribute("class", "mainpage-row-item")
-      canvasEl.setAttribute("id", "row-id-" + rowID + "-col-id-" + colID)
+  //   // Give prepares canvas a class and ID
+  //   canvasEl.setAttribute("class", "mainpage-row-item")
+  //   canvasEl.setAttribute("id", "row-id-" + rowID + "-col-id-" + colID)
 
-      // Add to the row
-      container.appendChild(canvasEl)
+  //   // Add to the row
+  //   container.appendChild(canvasEl)
 
-      var containerLink = document.createElement("a")
+  //   var containerLink = document.createElement("a")
 
-      containerLink.setAttribute('href', `editGraph.php?graph_id=${column.graphID}&graph_type=${column.graphType}`);
-      containerLink.innerHTML = 'Edit';
+  //   containerLink.setAttribute('href', `editGraph.php?graph_id=${column.graphID}&graph_type=${column.graphType}`);
+  //   containerLink.innerHTML = 'Edit';
 
-      containerLink.setAttribute("class", "edit-graph")
-      containerLink.setAttribute("id", "row-id-" + rowID + "-col-id-" + colID)
+  //   containerLink.setAttribute("class", "edit-graph")
+  //   containerLink.setAttribute("id", "row-id-" + rowID + "-col-id-" + colID)
 
-      container.appendChild(containerLink)
+  //   container.appendChild(containerLink)
 
-    })
-  })
+  //   })
+  // })
 }
 
 function renderGraphs(json) {
@@ -124,9 +131,7 @@ function renderGraphs(json) {
           // DEBUG:
           // console.log(responseData)
 
-          let graphType = responseData.type
-
-          if (graphType === "gauge") {
+          if (responseData.type === "gauge") {
             responseData.data.datasets[0].data = data
             responseData.data.datasets[0].value = value
             responseData.options.valueLabel.formatter = Math.round
@@ -153,25 +158,26 @@ window.onload = () => {
 
   // Gets the config file using the JS Fetch API (It's a promise function)
   // Promises: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
-  fetch("../configs/dashboards/dashboard.json")
+  fetch("../scripts/getDashboard.php?dashboard_id=1")
     // Gets the data and converts it to a JSON object to work with
     .then(response => response.json())
     // Render function
     .then((json) => {
-      renderRowsAndColumns(json)
+      renderHTML(json)
     })
 
+  var grid = GridStack.init();
 
-  // --- Add the graphs to the dashboard --- 
 
-  // Gets the config file using the JS Fetch API
-  fetch("../configs/dashboards/dashboard.json")
-    // Gets the data and converts it to a JSON object to work with
-    .then(response => response.json())
-    // Render function
-    .then((json) => {
-      renderGraphs(json)
-    })
+  // // --- Add the graphs to the dashboard --- 
+
+  // // Gets the config file using the JS Fetch API
+  // fetch("../configs/dashboards/dashboard.json")
+  //   // Gets the data and converts it to a JSON object to work with
+  //   .then(response => response.json())
+  //   // Render function
+  //   .then((json) => {
+  //     renderGraphs(json)
+  //   })
 
 };
-Footer
