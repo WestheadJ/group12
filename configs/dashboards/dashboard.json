@@ -26,7 +26,7 @@
             "gs_w": 3,
             "gs_h": 3,
             "content": {
-                "graphId": 1
+                "graph_id": 1
             }
         },
         {
@@ -34,7 +34,7 @@
             "gs_w": 3,
             "gs_h": 3,
             "content": {
-                "graphId": 2
+                "graph_id": 2
             }
         },
         {
@@ -42,15 +42,15 @@
             "gs_w": 3,
             "gs_h": 3,
             "content": {
-                "graphId": 3
+                "graph_id": 3
             }
         },
         {
-            "widget_id": 4,
+            "widget_id": 6,
             "gs_w": 3,
             "gs_h": 3,
             "content": {
-                "graphId": 4
+                "graph_id": 4
             }
         }
     ]

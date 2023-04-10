@@ -61,10 +61,10 @@ function renderGridstack(json) {
 
     renderContainer.appendChild(gridItem)
 
-    if (widget.content.graphId) {
+    if (widget.content.graph_id) {
       let widgetDiv = document.getElementById(widget.widget_id)
       let canvas = document.createElement("canvas")
-      canvas.setAttribute("id", `${widget.widget_id}-${widget.content.graphId}`)
+      canvas.setAttribute("id", `${widget.widget_id}-${widget.content.graph_id}`)
       widgetDiv.appendChild(canvas)
 
     }
@@ -88,9 +88,9 @@ function renderGridstack(json) {
 
   dashboardConfigs.forEach(widget => {
 
-    if (widget.content.graphId) {
-      var canvas = document.getElementById(`${widget.widget_id}-${widget.content.graphId}`)
-      fetch('../scripts/getGraph.php?graph_id=' + widget.content.graphId)
+    if (widget.content.graph_id) {
+      var canvas = document.getElementById(`${widget.widget_id}-${widget.content.graph_id}`)
+      fetch('../scripts/getGraph.php?graph_id=' + widget.content.graph_id)
         .then((res) => res.json())
         .then((responseData) => {
 
