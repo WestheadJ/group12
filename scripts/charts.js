@@ -20,24 +20,30 @@ var randomValue = function (data) {
 var data = randomData();
 var value = randomValue(data);
 
-function renderHTML(json) {
+function renderGridstack(json) {
   // Get the render container
   var renderContainer = document.getElementById('render')
+
   var dashboardConfigs = JSON.parse(json[0].dashboard_data).configs
-  console.log(dashboardConfigs)
+
+  // DEBUG
+  // console.log(dashboardConfigs)
 
   dashboardConfigs.forEach(widget => {
-    console.log(widget)
-    console.log(widget.gs_h)
+
+    // DEBUG
+    // console.log(widget)
+    // console.log(widget.gs_h)
 
     let gridItem = document.createElement('div')
     gridItem.setAttribute('class', 'grid-stack-item')
-    gridItem.setAttribute("widget-id", widget.widget_id)
+    gridItem.setAttribute("id", widget.widget_id)
     gridItem.setAttribute("gs-h", widget.gs_h)
     gridItem.setAttribute("gs-w", widget.gs_w)
     gridItem.style.border = "solid black 1px"
     gridItem.style.backgroundColor = "gray"
     if (!widget.gs_x) {
+      // LEFT EMPTY AS NEEDS TO PASS
 
     }
     else {
@@ -46,6 +52,7 @@ function renderHTML(json) {
     }
 
     if (!widget.gs_y) {
+      // LEFT EMPTY AS NEEDS TO PASS
     }
     else {
       gridItem.setAttribute("gs-y", widget.gs_y)
@@ -54,71 +61,69 @@ function renderHTML(json) {
 
     renderContainer.appendChild(gridItem)
 
+    if (widget.content.graphId) {
+      let widgetDiv = document.getElementById(widget.widget_id)
+      let canvas = document.createElement("canvas")
+      canvas.setAttribute("id", `${widget.widget_id}-${widget.content.graphId}`)
+      widgetDiv.appendChild(canvas)
+
+    }
+
+    if (widget.content.comment) {
+      let widgetDiv = document.getElementById(widget.widget_id)
+      let comment = document.createElement("p")
+      comment.setAttribute("id", `${widget.widget_id}-comment`)
+      comment.innerText = widget.content.comment;
+      widgetDiv.appendChild(comment)
+    }
+
+    if (widget.content.title) {
+      let widgetDiv = document.getElementById(widget.widget_id)
+      let title = document.createElement("h1")
+      title.setAttribute("id", `${widget.widget_id}-title`)
+      title.innerText = widget.content.title;
+      widgetDiv.appendChild(title)
+    }
+  })
+
+  dashboardConfigs.forEach(widget => {
+
+    if (widget.content.graphId) {
+      var canvas = document.getElementById(`${widget.widget_id}-${widget.content.graphId}`)
+      fetch('../scripts/getGraph.php?graph_id=' + widget.content.graphId)
+        .then((res) => res.json())
+        .then((responseData) => {
+
+          // DEBUG:
+          // console.log(responseData)
+          graph_id = JSON.parse(responseData[0].graph_id)
+          responseData = JSON.parse(responseData[0].graph_data)
+
+          // DEBUG:
+          // console.log(responseData)
+
+          if (responseData.type === "gauge") {
+            responseData.data.datasets[0].data = data
+            responseData.data.datasets[0].value = value
+            responseData.options.valueLabel.formatter = Math.round
+          }
+          else {
+            responseData.data.datasets[0].data = data
+          }
+
+          var ctx = canvas.getContext('2d')
+          graph = new Chart(ctx, responseData)
+          return graph
+        })
+    }
 
 
   })
+}
 
-  // *For each row* in the dashboard ->  
-  // json.configs.forEach(row => {
-  // DEBUG
-  // console.log("This is row:",row.rowID.toString())
-
-  // // Gets the rowID (Converts to string as in the JSON it is an int)
-  // var rowID = row.rowID
-
-  // // Ready a div to become a row
-  // var rowEl = document.createElement("div")
-
-  // // Give it a class and an id
-  // rowEl.setAttribute("class", "mainpage-row")
-  // rowEl.setAttribute("id", "row-id-" + rowID)
-
-  // // Add div to the container
-  // renderContainer.appendChild(rowEl)
-
-  // // *For each column* in the row ->
-  // row.columns.forEach(column => {
-
-  //   // DEBUGS
-  //   // console.log(column)
-  //   // console.log("This is column",column.colID.toString(),"of row",rowID )
-  //   // console.log("GraphID =",column.graphID)
-
-  //   // Get the column ID (Needs converting to a string because it's an int)
-  //   var colID = column.colID.toString()
-
-  //   // Get the current rows div
-  //   var insertRowEl = document.getElementById("row-id-" + rowID)
-
-  //   var columnEl = document.createElement("div")
-  //   columnEl.setAttribute("class", "mainpage-row-item-container")
-  //   columnEl.setAttribute("id", "container-row-id-" + rowID + "-col-id-" + colID)
-
-  //   insertRowEl.appendChild(columnEl)
-
-  //   var container = document.getElementById("container-row-id-" + rowID + "-col-id-" + colID)
-
-  //   var canvasEl = document.createElement("canvas")
-
-  //   // Give prepares canvas a class and ID
-  //   canvasEl.setAttribute("class", "mainpage-row-item")
-  //   canvasEl.setAttribute("id", "row-id-" + rowID + "-col-id-" + colID)
-
-  //   // Add to the row
-  //   container.appendChild(canvasEl)
-
-  //   var containerLink = document.createElement("a")
-
-  //   containerLink.setAttribute('href', `editGraph.php?graph_id=${column.graphID}&graph_type=${column.graphType}`);
-  //   containerLink.innerHTML = 'Edit';
-
-  //   containerLink.setAttribute("class", "edit-graph")
-  //   containerLink.setAttribute("id", "row-id-" + rowID + "-col-id-" + colID)
-
-  //   container.appendChild(containerLink)
-
-  //   })
-  // })
+function renderContent(json) {
+  var dashboardConfigs = JSON.parse(json[0].dashboard_data).configs
+  console.log(dashboardConfigs)
 }
 
 function renderGraphs(json) {
@@ -147,31 +152,7 @@ function renderGraphs(json) {
 
       // console.log(column)
 
-      fetch('../scripts/getGraph.php?graph_id=' + column.graphID)
-        .then((res) => res.json())
-        .then((responseData) => {
 
-          // DEBUG:
-          // console.log(responseData)
-          graph_id = JSON.parse(responseData[0].graph_id)
-          responseData = JSON.parse(responseData[0].graph_data)
-
-          // DEBUG:
-          // console.log(responseData)
-
-          if (responseData.type === "gauge") {
-            responseData.data.datasets[0].data = data
-            responseData.data.datasets[0].value = value
-            responseData.options.valueLabel.formatter = Math.round
-          }
-          else {
-            responseData.data.datasets[0].data = data
-          }
-
-          var ctx = canvas.getContext('2d')
-          graph = new Chart(ctx, responseData)
-          return graph
-        })
 
 
 
@@ -191,9 +172,11 @@ window.onload = () => {
     .then(response => response.json())
     // Render function
     .then((json) => {
-      renderHTML(json)
+      renderGridstack(json)
+      renderContent(json)
       GridStack.init();
     })
+
 
 
   // // --- Add the graphs to the dashboard --- 

@@ -19,7 +19,7 @@
   <script src="https://cdn.fusioncharts.com/fusioncharts/latest/themes/fusioncharts.theme.fusion.js"></script>
   <script src="../node_modules/gridstack/dist/gridstack-all.js"></script>
   <link href="../node_modules/gridstack/dist/gridstack.min.css" rel="stylesheet" />
-
+  <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
 </head>
 
 <body>
