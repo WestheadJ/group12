@@ -1,0 +1,21 @@
+{
+    "type": "bar",
+    "data": {
+      "labels": ["Green", "Amber", "Red"],
+      "datasets": [{
+        "label": "Chart",
+        "data": [1,2,3],
+        "backgroundColor": ["grey", "grey", "grey"],
+        "borderWidth": 1
+      }]
+    },
+    "options": {
+      "scales": {
+        "yAxes": [{
+          "ticks": {
+            "beginAtZero": true
+          }
+        }]
+      }
+    }
+  }

@@ -123,6 +123,7 @@ function render(json) {
 
   })
 }
+
 window.onload = () => {
 
   // --- Create the layout of the dashboard ---
@@ -135,10 +136,18 @@ window.onload = () => {
     // Render function
     .then((json) => {
       render(json)
-      GridStack.init();
+      var grid = GridStack.init();
+      grid.setStatic(true);
     })
 
-
+  var button = document.querySelectorAll('[id=editing]');
+  button.forEach(button => {
+    if (button.style.display === "none") {
+      button.style.display = "block";
+    } else {
+      button.style.display = "none";
+    }
+  });  
 
   // // --- Add the graphs to the dashboard --- 
 
