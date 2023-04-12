@@ -3,6 +3,16 @@ function edit() {
   var grid = GridStack.init();  
   grid.setStatic(false);
   alert('edit dashboard');
+  var widgets = document.getElementsByClassName('grid-stack-item');
+  for (var i = 0; i < widgets.length; i++) {
+    var deleteButton = document.createElement('button');
+    deleteButton.innerHTML = 'X';
+    deleteButton.className = 'delete-widget';
+    deleteButton.onclick = function() {
+      grid.removeWidget(this.parentNode);
+    };
+    widgets[i].appendChild(deleteButton);
+  }
 }
 
 
@@ -113,4 +123,5 @@ function menueToggle(){
       button.style.display = "none";
     }
   });
+  
 }

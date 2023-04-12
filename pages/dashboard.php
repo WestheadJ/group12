@@ -19,10 +19,16 @@ require 'watermanTop.php';
     <button id="editing" class="configure-btn" onclick="addChart()">Add chart</button>
     <button id="editing" class="configure-btn" onclick="addComment()">Add comment</button>
     <button id="editing" class="configure-btn" onclick="addTitle()">Add Title</button>
+    
+    
   </div>
   <!-- GRIDSTACK RENDER DIV -->
+  
+  <div class="grid-stack-item">
+  <div class="grid-stack-item-content">
+  
   <div id="render" class="grid-stack">
-
+  
   </div>
   <!-- <div class="abutton">
     <button onclick="buttonClickityClick()">+</button>
