@@ -11,7 +11,7 @@
 
 .folders-heading{
     margin-left: 20px; 
-    margin-top: 120px;
+    margin-top: 150px;
 }  
 
 .folder-link {
@@ -20,8 +20,8 @@
 }
 
 .create-folder-input {
-    margin-right: 16px;
-    margin-top: 20px;
+    margin-right: 16px!important;
+    margin-top: 20px!important;
 }
 
 .create-folder-input::placeholder {
@@ -65,10 +65,10 @@
     height: 39px; 
 }
   
-  .submit-button {
-    margin-left: 20px;
-    vertical-align: top;
-  }
+.submit-button {
+  margin-left: 20px!important;
+  
+}
 
   .file-container {
     border: 3px solid  #04AA6D;;
@@ -89,6 +89,7 @@
     cursor: pointer!important;
     width: 170px !important;
     font-size: 14px!important;
+    height: 40px;
   }
 
   .delete-button {
