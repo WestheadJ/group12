@@ -3,16 +3,26 @@ function edit() {
   var grid = GridStack.init();  
   grid.setStatic(false);
   alert('edit dashboard');
-  var widgets = document.getElementsByClassName('grid-stack-item');
-  for (var i = 0; i < widgets.length; i++) {
+// Get all the widgets
+var widgets = document.getElementsByClassName('grid-stack-item');
+
+// Loop through each widget
+for (var i = 0; i < widgets.length; i++) {
+  // Check if the widget already has a delete button
+  var existingDeleteButton = widgets[i].querySelector('.delete-widget');
+  if (!existingDeleteButton) {
+    // Create a delete button
     var deleteButton = document.createElement('button');
     deleteButton.innerHTML = 'X';
     deleteButton.className = 'delete-widget';
     deleteButton.onclick = function() {
+      // Remove the widget from the grid
       grid.removeWidget(this.parentNode);
     };
+    // Append the delete button to the widget
     widgets[i].appendChild(deleteButton);
   }
+}
 }
 
 
@@ -102,6 +112,10 @@ function save(){
   //NEED TO BE ABLE TO SAVE DASHBOARD TO DB HERE
   var grid = GridStack.init();  
   grid.setStatic(true);
+  var deleteButtons = document.getElementsByClassName('delete-widget');
+  while (deleteButtons[0]) {
+    deleteButtons[0].parentNode.removeChild(deleteButtons[0]);
+  }
   alert('dashboard saved')
 }
 
