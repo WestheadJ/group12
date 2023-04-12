@@ -56,7 +56,7 @@ function getGraphData() {
       }
 
       document.getElementById("graph-title").value = responseData.options.title.text
-
+     
       let canvas = document.getElementById("edit-bar-chart")
       var ctx = canvas.getContext('2d')
       graph = new Chart(ctx, responseData)

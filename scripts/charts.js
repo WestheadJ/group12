@@ -32,7 +32,7 @@ function render(json) {
   dashboardConfigs.forEach(widget => {
 
     // DEBUG
-    // console.log(widget)
+    console.log(widget)
     // console.log(widget.gs_h)
 
     let gridItem = document.createElement('div')

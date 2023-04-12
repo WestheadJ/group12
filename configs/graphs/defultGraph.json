@@ -1,21 +1,41 @@
 {
-    "type": "bar",
-    "data": {
-      "labels": ["Green", "Amber", "Red"],
-      "datasets": [{
+  "data": {
+    "labels": [
+      "Data 1",
+      "Amber",
+      "Red"
+    ],
+    "datasets": [
+      {
+        "data": [
+          1,
+          2,
+          3
+        ],
         "label": "Chart",
-        "data": [1,2,3],
-        "backgroundColor": ["grey", "grey", "grey"],
-        "borderWidth": 1
-      }]
+        "borderWidth": 1,
+        "backgroundColor": [
+          "grey",
+          "grey",
+          "grey"
+        ]
+      }
+    ]
+  },
+  "type": "bar",
+  "options": {
+    "title": {
+      "text": "this is a demo",
+      "display": true
     },
-    "options": {
-      "scales": {
-        "yAxes": [{
+    "scales": {
+      "yAxes": [
+        {
           "ticks": {
             "beginAtZero": true
           }
-        }]
-      }
+        }
+      ]
     }
   }
+}

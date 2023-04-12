@@ -5,6 +5,7 @@ require 'watermanTop.php';
 
 <script src="../scripts/charts.js"></script>
 <script src="../scripts/editDashboard.js"></script>
+<script src="../scripts/dummyChart.js"></script>
 
 <div id="mainpage">
   <div class="toolbar">

@@ -126,6 +126,10 @@ a.edit-graph:hover{
   width: 180px;
 }
 
+.hee{
+  background-color: #35967c;
+}
+
 .abutton{
   display: flex;
   justify-content: center;
