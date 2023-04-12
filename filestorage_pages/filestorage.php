@@ -1,6 +1,5 @@
 <?php
 include("../configs/db/dbConnection.php");
-include("../pages/navbar.php");
 
 
 if(isset($_POST['create_folder'])) {
@@ -16,6 +15,11 @@ $folder_sql = "SELECT * FROM folders";
 $folder_result = mysqli_query($conn, $folder_sql);
 ?>
 
+<?php
+require '../pages/watermanTop.php';
+
+?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -23,8 +27,8 @@ $folder_result = mysqli_query($conn, $folder_sql);
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>File Storage</title>
   <link rel="stylesheet" href="../styles/filestorage.css">
+  <title>File Storage</title>
 
 </head>
 <body>
@@ -78,3 +82,7 @@ $folder_result = mysqli_query($conn, $folder_sql);
   ?>
 </body>
 </html>
+
+<?php
+require '../pages/watermanBottom.php';
+?>
