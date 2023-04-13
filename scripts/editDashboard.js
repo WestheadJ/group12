@@ -59,10 +59,6 @@ function addChart() {
     ];
   };
 
-  var randomValue = function (data) {
-    return Math.max.apply(null, data) * Math.random();
-  };
-
   var data = randomData();
 
   var canvas = document.querySelectorAll('[id=dummy]')
@@ -74,7 +70,7 @@ function addChart() {
         // dData.data.datasets[0].value = value
         // dData.options.valueLabel.formatter = Math.round 
         var ctx = canvas.getContext('2d');
-        return window.Chart = new Chart(ctx, dData);
+        return window.dfltChart = new Chart(ctx, dData);
       })
   });
 
