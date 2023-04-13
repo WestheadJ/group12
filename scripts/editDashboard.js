@@ -66,7 +66,7 @@ function addChart() {
     fetch('../configs/graphs/defultGraph.json')
       .then((response) => response.json())
       .then((dData) => {
-        dData.data.datasets[0].data = data
+        // dData.data.datasets[0].data = data
         // dData.data.datasets[0].value = value
         // dData.options.valueLabel.formatter = Math.round 
         var ctx = canvas.getContext('2d');
