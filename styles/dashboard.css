@@ -1,0 +1,22 @@
+ .grid-stack-item .delete-widget {
+    background-color: #f44336;
+    color: #fff;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 24px;
+    height: 24px;
+    line-height: 22px;
+    border-radius: 50%;
+  }
+  
+  .grid-stack-item .delete-widget:hover {
+    background-color: #d32f2f;
+  }
+  
