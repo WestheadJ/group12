@@ -44,6 +44,14 @@ a.edit-graph:hover{
   box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.2);
 }
 
+.comment-editing{
+  background-color: blue;
+}
+
+.comment-saved{
+  background-color: lime;
+}
+
 
 #mainpage {
   padding-top: 2%;

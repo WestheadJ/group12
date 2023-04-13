@@ -47,35 +47,6 @@ function addChart() {
   };
 
   var data = randomData();
-  var value = randomValue(data);
-  // var xValues = ["Italy", "France", "Spain", "USA", "Argentina"];
-  // var yValues = [55, 49, 44, 24, 15];
-  // var barColors = ["red", "green","blue","orange","brown"];
-
-  // new Chart("dummy", {
-  //   type: "bar",
-  //   data: {
-  //     labels: xValues,
-  //     datasets: [{
-  //       backgroundColor: barColors,
-  //       data: yValues
-  //     }]
-  //   },
-  //   options: {
-  //     legend: {display: false},
-  //     title: {
-  //       display: true,
-  //       text: "World Wine Production 2018"
-  //     }
-  //   }
-  // });
-
-  // let dummyCanvas = document.getElementById("dummy")
-  // var dummyCTX = dummyCanvas.getContext('2d')
-  // dummyGraph = new Chart(dummyCTX, responseData)
-  // return dummyGraph
-
-  // fetch('../scripts/dummyChart.js')
 
           var canvas = document.querySelectorAll('[id=dummy]')
           canvas.forEach(canvas => {
@@ -100,11 +71,18 @@ function addTitle() {
   });
 }
 
+var commentCounter = 0;
+
 function addComment() {
   var grid = GridStack.init();  
+  // commentCounter += 1;
+  // let comm_id = "comment-" + commentCounter
+  console.log(commentCounter);
   grid.addWidget({
-    x: 0, y: 5, w: 8, h: 3, content: '<textarea style="margin: 1.5rem; width:90%" name="variable" rows="4" cols="50">Comment...</textarea>'
+    x: 0, y: 5, w: 8, h: 3, content: '<textarea class="comment-editing" style="margin: 1.5rem; width:90%" name="variable" rows="4" cols="50">Comment...</textarea>'
   });
+
+  // Need to make a toggle switch for readonly and to change css
 }
 
 function save(){
@@ -117,6 +95,13 @@ function save(){
     deleteButtons[0].parentNode.removeChild(deleteButtons[0]);
   }
   alert('dashboard saved')
+
+  // Changes the class of the comment boxes USE THIS TO MAKE LOOK LIKE PARAGRAPH
+  var comment = document.querySelectorAll('[class=comment-editing]');
+  comment.forEach(comment => {
+    comment.setAttribute("class", `comment-saved`);
+  });
+
 }
 
 function menueToggle(){
