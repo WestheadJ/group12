@@ -16,7 +16,7 @@ require 'watermanTop.php';
     <canvas id="edit-bar-chart"></canvas>
   </div>
   <div id="form-container">
-    <form onsubmit="return save(event)" method="post" id="form">
+    <form onsubmit="return saveGraph(event)" method="post" id="form">
       <div class="inputItem">
         <label>Chart title</label>
         <input type="text" id="graph-title" name="graph-title" value="Chart" oninput="updatePreview('graph-title')">
@@ -38,11 +38,28 @@ require 'watermanTop.php';
 </div>
 
 <div id="comment-edit">
-  comment edit
+  <h2>Preview:</h2>
+  <p id="comment-preview">Loading...</p>
+  <hr />
+  <form onsubmit="return saveComment(event)" method="post" id="comment-form">
+    <label for="comment">Edit comment:</label>
+    <input id="comment-input" name="comment" />
+    <input type="submit" value="Save" id="submit-button" />
+  </form>
 </div>
 
 <div id="title-edit">
-  title edit
+  <div>
+    <h2>Preview:</h2>
+    <p id="title-preview">Loading...</p>
+    <hr />
+    <form onsubmit="return saveTitle(event)" method="post" id="title-form">
+      <label for="title">Edit title:</label>
+      <input id="title-input" name="title" />
+      <input type="submit" value="Save" id="submit-button" />
+
+    </form>
+  </div>
 </div>
 
 

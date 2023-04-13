@@ -8,7 +8,7 @@ window.onload = () => {
   }
   else {
     const content = params.split("?")[1].split("&")[1].split('=')[1]
-
+    const widget_id = params.split('?')[1].split("&")[0].split('=')[1]
     let graphEdit = document.getElementById("graph-edit")
     let commentEdit = document.getElementById("comment-edit")
     let titleEdit = document.getElementById("title-edit")
@@ -18,7 +18,7 @@ window.onload = () => {
       graphEdit.remove()
       console.log("Removing title and graph")
     }
-    if (content === "title") {
+    else if (content === "title") {
       commentEdit.remove()
       graphEdit.remove()
       console.log("Removing comment and graph")
@@ -26,7 +26,7 @@ window.onload = () => {
     else {
       commentEdit.remove()
       titleEdit.remove()
-      console.log("Removing title and comment")
+
     }
     fetch("../scripts/getDashboard.php?dashboard_id=1")
       // Gets the data and converts it to a JSON object to work with
@@ -34,10 +34,32 @@ window.onload = () => {
       // Render function
       .then((json) => {
         let dashboard = JSON.parse(json[0].dashboard_data)
-        console.log(dashboard)
-        type = dashboard
+        dashboard.configs.forEach(widget => {
+          console.log(widget)
+          if (widget.widget_id == widget_id)
+            if (content === "title") {
+              document.getElementById("title-preview").innerText = widget.content.title
+              document.getElementById("title-input").value = widget.content.title
+            }
+            else if (content == "comment") {
+              document.getElementById("comment-preview").innerText = widget.content.comment
+              document.getElementById("comment-input") = widget.content.comment
+            }
+            else {
+
+            }
+        });
+
       })
   }
+}
+
+function saveComment(e) {
+  e.preventDefault()
+}
+
+function saveTitle(e) {
+  e.preventDefault()
 }
 
 // let graph;
@@ -125,31 +147,31 @@ window.onload = () => {
 //   graph.update()
 // }
 
-// function save(e) {
-//   e.preventDefault();
-//   return fetch('../scripts/getGraph.php?graph_id=' + graph_id)
-//     .then((response) => response.json())
-//     .then((responseData) => {
-//       let json = JSON.parse(responseData[0].graph_data)
-//       let title = document.getElementById('graph-title').value
-//       let xAxis = document.getElementById('x-axis').value
-//       let yAxis = document.getElementById('y-axis').value
-//       json.options.title.text = title
-//       json.options.scales.xAxes[0].scaleLabel.labelString = xAxis
-//       json.options.scales.yAxes[0].scaleLabel.labelString = yAxis
-//       fetch('../scripts/saveGraph.php?graph_id=' + graph_id, {
-//         method: "POST",
-//         body: JSON.stringify(json)
-//       })
-//         .then(res => res.json())
-//         .then(res => {
-//           console.log(res)
-//           if (JSON.parse(res).status === 200) {
-//             return window.location.replace("dashboard.php")
-//           }
-//           else {
-//             return alert("There was an error updating")
-//           }
-//         })
-//     })
-// }
+function saveGraph(e) {
+  e.preventDefault();
+  return fetch('../scripts/getGraph.php?graph_id=' + graph_id)
+    .then((response) => response.json())
+    .then((responseData) => {
+      let json = JSON.parse(responseData[0].graph_data)
+      let title = document.getElementById('graph-title').value
+      let xAxis = document.getElementById('x-axis').value
+      let yAxis = document.getElementById('y-axis').value
+      json.options.title.text = title
+      json.options.scales.xAxes[0].scaleLabel.labelString = xAxis
+      json.options.scales.yAxes[0].scaleLabel.labelString = yAxis
+      fetch('../scripts/saveGraph.php?graph_id=' + graph_id, {
+        method: "POST",
+        body: JSON.stringify(json)
+      })
+        .then(res => res.json())
+        .then(res => {
+          console.log(res)
+          if (JSON.parse(res).status === 200) {
+            return window.location.replace("dashboard.php")
+          }
+          else {
+            return alert("There was an error updating")
+          }
+        })
+    })
+}
