@@ -2,56 +2,64 @@
     "userID": "watermangrp",
     "configs": [
         {
-            "widget_id": 1,
-            "gs_w": 2,
             "gs_h": 2,
+            "gs_w": 2,
             "gs_x": 0,
             "gs_y": 5,
             "content": {
                 "comment": "test comment"
-            }
+            },
+            "widget_id": 1
         },
         {
-            "widget_id": 2,
-            "gs_w": 5,
             "gs_h": 2,
+            "gs_w": 5,
             "gs_x": 0,
             "gs_y": 0,
             "content": {
                 "title": "test title"
-            }
+            },
+            "widget_id": 2
         },
         {
-            "widget_id": 3,
-            "gs_w": 3,
             "gs_h": 3,
+            "gs_w": 3,
             "content": {
                 "graph_id": 1
-            }
+            },
+            "widget_id": 3
         },
         {
-            "widget_id": 4,
-            "gs_w": 3,
             "gs_h": 3,
+            "gs_w": 3,
             "content": {
                 "graph_id": 2
-            }
+            },
+            "widget_id": 4
         },
         {
-            "widget_id": 5,
-            "gs_w": 3,
             "gs_h": 3,
+            "gs_w": 3,
             "content": {
                 "graph_id": 3
-            }
+            },
+            "widget_id": 5
         },
         {
-            "widget_id": 6,
-            "gs_w": 3,
             "gs_h": 3,
+            "gs_w": 3,
             "content": {
                 "graph_id": 4
-            }
+            },
+            "widget_id": 6
+        },
+        {
+            "gs_h": 3,
+            "gs_w": 3,
+            "content": {
+                "graph_id": 10
+            },
+            "widget_id": 7
         }
     ]
 }

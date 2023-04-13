@@ -1,34 +1,37 @@
-function edit() { 
+function edit() {
   menueToggle()
-  var grid = GridStack.init();  
+  var grid = GridStack.init();
   grid.setStatic(false);
   alert('edit dashboard');
-// Get all the widgets
-var widgets = document.getElementsByClassName('grid-stack-item');
+  // Get all the widgets
+  var widgets = document.getElementsByClassName('grid-stack-item');
 
-// Loop through each widget
-for (var i = 0; i < widgets.length; i++) {
-  // Check if the widget already has a delete button
-  var existingDeleteButton = widgets[i].querySelector('.delete-widget');
-  if (!existingDeleteButton) {
-    // Create a delete button
-    var deleteButton = document.createElement('button');
-    deleteButton.innerHTML = 'X';
-    deleteButton.className = 'delete-widget';
-    deleteButton.onclick = function() {
-      // Remove the widget from the grid
-      grid.removeWidget(this.parentNode);
-    };
-    // Append the delete button to the widget
-    widgets[i].appendChild(deleteButton);
+  // Loop through each widget
+  for (var i = 0; i < widgets.length; i++) {
+    // Check if the widget already has a delete button
+    var existingDeleteButton = widgets[i].querySelector('.delete-widget');
+    if (!existingDeleteButton) {
+      // Create a delete button
+      var deleteButton = document.createElement('button');
+      deleteButton.innerHTML = 'X';
+      deleteButton.className = 'delete-widget';
+      deleteButton.onclick = function () {
+        // Remove the widget from the grid
+        grid.removeWidget(this.parentNode);
+      };
+      // Append the delete button to the widget
+      widgets[i].appendChild(deleteButton);
+    }
+
+    console.log(widgets[i].getAttribute('id'))
+
   }
-}
 }
 
 
 
 function addChart() {
-  var grid = GridStack.init();  
+  var grid = GridStack.init();
   grid.addWidget({
     x: 0, y: 5, w: 6, h: 5, content: '<canvas id="dummy"></canvas>' // here
     // gs-h="3" gs-w="1" gs-x="0" gs-y="5"
@@ -42,26 +45,30 @@ function addChart() {
     ];
   };
 
+  var randomValue = function (data) {
+    return Math.max.apply(null, data) * Math.random();
+  };
+
   var data = randomData();
 
-          var canvas = document.querySelectorAll('[id=dummy]')
-          canvas.forEach(canvas => {
-            fetch('../configs/graphs/defultGraph.json')
-            .then((response) => response.json())
-            .then((dData) =>{ 
-              dData.data.datasets[0].data = data
-              // dData.data.datasets[0].value = value
-              // dData.options.valueLabel.formatter = Math.round 
-              var ctx = canvas.getContext('2d');
-              return window.lt = new Chart(ctx, dData);
-            })
-          });
+  var canvas = document.querySelectorAll('[id=dummy]')
+  canvas.forEach(canvas => {
+    fetch('../configs/graphs/defultGraph.json')
+      .then((response) => response.json())
+      .then((dData) => {
+        dData.data.datasets[0].data = data
+        // dData.data.datasets[0].value = value
+        // dData.options.valueLabel.formatter = Math.round 
+        var ctx = canvas.getContext('2d');
+        return window.Chart = new Chart(ctx, dData);
+      })
+  });
 
 }
 
 
 function addTitle() {
-  var grid = GridStack.init();  
+  var grid = GridStack.init();
   grid.addWidget({
     x: 0, y: 0, w: 4, content: 'TITLE'
   });
@@ -70,7 +77,7 @@ function addTitle() {
 var commentCounter = 0;
 
 function addComment() {
-  var grid = GridStack.init();  
+  var grid = GridStack.init();
   // commentCounter += 1;
   // let comm_id = "comment-" + commentCounter
   console.log(commentCounter);
@@ -81,10 +88,10 @@ function addComment() {
   // Need to make a toggle switch for readonly and to change css
 }
 
-function save(){
+function save() {
   menueToggle()
   //NEED TO BE ABLE TO SAVE DASHBOARD TO DB HERE
-  var grid = GridStack.init();  
+  var grid = GridStack.init();
   grid.setStatic(true);
   var deleteButtons = document.getElementsByClassName('delete-widget');
   while (deleteButtons[0]) {
@@ -100,7 +107,7 @@ function save(){
 
 }
 
-function menueToggle(){
+function menueToggle() {
   var button = document.querySelectorAll('[id=editing]');
   button.forEach(button => {
     if (button.style.display === "none") {
@@ -123,5 +130,5 @@ function menueToggle(){
   comment.forEach(comment => {
     comment.setAttribute("class", `comment-editing`);
   });
-  
+
 }

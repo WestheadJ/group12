@@ -32,12 +32,21 @@ function render(json) {
   dashboardConfigs.forEach(widget => {
 
     // DEBUG
-    console.log(widget)
+    // console.log(widget)
     // console.log(widget.gs_h)
 
     let gridItem = document.createElement('div')
     gridItem.setAttribute('class', 'grid-stack-item')
-    gridItem.setAttribute("id", widget.widget_id)
+
+    if (widget.content.title) {
+      gridItem.setAttribute("id", `title-${widget.widget_id}`)
+    }
+    if (widget.content.comment) {
+      gridItem.setAttribute("id", `comment-${widget.widget_id}`)
+    }
+    if (widget.content.graph_id) {
+      gridItem.setAttribute("id", `${widget.widget_id}-${widget.content.graph_id}`)
+    }
     gridItem.setAttribute("gs-h", widget.gs_h)
     gridItem.setAttribute("gs-w", widget.gs_w)
 
@@ -65,25 +74,25 @@ function render(json) {
     renderContainer.appendChild(gridItem)
 
     if (widget.content.graph_id) {
-      let widgetDiv = document.getElementById(widget.widget_id)
+      let widgetDiv = document.getElementById(`${widget.widget_id}-${widget.content.graph_id}`)
       let canvas = document.createElement("canvas")
-      canvas.setAttribute("id", `${widget.widget_id}-${widget.content.graph_id}`)
+      canvas.setAttribute("id", widget.content.graph_id)
       widgetDiv.appendChild(canvas)
 
     }
 
     if (widget.content.comment) {
-      let widgetDiv = document.getElementById(widget.widget_id)
+      let widgetDiv = document.getElementById(`comment-${widget.widget_id}`)
       let comment = document.createElement("p")
-      comment.setAttribute("id", `${widget.widget_id}-comment`)
+      comment.setAttribute("id", `comment-${widget.widget_id}`)
       comment.innerText = widget.content.comment;
       widgetDiv.appendChild(comment)
     }
 
     if (widget.content.title) {
-      let widgetDiv = document.getElementById(widget.widget_id)
+      let widgetDiv = document.getElementById(`title-${widget.widget_id}`)
       let title = document.createElement("h1")
-      title.setAttribute("id", `${widget.widget_id}-title`)
+      title.setAttribute("id", `title-${widget.widget_id}`)
       title.innerText = widget.content.title;
       widgetDiv.appendChild(title)
     }
@@ -92,7 +101,9 @@ function render(json) {
   dashboardConfigs.forEach(widget => {
 
     if (widget.content.graph_id) {
-      var canvas = document.getElementById(`${widget.widget_id}-${widget.content.graph_id}`)
+      // console.log(widget.content.graph_id)
+      var canvas = document.getElementById(`${widget.content.graph_id}`)
+      // console.log(canvas)
       fetch('../scripts/getGraph.php?graph_id=' + widget.content.graph_id)
         .then((res) => res.json())
         .then((responseData) => {
@@ -147,17 +158,5 @@ window.onload = () => {
     } else {
       button.style.display = "none";
     }
-  });  
-
-  // // --- Add the graphs to the dashboard --- 
-
-  // // Gets the config file using the JS Fetch API
-  // fetch("../configs/dashboards/dashboard.json")
-  //   // Gets the data and converts it to a JSON object to work with
-  //   .then(response => response.json())
-  //   // Render function
-  //   .then((json) => {
-  //     renderGraphs(json)
-  //   })
-
+  });
 };
