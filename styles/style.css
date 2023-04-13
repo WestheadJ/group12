@@ -45,11 +45,16 @@ a.edit-graph:hover{
 }
 
 .comment-editing{
-  background-color: blue;
+  background-color: rgb(255, 255, 255);
 }
 
 .comment-saved{
-  background-color: lime;
+  background-color: rgb(232, 232, 232);
+  resize: none;
+  pointer-events: none;
+  /* Comment out CSS below to style the saved comment boxes! */
+  border-style: none; 
+  box-shadow: none;
 }
 
 

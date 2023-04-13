@@ -41,10 +41,6 @@ function addChart() {
       randomScalingFactor()
     ];
   };
-  
-  var randomValue = function (data) {
-    return Math.max.apply(null, data) * Math.random();
-  };
 
   var data = randomData();
 
@@ -57,7 +53,7 @@ function addChart() {
               // dData.data.datasets[0].value = value
               // dData.options.valueLabel.formatter = Math.round 
               var ctx = canvas.getContext('2d');
-              return window.Chart = new Chart(ctx, dData);
+              return window.lt = new Chart(ctx, dData);
             })
           });
 
@@ -121,6 +117,11 @@ function menueToggle(){
     } else {
       button.style.display = "none";
     }
+  });
+
+  var comment = document.querySelectorAll('[class=comment-saved]');
+  comment.forEach(comment => {
+    comment.setAttribute("class", `comment-editing`);
   });
   
 }
