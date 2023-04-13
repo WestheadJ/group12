@@ -2,7 +2,7 @@ function edit() {
   menueToggle()
   var grid = GridStack.init();
   grid.setStatic(false);
-  alert('edit dashboard');
+
   // Get all the widgets
   var widgets = document.getElementsByClassName('grid-stack-item');
 
@@ -27,11 +27,11 @@ function edit() {
       let id = widgets[i].getAttribute('id')
       let editButton = document.createElement("a")
       if (id.split('-')[0] === "comment" || id.split('-')[0] === "title") {
-        editButton.setAttribute("href", `editWidget.php?widget_id=${id.split('-')[1]}`)
+        editButton.setAttribute("href", `editWidget.php?widget_id=${id.split('-')[1]}&content=${id.split('-')[0]}`)
         editButton.setAttribute("class", "edit-button")
       }
       else {
-        editButton.setAttribute("href", "editWidget.php")
+        editButton.setAttribute("href", `editWidget.php?widget_id=${id.split('-')[1]}&content=${id.split('-')[0]}`)
         editButton.setAttribute("class", "edit-button")
       }
       editButton.innerText = "Edit"
