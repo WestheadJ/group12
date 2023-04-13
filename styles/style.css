@@ -212,6 +212,16 @@ a.cancel {
   padding: 9px 9px 9px 9px;
 }
 
+.edit-button{
+  float: right;
+  margin-right: 0.5em;
+  text-decoration: underline;
+}
+
+.edit-button:hover{
+  color: #1b5546;
+}
+
 @media screen and (max-width:750px) {
   .mainpage-row {
     flex-direction: column;

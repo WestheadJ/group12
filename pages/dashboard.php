@@ -24,15 +24,14 @@ require 'watermanTop.php';
   </div>
   <!-- GRIDSTACK RENDER DIV -->
 
-  <div class="grid-stack-item">
-    <div class="grid-stack-item-content">
+  <div class="grid-stack-item-content">
 
-      <div id="render" class="grid-stack">
-
-      </div>
+    <div id="render" class="grid-stack">
 
     </div>
 
-    <?php
-    require 'watermanBottom.php';
-    ?>
+  </div>
+
+  <?php
+  require 'watermanBottom.php';
+  ?>

@@ -23,7 +23,21 @@ function edit() {
       widgets[i].appendChild(deleteButton);
     }
 
-    console.log(widgets[i].getAttribute('id'))
+    if (widgets[i].getAttribute('id')) {
+      let id = widgets[i].getAttribute('id')
+      let editButton = document.createElement("a")
+      if (id.split('-')[0] === "comment" || id.split('-')[0] === "title") {
+        editButton.setAttribute("href", `editWidget.php?widget_id=${id.split('-')[1]}`)
+        editButton.setAttribute("class", "edit-button")
+      }
+      else {
+        editButton.setAttribute("href", "editWidget.php")
+        editButton.setAttribute("class", "edit-button")
+      }
+      editButton.innerText = "Edit"
+      widgets[i].appendChild(editButton)
+    }
+
 
   }
 }
@@ -96,6 +110,11 @@ function save() {
   var deleteButtons = document.getElementsByClassName('delete-widget');
   while (deleteButtons[0]) {
     deleteButtons[0].parentNode.removeChild(deleteButtons[0]);
+  }
+
+  var editButtons = document.getElementsByClassName('edit-button');
+  while (editButtons[0]) {
+    editButtons[0].parentNode.removeChild(editButtons[0])
   }
   alert('dashboard saved')
 
