@@ -80,7 +80,7 @@ function addChart() {
 function addTitle() {
   var grid = GridStack.init();
   grid.addWidget({
-    x: 0, y: 0, w: 4, content: 'TITLE'
+    x: 0, y: 0, w: 4, content: '<textarea class="title-editing" style="margin: 1.5rem; width:90%" name="variable" rows="1" cols="50">Title....</textarea>'
   });
 }
 
@@ -94,8 +94,6 @@ function addComment() {
   grid.addWidget({
     x: 0, y: 5, w: 8, h: 3, content: '<textarea class="comment-editing" style="margin: 1.5rem; width:90%" name="variable" rows="4" cols="50">Comment...</textarea>'
   });
-
-  // Need to make a toggle switch for readonly and to change css
 }
 
 function save() {
@@ -114,10 +112,16 @@ function save() {
   }
   alert('dashboard saved')
 
-  // Changes the class of the comment boxes USE THIS TO MAKE LOOK LIKE PARAGRAPH
+  // Toggles between CSS classes for static and live state
   var comment = document.querySelectorAll('[class=comment-editing]');
   comment.forEach(comment => {
     comment.setAttribute("class", `comment-saved`);
+  });
+
+  // Toggles between CSS classes for static and live state
+  var title = document.querySelectorAll('[class=title-editing]');
+  title.forEach(title => {
+    title.setAttribute("class", `title-saved`);
   });
 
 }
@@ -141,9 +145,16 @@ function menueToggle() {
     }
   });
 
+  // Toggles between CSS classes for static and live state
   var comment = document.querySelectorAll('[class=comment-saved]');
   comment.forEach(comment => {
     comment.setAttribute("class", `comment-editing`);
+  });
+
+  // Toggles between CSS classes for static and live state
+  var title = document.querySelectorAll('[class=title-saved]');
+  title.forEach(title => {
+    title.setAttribute("class", `title-editing`);
   });
 
 }
