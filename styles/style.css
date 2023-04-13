@@ -57,6 +57,23 @@ a.edit-graph:hover{
   box-shadow: none;
 }
 
+.title-editing{
+  background-color: rgb(255, 255, 255);
+  font-size: x-large;
+  font-weight: bold;
+}
+
+.title-saved{
+  background-color: rgb(232, 232, 232);
+  font-size: x-large;
+  font-weight: bold;
+  resize: none;
+  pointer-events: none;
+  /* Comment out CSS below to style the saved comment boxes! */
+  border-style: none; 
+  box-shadow: none;
+}
+
 
 #mainpage {
   padding-top: 2%;
