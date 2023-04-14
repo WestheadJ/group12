@@ -38,7 +38,7 @@ FusionCharts.ready(function() {
           ]
         }],
         "dataset": [{
-            "seriesname": "RED",
+            "seriesname": "Graph: 1",
             "anchorBgColor": "#FF2D00",
             "color": "#FF2D00",
             "data": [{
@@ -65,7 +65,7 @@ FusionCharts.ready(function() {
             ]
           },
           {
-            "seriesname": "GREEN",
+            "seriesname": "Graph: 2",
             "anchorBgColor": "#00CC16",
             "color": "#00CC16",
             "data": [{
@@ -92,7 +92,7 @@ FusionCharts.ready(function() {
             ]
           },
           {
-            "seriesname": "AMBER",
+            "seriesname": "Graph: 3",
             "anchorBgColor": "#FFB900",
             "color": "#FFB900",
             "data": [{

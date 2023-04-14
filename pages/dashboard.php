@@ -9,6 +9,7 @@ require 'watermanTop.php';
 <!-- <script src="../scripts/print.js"></script> -->
 
 <?php include 'report.php'; ?>
+<?php include 'popout.php'; ?>
 
 
 <div id="mainpage">
