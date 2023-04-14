@@ -3,7 +3,7 @@
     padding: 10px;
     border: 3px solid  #04AA6D;
     max-width: 200px;
-    min-height: 70px;
+    min-height: 100px;
     margin-left: 20px; 
     border-radius: 4px;
     position: relative;
@@ -94,6 +94,9 @@
     right: 5px;
     height: 20px;
     line-height: 10px;
+    border-radius: 4px;
+    background-color: #04AA6D;
+
 }
 
 #folder_name.create-folder-input {
