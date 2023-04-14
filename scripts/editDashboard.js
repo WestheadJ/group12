@@ -25,13 +25,14 @@ function edit() {
 
     if (widgets[i].getAttribute('id')) {
       let id = widgets[i].getAttribute('id')
+      console.log(id)
       let editButton = document.createElement("a")
       if (id.split('-')[0] === "comment" || id.split('-')[0] === "title") {
         editButton.setAttribute("href", `editWidget.php?widget_id=${id.split('-')[1]}&content=${id.split('-')[0]}`)
         editButton.setAttribute("class", "edit-button")
       }
       else {
-        editButton.setAttribute("href", `editWidget.php?widget_id=${id.split('-')[1]}&content=${id.split('-')[0]}`)
+        editButton.setAttribute("href", `editWidget.php?widget_id=${id.split('-')[0]}&content=${id.split('-')[1]}`)
         editButton.setAttribute("class", "edit-button")
       }
       editButton.innerText = "Edit"

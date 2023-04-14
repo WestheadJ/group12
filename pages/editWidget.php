@@ -13,16 +13,16 @@ require 'watermanTop.php';
 
 <div id="graph-edit">
   <div id="graph-container">
-    <canvas id="edit-bar-chart"></canvas>
+    <canvas id="graph"></canvas>
   </div>
   <div id="form-container">
     <form onsubmit="return saveGraph(event)" method="post" id="form">
       <div class="inputItem">
         <label>Chart title</label>
         <input type="text" id="graph-title" name="graph-title" value="Chart" oninput="updatePreview('graph-title')">
-        <label>X Axis</label>
+        <label id="x-axis-label">X Axis</label>
         <input type="text" id="x-axis" name="x-axis" oninput="updatePreview('x-axis')">
-        <label>Y Axis</label>
+        <label id="y-axis-label">Y Axis</label>
         <input type="text" id="y-axis" name="y-axis" oninput="updatePreview('y-axis')">
         <!-- <label>Graph Type</label>
             <select id="Graph Type" name="Graph Type">
