@@ -47,6 +47,17 @@ window.onload = () => {
             }
             else {
               getGraphData(content)
+              fetch("../scripts/getAllGraphs.php")
+                .then(response => response.json())
+                .then(json => {
+                  json.forEach(graph => {
+                    let graphId = JSON.parse(graph.graph_id)
+                    let option = document.createElement("option")
+                    option.setAttribute("value", graphId)
+                    option.innerText = graphId
+                    document.getElementById("select-chart").appendChild(option)
+                  })
+                })
             }
         });
 
@@ -180,4 +191,14 @@ function saveGraph(e) {
           }
         })
     })
+}
+
+function chartChange(e) {
+  console.log(e.target.value)
+  graph.destroy()
+  document.getElementById("graph").remove()
+  let canvas = document.createElement("canvas")
+  canvas.setAttribute("id", "graph")
+  document.getElementById("graph-container").appendChild(canvas)
+  getGraphData(e.target.value)
 }

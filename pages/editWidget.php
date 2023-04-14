@@ -18,6 +18,10 @@ require 'watermanTop.php';
   <div id="form-container">
     <form onsubmit="return saveGraph(event)" method="post" id="form">
       <div class="inputItem">
+        <label for="select-chart">Chart type:</label>
+        <select onchange="chartChange(event)" id="select-chart" name="select-chart">
+
+        </select>
         <label>Chart title</label>
         <input type="text" id="graph-title" name="graph-title" value="Chart" oninput="updatePreview('graph-title')">
         <label id="x-axis-label">X Axis</label>
