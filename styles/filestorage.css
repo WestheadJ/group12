@@ -20,6 +20,7 @@
 }
 
 .create-folder-input {
+    position: relative;
     margin-right: 16px!important;
     margin-top: 23px!important;
 }
@@ -28,12 +29,6 @@
     color: white; 
     font-size: 14px;
   }
-
-  .create-folder-btn {
-    float: right;
-    margin-right: 30px;
-    margin-top: 23px;
-}
 
 .file-input input[type="file"] {
     color: white;
@@ -102,6 +97,13 @@
 }
 
 #folder_name.create-folder-input {
-  position: absolute;
-  left: 940px;
+  left: 960px;
+  top: 80px;
+  position: relative;
+}
+
+input.create-folder-btn{
+  left: 1150px;
+  top: 143px;
+  position: relative;
 }
