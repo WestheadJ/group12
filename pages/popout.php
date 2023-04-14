@@ -4,7 +4,7 @@
     <form class="form-container">
         <script src="../scripts/historyChartFusion.js"></script>
         <div id="chart-container"></div>
-            <button type="#" class="btn timestamp">Timestamp</button>
+            <button type="" class="btn timestamp">Timestamp</button>
             <button type="button" class="btn cancel1" onclick="closeForm()">Close</button>
     </form>
 </div>
