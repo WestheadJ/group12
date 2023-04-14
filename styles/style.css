@@ -38,6 +38,7 @@ a.edit-graph:hover{
   color: white;
   padding: .75em;
   margin-left: 2%;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,.1);
 }
 
 .configure-btn:hover{
@@ -74,6 +75,11 @@ a.edit-graph:hover{
   /* Comment out CSS below to style the saved comment boxes! */
   border-style: none; 
   box-shadow: none;
+}
+
+.toolbar{
+  margin-bottom: 5em;
+  margin-left: 1.9em;
 }
 
 
@@ -268,7 +274,7 @@ a.cancel {
   right: 15px;
   border: 7px solid #f1f1f1;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,.2);
-  z-index: 9;
+  z-index: 10;
 }
 
 /* Add styles to the form container */
