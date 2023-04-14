@@ -111,22 +111,3 @@ input.create-folder-btn{
   position: relative;
 }
 
-input[type="file"]::-webkit-file-upload-button {
-  visibility: hidden;
-}
-input[type="file"]::before {
-  content: 'Select file';
-  display: inline-block;
-  background: #ccc;
-  border: none;
-  padding: 5px 10px;
-  outline: none;
-  white-space: nowrap;
-  -webkit-user-select: none;
-  cursor: pointer;
-  text-shadow: 1px 1px #fff;
-  font-weight: 700;
-  font-size: 1.2em;
-  margin-right: 10px;
-}
-
