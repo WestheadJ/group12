@@ -1,4 +1,6 @@
 let type;
+let widgetId;
+let graphId;
 
 window.onload = () => {
   let params = window.location.search;
@@ -8,7 +10,8 @@ window.onload = () => {
   }
   else {
     const content = params.split("?")[1].split("&")[1].split('=')[1]
-    const widget_id = params.split('?')[1].split("&")[0].split('=')[1]
+
+    widgetId = params.split('?')[1].split("&")[0].split('=')[1]
     let graphEdit = document.getElementById("graph-edit")
     let commentEdit = document.getElementById("comment-edit")
     let titleEdit = document.getElementById("title-edit")
@@ -36,7 +39,7 @@ window.onload = () => {
         let dashboard = JSON.parse(json[0].dashboard_data)
         dashboard.configs.forEach(widget => {
           console.log(widget)
-          if (widget.widget_id == widget_id)
+          if (widget.widget_id == widgetId)
             if (content === "title") {
               document.getElementById("title-preview").innerText = widget.content.title
               document.getElementById("title-input").value = widget.content.title
@@ -47,6 +50,7 @@ window.onload = () => {
             }
             else {
               getGraphData(content)
+              graphId = content
               fetch("../scripts/getAllGraphs.php")
                 .then(response => response.json())
                 .then(json => {
@@ -58,6 +62,7 @@ window.onload = () => {
                     document.getElementById("select-chart").appendChild(option)
                   })
                 })
+              return graphId
             }
         });
 
@@ -95,15 +100,15 @@ var randomValue = function (data) {
 var randomDataVar = randomData();
 var randomValueVar = randomValue(randomDataVar);
 
-function getGraphData(graph_id) {
-  return fetch('../scripts/getGraph.php?graph_id=' + graph_id)
+function getGraphData(graphId) {
+  return fetch('../scripts/getGraph.php?graph_id=' + graphId)
     .then((response) => response.json())
     .then((responseData) => {
 
 
       // DEBUG:
       // console.log(responseData)
-      graph_id = JSON.parse(responseData[0].graph_id)
+      graphId = JSON.parse(responseData[0].graph_id)
       responseData = JSON.parse(responseData[0].graph_data)
 
       // DEBUG:
@@ -140,7 +145,8 @@ function getGraphData(graph_id) {
       let canvas = document.getElementById("graph")
       var ctx = canvas.getContext('2d')
       graph = new Chart(ctx, responseData)
-      return graph
+      globalGraphId = graphId
+      return graph, globalGraphId
     })
 }
 
@@ -166,17 +172,22 @@ function updatePreview(id) {
 
 function saveGraph(e) {
   e.preventDefault();
-  return fetch('../scripts/getGraph.php?graph_id=' + graph_id)
+  fetch('../scripts/getGraph.php?graph_id=' + graphId)
     .then((response) => response.json())
     .then((responseData) => {
       let json = JSON.parse(responseData[0].graph_data)
       let title = document.getElementById('graph-title').value
-      let xAxis = document.getElementById('x-axis').value
-      let yAxis = document.getElementById('y-axis').value
+      if (json.type !== "gauge") {
+        let xAxis = document.getElementById('x-axis').value
+        let yAxis = document.getElementById('y-axis').value
+
+        json.options.scales.xAxes[0].scaleLabel.labelString = xAxis
+        json.options.scales.yAxes[0].scaleLabel.labelString = yAxis
+      }
+
       json.options.title.text = title
-      json.options.scales.xAxes[0].scaleLabel.labelString = xAxis
-      json.options.scales.yAxes[0].scaleLabel.labelString = yAxis
-      fetch('../scripts/saveGraph.php?graph_id=' + graph_id, {
+
+      fetch('../scripts/saveGraph.php?graph_id=' + graphId, {
         method: "POST",
         body: JSON.stringify(json)
       })
@@ -184,7 +195,24 @@ function saveGraph(e) {
         .then(res => {
           console.log(res)
           if (JSON.parse(res).status === 200) {
-            return window.location.replace("dashboard.php")
+            fetch("../scripts/getDashboard.php?dashboard_id=1")
+              .then(res => res.json())
+              .then(json => {
+                let dashboard = JSON.parse(json[0].dashboard_data)
+                let tempConfigs = []
+                dashboard.configs.forEach(widget => {
+                  if (widget.widget_id === widgetId) {
+                    widget.content.graph_id === graphId
+                  }
+                  tempConfigs.push(widget)
+                })
+                dashboard.configs = tempConfigs
+                fetch("../scripts/saveWidget.php?dashboard_id=1")
+                  .then(res => res.json())
+                  .then(json => {
+                    console.log(json)
+                  })
+              })
           }
           else {
             return alert("There was an error updating")
