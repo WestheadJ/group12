@@ -207,7 +207,7 @@ function saveGraph(e) {
                   tempConfigs.push(widget)
                 })
                 dashboard.configs = tempConfigs
-                fetch("../scripts/saveWidget.php?dashboard_id=1")
+                fetch("../scripts/saveWidget.php?dashboard_id=1", { method: "post", body: JSON.stringify(dashboard) })
                   .then(res => res.json())
                   .then(json => {
                     console.log(json)
