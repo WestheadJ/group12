@@ -84,7 +84,7 @@
   }
 
   #printReport {
-    margin-right: 100px ;
+    margin-left: 0px ;
     margin-top: 10px;
   }
 
@@ -92,6 +92,13 @@
     margin-left: 10px;
   
   }
+
+  @media print {
+    #printReport {
+      display: none;
+    }
+  }
+  
 
   
 
