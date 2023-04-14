@@ -1,3 +1,4 @@
+// REFERENCE FOR CODE: https://www.fusioncharts.com/dev/chart-attributes/msline (Used for our history chart. (client gave us permission to use FusionCharts))
 FusionCharts.ready(function() {
     var visitChart = new FusionCharts({
       type: 'msline',

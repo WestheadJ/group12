@@ -150,7 +150,7 @@ function getGraphData(graphId) {
     })
 }
 
-// https://stackoverflow.com/questions/7056669/how-to-prevent-default-event-handling-in-an-onclick-method
+// REFERENCE FOR CODE: https://stackoverflow.com/questions/7056669/how-to-prevent-default-event-handling-in-an-onclick-method
 function updatePreview(id) {
   let input = document.getElementById(id).value
 

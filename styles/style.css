@@ -48,6 +48,7 @@ a.edit-graph:hover{
   background-color: rgb(255, 255, 255);
 }
 
+/* REFERENCE FOR CODE: https://stackoverflow.com/questions/2528462/how-to-set-readonly-property-of-textbox-from-css */
 .comment-saved{
   background-color: rgb(232, 232, 232);
   resize: none;
@@ -63,6 +64,7 @@ a.edit-graph:hover{
   font-weight: bold;
 }
 
+/* REFERENCE FOR CODE: https://stackoverflow.com/questions/2528462/how-to-set-readonly-property-of-textbox-from-css */
 .title-saved{
   background-color: rgb(232, 232, 232);
   font-size: x-large;

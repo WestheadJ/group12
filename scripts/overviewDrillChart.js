@@ -1,3 +1,6 @@
+
+// REFERENCE FOR CODE - As the client has allowed us to make use of fusion charts we worked from this documentation below to make our drill down pie chart.
+// https://www.fusioncharts.com/dev/chart-guide/chart-configurations/drill-down
 FusionCharts.ready(function() {
     var satisfactionChart = new FusionCharts({
       type: 'pie2d',

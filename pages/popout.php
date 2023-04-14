@@ -10,5 +10,5 @@
 </div>
 <script src="../scripts/popout.js"></script>
 
-<!-- REFERENCE FOR CODE -->
+<!-- REFERENCE FOR CODE: Used the basis of this login form for the popout functionality and made it our own for this chart. -->
 <!-- https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_popup_form -->

@@ -1,4 +1,4 @@
-// https://www.freecodecamp.org/news/how-to-read-json-file-in-javascript/
+// REFERENCE FOR CODE: https://www.freecodecamp.org/news/how-to-read-json-file-in-javascript/
 
 
 var randomScalingFactor = function () {

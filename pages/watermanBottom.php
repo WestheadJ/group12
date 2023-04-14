@@ -28,3 +28,6 @@
         style="position: absolute; top: -9999em; white-space: nowrap; padding: 0px; width: 1px; height: 1px; overflow: hidden;">
     </div>
 </body>
+
+<!-- REFERENCE FOR CODE: Taken from our client's dev site and used to make our integration look more believable -->
+<!-- http://dev2.legalregister.co.uk/legal_register/climate -->
