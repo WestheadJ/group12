@@ -2,27 +2,19 @@ function edit() {
   menueToggle()
   var grid = GridStack.init();
   grid.setStatic(false);
-
   // Get all the widgets
   var widgets = document.getElementsByClassName('grid-stack-item');
 
   // Loop through each widget
   for (var i = 0; i < widgets.length; i++) {
-    // Check if the widget already has a delete button
-    var existingDeleteButton = widgets[i].querySelector('.delete-widget');
-    if (!existingDeleteButton) {
-      // Create a delete button
-      var deleteButton = document.createElement('button');
-      deleteButton.innerHTML = 'X';
-      deleteButton.className = 'delete-widget';
-      deleteButton.onclick = function () {
-        // Remove the widget from the grid
-        grid.removeWidget(this.parentNode);
-      };
-      // Append the delete button to the widget
-      widgets[i].appendChild(deleteButton);
-    }
+    // Remove the delete button from the widget
+    removeDeleteButton(widgets[i]);
 
+    // Add the delete button to the widget
+    addDeleteButton(widgets[i], grid);
+  }
+
+  
     if (widgets[i].getAttribute('id')) {
       let id = widgets[i].getAttribute('id')
       console.log(id)
@@ -41,6 +33,31 @@ function edit() {
 
 
   }
+
+function addDeleteButton(widget, grid) {
+  // Check if the widget already has a delete button
+  var existingDeleteButton = widget.querySelector('.delete-widget');
+  if (!existingDeleteButton) {
+    // Create a delete button
+    var deleteButton = document.createElement('button');
+    deleteButton.innerHTML = 'X';
+    deleteButton.className = 'delete-widget';
+    deleteButton.onclick = function () {
+      // Remove the widget from the grid
+      grid.removeWidget(widget);
+    };
+    // Append the delete button to the widget
+    widget.appendChild(deleteButton);
+  }
+}
+function removeDeleteButton(widget) {
+  // Check if the widget has a delete button
+  var existingDeleteButton = widget.querySelector('.delete-widget');
+  if (existingDeleteButton) {
+    // Remove the delete button from the widget
+    existingDeleteButton.remove();
+  }
+
 }
 
 
@@ -53,12 +70,18 @@ function addChart() {
   });
 
   var randomData = function () {
-    return [
-      randomScalingFactor(),
+    return [      
+       randomScalingFactor(),
       randomScalingFactor(),
       randomScalingFactor()
-    ];
+    ]
   };
+
+  // Get the new widget
+  var newWidget = document.querySelector('.grid-stack-item:last-child');
+
+  // Add the delete button to the new widget
+  addDeleteButton(newWidget, grid);
 
   var data = randomData();
 
