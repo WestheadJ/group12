@@ -105,8 +105,12 @@ function addTitle() {
   var grid = GridStack.init();
   grid.addWidget({
     x: 0, y: 0, w: 4, content: '<textarea class="title-editing" style="margin: 1.5rem; width:90%" name="variable" rows="1" cols="50">Title....</textarea>'
+  }, function(el) {
+    // Add the delete button to the new widget
+    addDeleteButton(el, grid);
   });
 }
+
 
 var commentCounter = 0;
 
@@ -118,7 +122,19 @@ function addComment() {
   grid.addWidget({
     x: 0, y: 5, w: 8, h: 3, content: '<textarea class="comment-editing" style="margin: 1.5rem; width:90%" name="variable" rows="4" cols="50">Comment...</textarea>'
   });
+
+  // Add the delete button to the new comment widget
+  var newWidget = document.querySelector('.grid-stack-item:last-child');
+  addDeleteButton(newWidget, grid);
+
+  // Add the delete button to all existing comment widgets
+  var commentWidgets = document.querySelectorAll('.comment-editing');
+  for (var i = 0; i < commentWidgets.length; i++) {
+    var widget = commentWidgets[i].parentNode;
+    addDeleteButton(widget, grid);
+  }
 }
+
 
 function save() {
   menueToggle()
