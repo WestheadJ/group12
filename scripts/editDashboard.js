@@ -61,21 +61,31 @@ function removeDeleteButton(widget) {
 
 function addChart() {
   var grid = GridStack.init();
+
+  // Counts how many widgets are currently on the dashboard
+  var widgetCount = document.querySelectorAll('.grid-stack-item').length;
+  // adds 1 to counter for the new widget
+  widgetCount += 1;
+
   grid.addWidget({
     x: 0, y: 5, w: 6, h: 5, content: '<canvas id="dummy"></canvas>' // here
     // gs-h="3" gs-w="1" gs-x="0" gs-y="5"
   });
-
+  
+  
   var randomData = function () {
     return [      
-       randomScalingFactor(),
+      randomScalingFactor(),
       randomScalingFactor(),
       randomScalingFactor()
     ]
   };
-
+  
   // Get the new widget
   var newWidget = document.querySelector('.grid-stack-item:last-child');
+  
+  // Assings id to the new widget
+  newWidget.setAttribute("id", `${widgetCount}`)
 
   // Add the delete button to the new widget
   addDeleteButton(newWidget, grid);
@@ -94,6 +104,7 @@ function addChart() {
         return window.dfltChart = new Chart(ctx, dData);
       })
   });
+
 
 }
 
@@ -139,7 +150,7 @@ function addComment() {
   var grid = GridStack.init();
   // commentCounter += 1;
   // let comm_id = "comment-" + commentCounter
-  console.log(commentCounter);
+  // console.log(commentCounter);
   var newWidget = grid.addWidget({
     x: 0, y: 5, w: 8, h: 3, content: '<textarea class="comment-editing" style="margin: 1.5rem; width:90%" name="variable" rows="4" cols="50">Comment...</textarea>'
   });
