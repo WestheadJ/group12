@@ -4,6 +4,7 @@
   }
   
   .modal-container {
+    /* remove margin: auto; */
     width: 85%;
     height: auto;
     background-color: white;
@@ -25,6 +26,7 @@
     justify-content: space-between;
   }
   
+  /* Adding Styles for Report Table */
   #report-table {
     border-collapse: collapse;
     width: 100%;
@@ -44,6 +46,7 @@
     text-align: left;
   }
   
+  /*Adding styles to the status inside the modal. */
   .statusColor {
     display: inline-block;
     width: 20px;
@@ -51,6 +54,7 @@
     border-radius: 50%;
   }
 
+   /*Adding styles to the buttons inside the modal. */
   #linkModal {
     background-color: #35967c;
     color: white;

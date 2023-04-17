@@ -7,8 +7,6 @@ document.getElementById('linkModal').addEventListener('click', function () {
     .then(data => {
       var html = '';
       data.charts.forEach(chart => {
-  //https://stackoverflow.com/questions/17120633/loop-through-each-html-table-column-and-get-the-data-using-jquery
-  //The source I used to help me implement the forEach() method to loop through each chart in the report.json file
         html += '<tr><th colspan="2">' + chart.chartTitle + '</th></tr>';
         chart.tableData.forEach(table => {
           html += '<tr>';
@@ -16,8 +14,6 @@ document.getElementById('linkModal').addEventListener('click', function () {
           html += '<td><span class="statusColor" style="background-color:' + table.statusColor + '"></td>';
           html += '</tr>';
         });
-  //https://www.youtube.com/watch?v=eS-FVnhjvEQ
- // The source I used to help me display the graph data in a table. 
       });
       reportTable.innerHTML = html;
     });
@@ -25,7 +21,4 @@ document.getElementById('linkModal').addEventListener('click', function () {
     newWindow.print();
   });
 }, false);
-
-  //https://www.w3schools.com/jsref/met_win_print.asp
-  //The source I used to help me implement a print option for the report. 
 
