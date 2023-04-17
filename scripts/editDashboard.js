@@ -140,35 +140,19 @@ function addComment() {
   // commentCounter += 1;
   // let comm_id = "comment-" + commentCounter
   console.log(commentCounter);
-  grid.addWidget({
+  var newWidget = grid.addWidget({
     x: 0, y: 5, w: 8, h: 3, content: '<textarea class="comment-editing" style="margin: 1.5rem; width:90%" name="variable" rows="4" cols="50">Comment...</textarea>'
   });
 
   // Add the delete button to the new comment widget, if it doesn't already have one
-  var newWidget = document.querySelector('.grid-stack-item:last-child');
   var existingDeleteButton = newWidget.querySelector('.delete-widget');
   if (!existingDeleteButton) {
     addDeleteButton(newWidget, grid);
   }
 
-  // Add the delete button to all existing comment widgets that don't already have one
-  var commentWidgets = document.querySelectorAll('.comment-editing');
-  for (var i = 0; i < commentWidgets.length; i++) {
-    var widget = commentWidgets[i].parentNode;
-    var existingDeleteButton = widget.querySelector('.delete-widget');
-    if (!existingDeleteButton) {
-      addDeleteButton(widget, grid);
-    }
-  }
+  
 }
 
-function addDeleteButtonsToComments(grid) {
-  var commentWidgets = document.querySelectorAll('.comment-editing');
-  for (var i = 0; i < commentWidgets.length; i++) {
-    var widget = commentWidgets[i].parentNode;
-    addDeleteButton(widget, grid);
-  }
-}
 
 
 function save() {
