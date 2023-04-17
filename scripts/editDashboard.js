@@ -7,31 +7,28 @@ function edit() {
 
   // Loop through each widget
   for (var i = 0; i < widgets.length; i++) {
-    // Remove the delete button from the widget
-    removeDeleteButton(widgets[i]);
+      // Remove the delete button from the widget
+      removeDeleteButton(widgets[i]);
 
-    // Add the delete button to the widget
-    addDeleteButton(widgets[i], grid);
-  }
+      // Add the delete button to the widget
+      addDeleteButton(widgets[i], grid);
 
-  
-    if (widgets[i].getAttribute('id')) {
-      let id = widgets[i].getAttribute('id')
-      console.log(id)
-      let editButton = document.createElement("a")
-      if (id.split('-')[0] === "comment" || id.split('-')[0] === "title") {
-        editButton.setAttribute("href", `editWidget.php?widget_id=${id.split('-')[1]}&content=${id.split('-')[0]}`)
-        editButton.setAttribute("class", "edit-button")
+      if (widgets[i].getAttribute('id')) {
+        let id = widgets[i].getAttribute('id')
+        console.log(id)
+        let editButton = document.createElement("a")
+        if (id.split('-')[0] === "comment" || id.split('-')[0] === "title") {
+          editButton.setAttribute("href", `editWidget.php?widget_id=${id.split('-')[1]}&content=${id.split('-')[0]}`)
+          editButton.setAttribute("class", "edit-button")
+        }
+        else {
+          editButton.setAttribute("href", `editWidget.php?widget_id=${id.split('-')[0]}&content=${id.split('-')[1]}`)
+          editButton.setAttribute("class", "edit-button")
+        }
+        editButton.innerText = "Edit"
+        widgets[i].appendChild(editButton)
       }
-      else {
-        editButton.setAttribute("href", `editWidget.php?widget_id=${id.split('-')[0]}&content=${id.split('-')[1]}`)
-        editButton.setAttribute("class", "edit-button")
-      }
-      editButton.innerText = "Edit"
-      widgets[i].appendChild(editButton)
     }
-
-
   }
 
 function addDeleteButton(widget, grid) {
