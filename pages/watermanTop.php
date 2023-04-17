@@ -5,7 +5,6 @@
 
 <!-- REFERENCE FOR CODE: Taken from our client's dev site and used to make our integration look more believable -->
 <!-- http://dev2.legalregister.co.uk/legal_register/climate -->
-
 <body id="main" data-new-gr-c-s-check-loaded="14.1028.0" data-gr-ext-installed="">
     <div>
         <!-- Header Section -->

@@ -51,10 +51,13 @@ function addDeleteButton(widget, grid) {
   }
 }
 function removeDeleteButton(widget) {
+  // Check if the widget has a delete button
   var existingDeleteButton = widget.querySelector('.delete-widget');
   if (existingDeleteButton) {
-    existingDeleteButton.parentNode.removeChild(existingDeleteButton);
+    // Remove the delete button from the widget
+    existingDeleteButton.remove();
   }
+
 }
 
 
@@ -102,35 +105,11 @@ function addTitle() {
   var grid = GridStack.init();
   grid.addWidget({
     x: 0, y: 0, w: 4, content: '<textarea class="title-editing" style="margin: 1.5rem; width:90%" name="variable" rows="1" cols="50">Title....</textarea>'
+  }, function(el) {
+    // Add the delete button to the new widget
+    addDeleteButton(el, grid);
   });
-  var newWidget = document.querySelector('.grid-stack-item:last-child');
-
-  // Add the delete button to the new widget
-  addDeleteButton(newWidget, grid);
 }
-// When the DOM is ready...
-document.addEventListener('DOMContentLoaded', function() {
-  // Add delete buttons to existing title widgets
-  var existingTitles = document.querySelectorAll('.title-editing');
-  for (var i = 0; i < existingTitles.length; i++) {
-    addDeleteButton(existingTitles[i].parentNode, grid);
-  }
-
-  // Add click event listener to the add title button
-  var addTitleButton = document.getElementById('add-title-button');
-  addTitleButton.onclick = function() {
-    // Add the new title widget
-    addTitle();
-
-    // Remove delete buttons from all other title widgets
-    var existingTitles = document.querySelectorAll('.title-editing');
-    for (var i = 0; i < existingTitles.length; i++) {
-      if (existingTitles[i].parentNode !== newWidget) {
-        removeDeleteButton(existingTitles[i].parentNode);
-      }
-    }
-  };
-});
 
 
 var commentCounter = 0;

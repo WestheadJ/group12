@@ -3,6 +3,7 @@ require 'watermanTop.php';
 
 ?>
 
+<link rel="stylesheet" href="../styles/dashboard.css">
 <script src="../scripts/charts.js"></script>
 <script src="../scripts/editDashboard.js"></script>
 <!-- <script src="../scripts/print.js"></script> -->
