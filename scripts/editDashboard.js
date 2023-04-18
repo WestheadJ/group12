@@ -5,30 +5,35 @@ function edit() {
   // Get all the widgets
   var widgets = document.getElementsByClassName('grid-stack-item');
 
-  // Loop through each widget
   for (var i = 0; i < widgets.length; i++) {
-      // Remove the delete button from the widget
-      removeDeleteButton(widgets[i]);
-
-      // Add the delete button to the widget
-      addDeleteButton(widgets[i], grid);
-
-      if (widgets[i].getAttribute('id')) {
-        let id = widgets[i].getAttribute('id')
-        console.log(id)
-        let editButton = document.createElement("a")
-        if (id.split('-')[0] === "comment" || id.split('-')[0] === "title") {
-          editButton.setAttribute("href", `editWidget.php?widget_id=${id.split('-')[1]}&content=${id.split('-')[0]}`)
-          editButton.setAttribute("class", "edit-button")
-        }
-        else {
-          editButton.setAttribute("href", `editWidget.php?widget_id=${id.split('-')[0]}&content=${id.split('-')[1]}`)
-          editButton.setAttribute("class", "edit-button")
-        }
-        editButton.innerText = "Edit"
-        widgets[i].appendChild(editButton)
-      }
+    // Remove the delete button from the widget
+    removeDeleteButton(widgets[i]);
+  
+    // Add the delete button to the widget
+    addDeleteButton(widgets[i], grid);
+  
+    // Check if an edit button already exists on this widget
+    if (widgets[i].querySelector('.edit-button')) {
+      continue;
     }
+  
+    if (widgets[i].getAttribute('id') && widgets[i].getAttribute('id').split('-')[0] !== "title" && widgets[i].getAttribute('id').split('-')[0] !== "comment") {
+      let id = widgets[i].getAttribute('id')
+      console.log(id)
+      let editButton = document.createElement("a")
+      if (id.split('-')[0] === "comment" || id.split('-')[0] === "title") {
+        editButton.setAttribute("href", `editWidget.php?widget_id=${id.split('-')[1]}&content=${id.split('-')[0]}`)
+        editButton.setAttribute("class", "edit-button")
+      }
+      else {
+        editButton.setAttribute("href", `editWidget.php?widget_id=${id.split('-')[0]}&content=${id.split('-')[1]}`)
+        editButton.setAttribute("class", "edit-button")
+      }
+      editButton.innerText = "Edit"
+      widgets[i].appendChild(editButton)
+    }
+  }
+  
   }
 
 function addDeleteButton(widget, grid) {
