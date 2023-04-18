@@ -14,7 +14,6 @@ if(isset($_GET['newGraph']))
 }
 else{
   echo('<script src="../scripts/editWidget.js"></script>');
-  echo('test');
 }
 ?>
 
@@ -42,17 +41,19 @@ else{
 
 <?php if(isset($_GET['newGraph'])):?>
   <label for="select-chart">Chart type:</label>
-        <select onchange="chartChange(event)" id="select-chart" name="select-chart">
-        <option value="Bar Chart">Bar Chart</option>
-              <option value="Pie Chart">Pie Chart</option>
-              <option value="Gauge Chart">Gauge Chart</option>
+        <select id="select-chart" onInput='changeGraph()' name="select-chart">
+              <option value="" selected disabled hidden>Select Chart Here</option>
+              <option value="bar">Bar Chart</option>
+              <option value="pie">Pie Chart</option>
+              <option value="line">Line Chart</option>
+              <option value="gauge">Gauge Chart</option>
             </select>
 <?php else:?>
 
 <?php endif; ?>
         </select>
         <label>Chart title</label>
-        <input type="text" id="graph-title" name="graph-title" value="Chart" oninput="updatePreview('graph-title')">
+        <input type="text" id="graph-title" name="graph-title" oninput="updatePreview('graph-title')">
         <label id="x-axis-label">X Axis</label>
         <input type="text" id="x-axis" name="x-axis" oninput="updatePreview('x-axis')">
         <label id="y-axis-label">Y Axis</label>
