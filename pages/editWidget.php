@@ -23,7 +23,7 @@ else{
 
 <?php if(isset($_GET['newGraph'])):?>
   <h1 id="title">Adding New Chart</h1>
-  <div id="dummy"></div>
+  <canvas id="dummy"></canvas>
 <?php else:?>
   <h1 id="title">Edit Chart</h1>
 <?php endif; ?>
