@@ -1,4 +1,8 @@
 <?php
+  require '../pages/watermanTop.php';
+?>
+
+<?php
 include("../configs/db/dbConnection.php");
 
 
@@ -23,7 +27,8 @@ $file_result = mysqli_query($conn, $file_sql);
   <link rel="stylesheet" href="../styles/filestorage.css">
 </head>
 <body class=file-page>
-    <h1 class="file-header">Files in <?php echo $folder_name; ?></h1>
+  <div class="file-view-container">
+    <h1 class="file-header">Files in: <?php echo $folder_name; ?></h1>
       <div class="file-view-area">
         <?php while($file_row = mysqli_fetch_assoc($file_result)) { ?>
           <div class="file-display">
@@ -32,5 +37,10 @@ $file_result = mysqli_query($conn, $file_sql);
         <?php } ?>
       </div>
       <a href="../filestorage_pages/filestorage.php" class="back">Back</a>
+  </div>
 </body>
 </html>
+
+<?php
+  require '../pages/watermanBottom.php';
+?>
