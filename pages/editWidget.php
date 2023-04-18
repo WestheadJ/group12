@@ -6,6 +6,19 @@ require 'watermanTop.php';
 
 ?>
 
+<?php
+require 'watermanTop.php';
+if(isset($_GET['newGraph']))
+{
+  echo('<script src="../scripts/newGraph.js"></script>');
+
+}
+else{
+  // echo('<script src="../scripts/editWidget.js"></script>');
+  echo('test');
+}
+?>
+
 <script src="../scripts/editWidget.js"></script>
 <!-- <link rel="stylesheet" href="../styles/editWidget.css" /> -->
 
