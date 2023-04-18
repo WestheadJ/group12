@@ -31,8 +31,10 @@ $file_result = mysqli_query($conn, $file_sql);
     <h1 class="file-header">Files in: <?php echo $folder_name; ?></h1>
       <div class="file-view-area">
         <?php while($file_row = mysqli_fetch_assoc($file_result)) { ?>
-          <div class="file-display">
-          <p><a href="../uploads/<?php echo $file_row['file_name']; ?>" class="files-link"><?php echo $file_row['file_name']; ?></a></p>
+          <div class="file-display-container">
+            <div class="file-display">
+            </div>
+            <p><a href="../uploads/<?php echo $file_row['file_name']; ?>" class="files-link"><?php echo $file_row['file_name']; ?></a></p>
           </div>
         <?php } ?>
       </div>

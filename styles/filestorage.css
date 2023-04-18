@@ -76,6 +76,7 @@ a.back{
   background-color: #04AA6D;
   padding: 1em;
   border-radius: 4px;
+  margin-top: 10em;
 }
 
 a.back:hover{
@@ -85,7 +86,19 @@ a.back:hover{
 .files-link{
   text-decoration: none;
   color: black;
-  font-size: 20px;
+  font-size: 10px;
+  text-align: center;
+}
+
+.file-display-container{
+  display:flex;
+  /* justify-content: center; */
+  flex-direction: column;
+  margin-left: 1em;
+  padding: 1em;
+}
+
+p{
   text-align: center;
 }
 
@@ -94,16 +107,16 @@ a.back:hover{
 }
 
 .file-display {
-  display: flex;
-  justify-content: center;
-  padding: 10px;
-  margin-bottom: 10px;
-  background-color: white;
-  max-width: 1000px; 
-  min-height: 100px;
-  margin-left: auto;
-  margin-right: auto;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,.1);
+  padding-top: 2em;
+  background-image: url("../assets/inside-file-ico.png");
+  background-size: 155px 120px;
+  max-width: 155px;
+  max-height: 120px;
+  min-height: 120px;
+  min-width: 150px;
+  margin-top: 20px;
+  position: relative;
+  /* font-size: 4px 4px; */
 }
 
 .file-view-container{
@@ -113,13 +126,14 @@ a.back:hover{
 }
 
 .file-view-area{
-  /* width: 75%; */
-  margin: 5rem;
+  display:flex;
+  flex-wrap: wrap;
+  margin-top: 3%;
   background-color: lightgray;
-  /* margin-left: 12.5%; */
   padding: 2em;
   box-shadow: inset 0px 8px 16px 0px rgba(0,0,0,.1);
   border-radius: 8px;
+  margin-bottom: 2em;
 }
 
 .file-header {
@@ -130,7 +144,7 @@ a.back:hover{
 }
 
 .file-display:hover{
-  box-shadow: inset 0 0 100px 100px rgba(170, 170, 170, 0.2);
+  /* box-shadow: inset 0 0 100px 100px rgba(170, 170, 170, 0.2); */
 }
 
 .delete-button {
