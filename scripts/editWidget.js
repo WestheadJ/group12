@@ -1,5 +1,4 @@
-let type;
-let widgetId;
+
 let graphId;
 
 window.onload = () => {
