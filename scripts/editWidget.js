@@ -12,43 +12,17 @@ window.onload = () => {
     const content = params.split("?")[1].split("&")[1].split('=')[1]
 
     widgetId = params.split('?')[1].split("&")[0].split('=')[1]
-    let graphEdit = document.getElementById("graph-edit")
-    let commentEdit = document.getElementById("comment-edit")
-    let titleEdit = document.getElementById("title-edit")
+    console.log(widgetId);
 
-    if (content === "comment") {
-      titleEdit.remove()
-      graphEdit.remove()
-      console.log("Removing title and graph")
-    }
-    else if (content === "title") {
-      commentEdit.remove()
-      graphEdit.remove()
-      console.log("Removing comment and graph")
-    }
-    else {
-      commentEdit.remove()
-      titleEdit.remove()
-
-    }
-    fetch("../scripts/getDashboard.php?dashboard_id=1")
+    x = "../scripts/getGraph.php?graph_id="+widgetId
+    fetch(x)
       // Gets the data and converts it to a JSON object to work with
       .then(response => response.json())
       // Render function
       .then((json) => {
-        let dashboard = JSON.parse(json[0].dashboard_data)
+        let graph = JSON.parse(json[0].data)
         dashboard.configs.forEach(widget => {
           console.log(widget)
-          if (widget.widget_id == widgetId)
-            if (content === "title") {
-              document.getElementById("title-preview").innerText = widget.content.title
-              document.getElementById("title-input").value = widget.content.title
-            }
-            else if (content == "comment") {
-              document.getElementById("comment-preview").innerText = widget.content.comment
-              document.getElementById("comment-input") = widget.content.comment
-            }
-            else {
               getGraphData(content)
               graphId = content
               fetch("../scripts/getAllGraphs.php")
@@ -60,8 +34,6 @@ window.onload = () => {
                     option.setAttribute("value", graphId)
                     option.innerText = graphId
                     document.getElementById("select-chart").appendChild(option)
-                  })
-                })
               return graphId
             }
         });
