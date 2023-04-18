@@ -83,7 +83,8 @@ function render(json) {
 
     if (widget.content.comment) {
       let widgetDiv = document.getElementById(`comment-${widget.widget_id}`)
-      let comment = document.createElement("p")
+      let comment = document.createElement("textarea")
+      comment.setAttribute("class", `comment-saved`)
       comment.setAttribute("id", `comment-${widget.widget_id}`)
       comment.innerText = widget.content.comment;
       widgetDiv.appendChild(comment)
@@ -91,7 +92,8 @@ function render(json) {
 
     if (widget.content.title) {
       let widgetDiv = document.getElementById(`title-${widget.widget_id}`)
-      let title = document.createElement("h1")
+      let title = document.createElement("textarea")
+      title.setAttribute("class", `title-saved`)
       title.setAttribute("id", `title-${widget.widget_id}`)
       title.innerText = widget.content.title;
       widgetDiv.appendChild(title)
