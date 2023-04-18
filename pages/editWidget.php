@@ -7,22 +7,22 @@ require 'watermanTop.php';
 ?>
 
 <?php
-require 'watermanTop.php';
+// require 'watermanTop.php';
 if(isset($_GET['newGraph']))
 {
   echo('<script src="../scripts/newGraph.js"></script>');
 
 }
 else{
-  // echo('<script src="../scripts/editWidget.js"></script>');
+  echo('<script src="../scripts/editWidget.js"></script>');
   echo('test');
 }
 ?>
 
-<script src="../scripts/editWidget.js"></script>
+<!-- <script src="../scripts/editWidget.js"></script> -->
 <!-- <link rel="stylesheet" href="../styles/editWidget.css" /> -->
 
-<h1 id="title">Edit Widget</h1>
+<!-- <h1 id="title">Edit Widget</h1>
 
 <div id="graph-edit">
   <div id="graph-container">
@@ -77,7 +77,7 @@ else{
 
     </form>
   </div>
-</div>
+</div> -->
 
 
 
