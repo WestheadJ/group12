@@ -11,7 +11,6 @@ require 'watermanTop.php';
 if(isset($_GET['newGraph']))
 {
   echo('<script src="../scripts/newGraph.js"></script>');
-
 }
 else{
   echo('<script src="../scripts/editWidget.js"></script>');
@@ -19,10 +18,16 @@ else{
 }
 ?>
 
-<!-- <script src="../scripts/editWidget.js"></script> -->
-<!-- <link rel="stylesheet" href="../styles/editWidget.css" /> -->
+<link rel="stylesheet" href="../styles/editWidget.css" /> -->
 
-<!-- <h1 id="title">Edit Widget</h1>
+
+<?php if(isset($_GET['newGraph'])):?>
+  <h1 id="title">Adding New Chart</h1>
+  <div id="dummy"></div>
+<?php else:?>
+  <h1 id="title">Edit Chart</h1>
+<?php endif; ?>
+
 
 <div id="graph-edit">
   <div id="graph-container">
@@ -41,7 +46,7 @@ else{
         <input type="text" id="x-axis" name="x-axis" oninput="updatePreview('x-axis')">
         <label id="y-axis-label">Y Axis</label>
         <input type="text" id="y-axis" name="y-axis" oninput="updatePreview('y-axis')">
-        <!-- <label>Graph Type</label>
+       <!-- <label>Graph Type</label>
             <select id="Graph Type" name="Graph Type">
               <option value="Bar Chart">Bar Chart</option>
               <option value="Pie Chart">Pie Chart</option>
@@ -77,7 +82,7 @@ else{
 
     </form>
   </div>
-</div> -->
+</div>
 
 
 
