@@ -68,7 +68,7 @@ function removeDeleteButton(widget) {
 function addChart() {
   var grid = GridStack.init();
 
-  
+
   // Counts how many widgets are currently on the dashboard
   var widgetCount = document.querySelectorAll('.grid-stack-item').length;
   // adds 1 to counter for the new widget
@@ -118,15 +118,28 @@ function addChart() {
 
 
 function addTitle() {
+
+  var gridstackItems = document.querySelectorAll('.grid-stack-item')
+  var counter = 0
+
+  gridstackItems.forEach((item, key) => {
+    counter = key
+  })
+
   var grid = GridStack.init();
   grid.addWidget({
-    x: 0, y: 0, w: 4, content: '<textarea class="title-editing" style="margin: 1.5rem; width:90%" name="variable" rows="1" cols="50">Title....</textarea>'
+    x: 0, y: 0, w: 4, h: 2, content: `<textarea id="title-${counter + 1}" class="title-editing" style="margin: 1.5rem; width:90%" name="variable" rows="1" cols="50">Title....</textarea>`
   });
+
   var newWidget = document.querySelector('.grid-stack-item:last-child');
+
+  newWidget.setAttribute('id', `title-${counter + 1}`)
 
   // Add the delete button to the new widget
   addDeleteButton(newWidget, grid);
 }
+
+
 // When the DOM is ready...
 document.addEventListener('DOMContentLoaded', function () {
   // Add delete buttons to existing title widgets
@@ -135,39 +148,46 @@ document.addEventListener('DOMContentLoaded', function () {
     addDeleteButton(existingTitles[i].parentNode, grid);
   }
 
-  // Add click event listener to the add title button
-  var addTitleButton = document.getElementById('add-title-button');
-  addTitleButton.onclick = function () {
-    // Add the new title widget
-    addTitle();
 
-    // Remove delete buttons from all other title widgets
-    var existingTitles = document.querySelectorAll('.title-editing');
-    for (var i = 0; i < existingTitles.length; i++) {
-      if (existingTitles[i].parentNode !== newWidget) {
-        removeDeleteButton(existingTitles[i].parentNode);
-      }
+  // Remove delete buttons from all other title widgets
+  var existingTitles = document.querySelectorAll('.title-editing');
+  for (var i = 0; i < existingTitles.length; i++) {
+    if (existingTitles[i].parentNode !== newWidget) {
+      removeDeleteButton(existingTitles[i].parentNode);
     }
-  };
+  }
+
 })
 
 
-var commentCounter = 0;
 
 function addComment() {
+  var gridstackItems = document.querySelectorAll('.grid-stack-item')
+  var counter = 0
+
+  gridstackItems.forEach((item, key) => {
+    counter = key
+  })
+
+
   var grid = GridStack.init();
-  // commentCounter += 1;
-  // let comm_id = "comment-" + commentCounter
-  // console.log(commentCounter);
+
+
+  console.log("comment adding")
+
   var newWidget = grid.addWidget({
-    x: 0, y: 5, w: 8, h: 3, content: '<textarea class="comment-editing" style="margin: 1.5rem; width:90%" name="variable" rows="4" cols="50">Comment...</textarea>'
+    x: 0, y: 5, w: 8, h: 3, content: `<textarea id="comment-${counter + 1}" class="comment-editing" style="margin: 1.5rem; width:90%" name="variable" rows="4" cols="50">Comment...</textarea>`
   });
+  var newWidget = document.querySelector('.grid-stack-item:last-child');
+
+  newWidget.setAttribute('id', `comment-${counter + 1}`)
 
   // Add the delete button to the new comment widget, if it doesn't already have one
   var existingDeleteButton = newWidget.querySelector('.delete-widget');
   if (!existingDeleteButton) {
     addDeleteButton(newWidget, grid);
   }
+
 }
 
 function save() {
@@ -187,10 +207,11 @@ function save() {
     var id = item.getAttribute("id")
     var contentType;
     var content;
+
     if (id.split('-')[0] === "comment") {
       contentType = "comment"
       content = {
-        comment: item.firstChild.innerHTML
+        comment: item.querySelector(`#comment-${id.split('-')[1]}`).innerHTML
       }
 
     }
@@ -198,7 +219,7 @@ function save() {
       contentType = "title"
       content =
       {
-        title: item.firstChild.innerHTML
+        title: item.querySelector(`#title-${id.split('-')[1]}`).innerHTML
       }
 
     }

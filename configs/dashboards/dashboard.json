@@ -52,14 +52,6 @@
                 "graph_id": 4
             },
             "widget_id": 6
-        },
-        {
-            "gs_h": 3,
-            "gs_w": 3,
-            "content": {
-                "graph_id": 10
-            },
-            "widget_id": 7
         }
     ]
 }

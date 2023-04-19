@@ -114,7 +114,6 @@ function render(json) {
           // console.log(responseData)
           graph_id = JSON.parse(responseData[0].graph_id)
           responseData = JSON.parse(responseData[0].graph_data)
-
           // DEBUG:
           // console.log(responseData)
 
