@@ -2,6 +2,7 @@ let graph;
 let x = 1;
 let graph_data;
 let graph_data_raw;
+let data;
 
 var randomScalingFactor = function () {
   return Math.round(Math.random() * 100);
@@ -55,50 +56,41 @@ function changeGraph() {
 
 function saveGraph(e) {
   e.preventDefault();
+  var count = document.querySelectorAll('grid-stack-items').length
+  count += 1;
   var input = document.getElementById('select-chart').value
   fetch('../configs/defaultGraphs/' + input + '.json')
     .then((response) => response.json())
     .then((responseData) => {
-      fetch('../scripts/saveGraph.php', {
+      console.log(JSON.stringify(responseData))
+      fetch('../scripts/saveWidget.php?id='+count, {
         method: "POST",
         body: JSON.stringify(responseData)
       })
         .then(res => res.json())
         .then(res => {
           console.log(res)
-          // if (JSON.parse(res).status === 200) {
-          //   fetch("../scripts/getDashboard.php?dashboard_id=1")
-          //     .then(res => res.json())
-          //     .then(json => {
-          //       let dashboard = JSON.parse(json[0].dashboard_data)
-          //       let tempConfigs = []
-          //       dashboard.configs.forEach(widget => {
-          //         if (widget.widget_id === widgetId) {
-          //           widget.content.graph_id === graphId
-          //         }
-          //         tempConfigs.push(widget)
-          //       })
-          //       dashboard.configs = tempConfigs
-          //       fetch("../scripts/saveWidget.php?dashboard_id=1", { method: "post", body: JSON.stringify(dashboard) })
-          //         .then(res => res.json())
-          //         .then(json => {
-          //           console.log(json)
-          //         })
-          //     })
-          // }
-          // else {
-          //   return alert("There was an error updating")
-          // }
         })
     })
+  getDash(count)
 }
 
-function chartChange(e) {
-  console.log(e.target.value)
-  graph.destroy()
-  document.getElementById("graph").remove()
-  let canvas = document.createElement("canvas")
-  canvas.setAttribute("id", "graph")
-  document.getElementById("graph-container").appendChild(canvas)
-  getGraphData(e.target.value)
+function getDash() {
+  fetch('../scripts/getDashboard.php')
+    .then(res => res.json())
+    .then(res => {
+      data = JSON.parse(res[0].dashboard_data)
+      data.configs.push({
+        widget_id: "test",
+        content: "test"
+      })
+      fetch('../scripts/saveDashboard.php', {
+        method: "POST",
+        body: data = JSON.stringify(data)
+      })
+        .then(res => res.json())
+        .then(res => {
+          console.log(res)
+        })
+    })
 }

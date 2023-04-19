@@ -1,8 +1,7 @@
 <?php
 require("../configs/db/dbConnection.php");
 
-$dashboardId = $_GET['dashboard_id'];
-$result = mysqli_query($conn, "SELECT * FROM dashboard WHERE dashboard_id='" . $dashboardId . "';");
+$result = mysqli_query($conn, "SELECT * FROM dashboard WHERE dashboard_id='1';");
 $toEncode = array();
 
 while ($row = mysqli_fetch_assoc($result)) {
