@@ -59,7 +59,7 @@ else{
         <label id="y-axis-label">Y Axis</label>
         <input type="text" id="y-axis" name="y-axis" oninput="updatePreview('y-axis')">
       </div>
-      <a href="dashboard.php">Cancel</a>
+      <a  class = "te"href="dashboard.php">Cancel</a>
       <input id="submit-button" type="submit" value="Save">
     </form>
   </div>

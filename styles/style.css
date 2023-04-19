@@ -233,10 +233,15 @@ a.cancel {
   color: #fefefe;
   border: none;
   border-radius: 4px;
-  width: 76px;
-  padding: 9px 9px 9px 9px;
+  width: 50px;
+  padding: 6px 6px 6px 6px;
+  
 }
-
+a.te{
+  width:100px;
+  display:flex;
+  float: right;
+}
 .edit-button{
   float: right;
   margin-right: 0.5em;
