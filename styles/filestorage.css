@@ -1,113 +1,232 @@
-.folder-container{
-    background-color: white;
-    padding: 10px;
-    border: 3px solid  #04AA6D;
-    max-width: 200px;
-    min-height: 100px;
-    margin-left: 20px; 
-    border-radius: 4px;
-    position: relative;
+body.file-page{
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  height: 100%;
 }
 
-.folders-heading{
-    margin-left: 20px; 
-    margin-top: 150px;
-}  
+
+.main-container{
+  background-color: #ffffff;
+  display:flex;
+  justify-content: space-between;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,.1);
+}
+
+.file-container{
+  padding: 3rem;
+  width: 50%;
+}
+
+.folder-container{
+  padding: 3rem;
+  width: 50%;
+}
+
+.folder-display-area{
+  display:flex;
+  flex-wrap: wrap;
+  margin-top: 3%;
+  background-color: lightgray;
+  /* padding: 2em; */
+  box-shadow: inset 0px 8px 16px 0px rgba(0,0,0,.1);
+  border-radius: 8px;
+  justify-content: space-evenly;
+  padding-bottom: 1em;
+}
+
+.folder-display-container{
+  background-color: white;
+  padding: 1em;
+}
+
+.folder-display{
+  padding-top: 2em;
+  background-image: url("../assets/file-ico.png");
+  background-size: 155px 100px;
+  text-align: center;
+  min-height: 100px;
+  min-width: 150px;
+  /* margin-left: 20px; */
+  margin-top: 20px;
+  position: relative;
+}
+
+/* REFERENCE: https://stackoverflow.com/questions/66942952/is-it-possible-to-change-the-background-color-of-an-jpg-image-in-css */
+.folder-display:hover{
+  -moz-filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
+  -o-filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
+  -webkit-filter: grayscale(100%);
+  filter: gray;
+  filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
+}
+
 
 .folder-link {
-    color: black;
-    font-size: 25px;
+  color: black;
+  font-size: 25px;
+  padding-top: 10px;
 }
 
-.create-folder-input {
-    position: relative;
-    margin-right: 16px!important;
-    margin-top: 23px!important;
+a.folder-link{
+  padding-top: 1em;
 }
 
-.create-folder-input::placeholder {
-    color: white; 
-    font-size: 14px;
-  }
+a.back{
+  color: white;
+  background-color: #04AA6D;
+  padding: 1em;
+  border-radius: 4px;
+  margin-top: 10em;
+}
 
-.file-input input[type="file"] {
-    color: white;
-    float: left;
-    margin-top: 25px;
-    margin-left: 20px;
-    height: 15px; 
+a.back:hover{
+  box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.2);
+}
+
+.files-link{
+  text-decoration: none;
+  color: black;
+  font-size: 10px;
+  text-align: center;
+}
+
+.file-display-container{
+  display:flex;
+  /* justify-content: center; */
+  flex-direction: column;
+  margin-left: 1em;
+  padding: 1em;
+}
+
+p{
+  text-align: center;
+}
+
+.files-link:hover{
+  text-decoration: underline;
+}
+
+.file-display {
+  padding-top: 2em;
+  background-image: url("../assets/inside-file-ico.png");
+  background-size: 155px 120px;
+  max-width: 155px;
+  max-height: 120px;
+  min-height: 120px;
+  min-width: 150px;
+  margin-top: 20px;
+  position: relative;
+  /* font-size: 4px 4px; */
+}
+
+.file-view-container{
+  background-color: white;
+  padding: 2rem;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,.1);
+}
+
+.file-view-area{
+  display:flex;
+  flex-wrap: wrap;
+  margin-top: 3%;
+  background-color: lightgray;
+  padding: 2em;
+  box-shadow: inset 0px 8px 16px 0px rgba(0,0,0,.1);
+  border-radius: 8px;
+  margin-bottom: 2em;
+}
+
+.file-header {
+  font-family: "IBM Plex Sans", sans-serif;
+  color: black;
+  font-weight: normal;
+  margin-left: 34px;
+}
+
+.file-display:hover{
+  /* box-shadow: inset 0 0 100px 100px rgba(170, 170, 170, 0.2); */
+}
+
+.delete-button {
+  font-size: 10px;
+  position: absolute;
+  bottom: 7px;
+  right: 5px;
+  height: 20px;
+  line-height: 10px;
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 4px;
+  background-color: #e0331c;
+
+}
+
+.create-folder-input{
+  background-color: #ffffff;
+  padding: 12px 18px;
+  border: solid 1px;
+  cursor: text;
+  width: 100%;
+  font-size: 14px;
+  height: 40px;
+}
+
+.create-folder-btn{
+  background-color: #04AA6D;
+  color: white;
+  font-weight: bold;
+  padding: 12px 18px;
+  border: none;
+  cursor: pointer;
+  width: 75%;
+  font-size: 14px;
+  margin-left: 12.5%;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,.1);
+}
+
+form.create-folder{
+  /* background-color: aqua; */
+}
+
+form.file-upload{
+  /* background-color: aqua; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+.file-input input[type="file"]{
+  background-color: white;
+  color: black;
+  padding: 12px 18px;
+  border: solid 1px black;
+  border-bottom: none;
+  font-size: 14px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,.1);
+}
+
+.folder-select select{
+  background-color: #04AA6D;
+  padding: 12px 18px;
+  border: solid 1px black;
+  border-top: none;
+  cursor: pointer;
+  font-size: 14px;
+  text-align: center;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,.1);
+}
+
+.submit-button{
+  background-color: #04AA6D!important;
+  padding: 12px 18px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  width: 75%;
+  margin-left: 12.5%;
+  color: white;
+  font-weight: bold;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,.2);
 } 
-
-  .files-link{
-    text-decoration: none;
-    color: black;
-    font-size: 20px;
-    text-align: center;
-  }
-
-  .file-header {
-    font-family: "IBM Plex Sans", sans-serif;
-    color: black;
-    font-weight: normal;
-    margin-left: 34px;
-  }
-  
-  .folder-select select {
-    color: white;
-    float: left;
-    margin-top: 25px;
-    margin-left: 20px;
-    height: 39px; 
-}
-  
-.submit-button {
-  margin-left: 20px!important;
-  
-}
-
-  .file-container {
-    border: 3px solid  #04AA6D;;
-    padding: 10px;
-    margin-bottom: 10px;
-    background-color: white;
-    max-width: 1290px; 
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 4px !important;
-  }
-
-  .create-folder-input, .create-folder-btn, .submit-button, .folder-select select,.file-input input[type="file"] {
-    background-color: #04AA6D!important;
-    padding: 12px 18px !important;
-    border: none!important;
-    border-radius: 4px!important;
-    cursor: pointer!important;
-    width: 170px !important;
-    font-size: 14px!important;
-    height: 40px;
-  }
-
-  .delete-button {
-    font-size: 10px;
-    position: absolute;
-    bottom: 7px;
-    right: 5px;
-    height: 20px;
-    line-height: 10px;
-    border-radius: 4px;
-    background-color: #04AA6D;
-
-}
-
-#folder_name.create-folder-input {
-  left: 960px;
-  top: 80px;
-  position: relative;
-}
-
-input.create-folder-btn{
-  left: 1150px;
-  top: 143px;
-  position: relative;
-}
-

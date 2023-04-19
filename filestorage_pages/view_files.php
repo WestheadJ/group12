@@ -1,4 +1,9 @@
 <?php
+  require '../pages/watermanTop.php';
+?>
+<link rel="stylesheet" href="../styles/waterman.css">
+
+<?php
 include("../configs/db/dbConnection.php");
 
 
@@ -22,12 +27,23 @@ $file_result = mysqli_query($conn, $file_sql);
   <title>View Files</title>
   <link rel="stylesheet" href="../styles/filestorage.css">
 </head>
-<body>
-<h1 class="file-header">Files in <?php echo $folder_name; ?></h1>
-    <?php while($file_row = mysqli_fetch_assoc($file_result)) { ?>
-      <div class="file-container">
-      <p><a href="../uploads/<?php echo $file_row['file_name']; ?>" class="files-link"><?php echo $file_row['file_name']; ?></a></p>
+<body class=file-page>
+  <div class="file-view-container">
+    <h1 class="file-header">Files in: <?php echo $folder_name; ?></h1>
+      <div class="file-view-area">
+        <?php while($file_row = mysqli_fetch_assoc($file_result)) { ?>
+          <div class="file-display-container">
+            <div class="file-display">
+            </div>
+            <p><a href="../uploads/<?php echo $file_row['file_name']; ?>" class="files-link"><?php echo $file_row['file_name']; ?></a></p>
+          </div>
+        <?php } ?>
       </div>
-    <?php } ?>
+      <a href="../filestorage_pages/filestorage.php" class="back">Back</a>
+  </div>
 </body>
 </html>
+
+<?php
+  require '../pages/watermanBottom.php';
+?>

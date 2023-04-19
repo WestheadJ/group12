@@ -1,3 +1,5 @@
+
+
 function edit() {
   menueToggle()
   var grid = GridStack.init();
@@ -66,11 +68,13 @@ function removeDeleteButton(widget) {
 function addChart() {
   var grid = GridStack.init();
 
+  
   // Counts how many widgets are currently on the dashboard
   var widgetCount = document.querySelectorAll('.grid-stack-item').length;
   // adds 1 to counter for the new widget
   widgetCount += 1;
-
+  x = "editWidget.php?newGraph=" + widgetCount;
+  window.location.href = x;
   grid.addWidget({
     x: 0, y: 5, w: 6, h: 5, content: '<canvas id="dummy"></canvas>' // here
     // gs-h="3" gs-w="1" gs-x="0" gs-y="5"

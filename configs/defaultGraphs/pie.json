@@ -1,0 +1,22 @@
+{
+  "data": {
+    "labels": [
+      "Green",
+      "Amber",
+      "Red"
+    ],
+    "datasets": [
+      {
+        "data": "data",
+        "label": "Chart",
+        "borderWidth": 1,
+        "backgroundColor": [
+          "green",
+          "orange",
+          "red"
+        ]
+      }
+    ]
+  },
+  "type": "pie"
+}

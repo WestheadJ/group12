@@ -17,8 +17,8 @@ $folder_result = mysqli_query($conn, $folder_sql);
 
 <?php
 require '../pages/watermanTop.php';
-
 ?>
+<link rel="stylesheet" href="../styles/waterman.css">
 
 
 <!DOCTYPE html>
@@ -32,33 +32,38 @@ require '../pages/watermanTop.php';
 
 </head>
 <body>
-
-  <form action="" method="POST">
-  <input type="submit" name="create_folder" value="+ New Folder" class="create-folder-btn">
-  <input type="text" name="folder_name" id="folder_name" placeholder="Enter folder name" class="create-folder-input">
-  </form>
-
-
-  <form enctype="multipart/form-data" action="" name="form" method="post" >
-    <div class="input-container">
-        <div class="file-input">
-            <input type="file" name="file" id="file" />
-        </div>
-  <!-- https://www.sourcecodester.com/php/9668/upload-and-download-files-php.html -->
-  <!-- The source I used to help me implement a file upload form.-->
-        <div class="folder-select">
-            <select name="folder_id">
-                <option value="" disabled selected>Select folder</option>
-                <?php while($row = mysqli_fetch_assoc($folder_result)) { ?>
-                    <option value="<?php echo $row['folder_id']; ?>"><?php echo $row['folder_name']; ?></option>
-                <?php } ?>
-            </select>
-        </div>
-    </div>
-    <br>
-    <input type="submit" name="submit" id="submit" value="Submit" class="submit-button" />
-</form>
+<div class="main-container">
+  <div class="folder-container">
+    <h2>Create Folder</h2>
+    <form class="create-folder" action="" method="POST">
+      <input type="text" name="folder_name" id="folder_name" placeholder="Enter folder name" class="create-folder-input">
+    <input type="submit" name="create_folder" value="+ New Folder" class="create-folder-btn">
+    </form>
+  </div>
   
+  <div class="file-container">
+    <h2>Upload File</h2>
+    <form class="file-upload" enctype="multipart/form-data" action="" name="form" method="post" >
+      <div class="input-container">
+            <div class="file-input">
+                <input type="file" name="file" id="file" />
+            </div>
+      <!-- https://www.sourcecodester.com/php/9668/upload-and-download-files-php.html -->
+      <!-- The source I used to help me implement a file upload form.-->
+            <div class="folder-select">
+                <select name="folder_id">
+                    <option value="" disabled selected>Select folder &darr; </option>
+                    <?php while($row = mysqli_fetch_assoc($folder_result)) { ?>
+                        <option value="<?php echo $row['folder_id']; ?>"><?php echo $row['folder_name']; ?></option>
+                    <?php } ?>
+                </select>
+            </div>
+        </div>
+        <br>
+        <input type="submit" name="submit" id="submit" value="Submit" class="submit-button" />
+    </form>
+  </div>
+</div>
   <?php
 
   if(isset($_POST['submit'])) {
@@ -80,9 +85,10 @@ require '../pages/watermanTop.php';
   }
   include("view_folders.php");
   ?>
+  
 </body>
 </html>
 
 <?php
-require '../pages/watermanBottom.php';
+  require '../pages/watermanBottom.php';
 ?>

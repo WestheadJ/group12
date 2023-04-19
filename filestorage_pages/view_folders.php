@@ -23,16 +23,19 @@ $folder_result = mysqli_query($conn, $folder_sql);
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-  <h1 class="folders-heading">Folders</h1>
-
-  <?php while($folder_row = mysqli_fetch_assoc($folder_result)) { ?>
-    <div class="folder-container">
-      <a href="view_files.php?folder_id=<?php echo $folder_row['folder_id']; ?>" class="folder-link"><?php echo $folder_row['folder_name']; ?></a>
-      <form action="" method="POST">
-        <input type="hidden" name="folder_id" value="<?php echo $folder_row['folder_id']; ?>">
-        <input type="submit" name="delete_folder" value="Delete" class="delete-button" onclick="return confirm('Are you sure you want to delete this folder, and the files contained within it?')">
-      </form>
+  <div class="folder-display-container">
+    <h1 class="folders-heading">Folders</h1>
+    <div class="folder-display-area">
+      <?php while($folder_row = mysqli_fetch_assoc($folder_result)) { ?>
+        <div class="folder-display">
+          <a href="view_files.php?folder_id=<?php echo $folder_row['folder_id']; ?>" class="folder-link"><?php echo $folder_row['folder_name']; ?></a>
+          <form action="" method="POST">
+            <input type="hidden" name="folder_id" value="<?php echo $folder_row['folder_id']; ?>">
+            <input type="submit" name="delete_folder" value="Delete" class="delete-button" onclick="return confirm('Are you sure you want to delete this folder, and the files contained within it?')">
+          </form>
+        </div>
+      <?php } ?>
     </div>
-  <?php } ?>
+  </div>
 </body>
 </html>
