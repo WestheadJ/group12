@@ -249,7 +249,7 @@ a.cancel {
 
 /* POPOUT CHART */
 
-{box-sizing: border-box;}
+/* box-sizing: {border-box;} */
 
 /* Button used to open the contact form - fixed at the bottom of the page */
 .open-button {
@@ -349,8 +349,6 @@ a.cancel {
     background-color: #d32f2f;
   }
 
-@media screen and (max-width:750px) {
-  .mainpage-row {
-    flex-direction: column;
-  }
+.grid-stack{
+  min-width: 775px;
 }
