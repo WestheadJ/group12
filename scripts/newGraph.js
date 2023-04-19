@@ -72,16 +72,23 @@ function saveGraph(e) {
           console.log(res)
         })
     })
-  getDash(count)
+  getDash()
 }
 
 function getDash() {
+  fetch('../scripts/getGraphCount.php')
+  .then(res => res.JSON.stringify())
+  .then(res => {
+    console.log("HELLO")
+  })
+
+  // })
   fetch('../scripts/getDashboard.php')
     .then(res => res.json())
     .then(res => {
       data = JSON.parse(res[0].dashboard_data)
       data.configs.push({
-        widget_id: "test",
+        widget_id: "d",
         content: "test"
       })
       fetch('../scripts/saveDashboard.php', {
@@ -92,5 +99,6 @@ function getDash() {
         .then(res => {
           console.log(res)
         })
+        
     })
 }
