@@ -237,11 +237,18 @@ a.cancel {
   padding: 6px 6px 6px 6px;
   
 }
+
 a.te{
   width:100px;
   display:flex;
-  float: right;
+  float: left;
+  margin: 2em;
 }
+
+a.te:hover{
+text-decoration: underline;
+}
+
 .edit-button{
   float: right;
   margin-right: 0.5em;
