@@ -1,8 +1,8 @@
-
 let graph_data;
 let graph_data_raw;
 let graph;
 let content;
+let graph_type;
 
 window.onload = () => {
   let params = window.location.search;
@@ -46,20 +46,23 @@ function getGraphData(graphId) {
 
       graph_data = JSON.parse(data[0].graph_data)
       graph_data_raw = JSON.parse(data[0].graph_data)
-      let graphType = graph_data.type
+      graphType = graph_data.type
       console.log(graph_data)
 
       document.getElementById("graph-title").value = graph_data.options.title.text
-      if (graphType === "gauge") {
-        graph_data.datasets[0].data = randomDataVar
-        graph_data.datasets[0].value = randomValueVar
-        graph_data.options.valueLabel.formatter = Math.round
-
+      if (graphType === "gauge" || graphType === "pie") {
         document.getElementById("x-axis").remove()
         document.getElementById("y-axis").remove()
         document.getElementById("x-axis-label").remove()
         document.getElementById("y-axis-label").remove()
-
+        if(graphType === "gauge"){
+          graph_data.data.datasets[0].data = randomDataVar
+          graph_data.data.datasets[0].value = randomValueVar
+          graph_data.options.valueLabel.formatter = Math.round
+        }
+        if(graphType === "pie"){
+          graph_data.data.datasets[0].data = randomDataVar
+        }
       }
       else {
         graph_data.data.datasets[0].data = randomDataVar
@@ -72,7 +75,6 @@ function getGraphData(graphId) {
       console.log(graph_data_raw)
       console.log(graph_data)
     })
-
 }
 
 // REFERENCE FOR CODE: https://stackoverflow.com/questions/7056669/how-to-prevent-default-event-handling-in-an-onclick-method
@@ -97,15 +99,16 @@ function updatePreview(id) {
 
 function saveGraph(e) {
   e.preventDefault();
-
-  graph_data_raw.options.scales.xAxes[0].scaleLabel.labelString = graph_data.options.scales.xAxes[0].scaleLabel.labelString
-  graph_data_raw.options.scales.yAxes[0].scaleLabel.labelString = graph_data.options.scales.yAxes[0].scaleLabel.labelString
+  if (graphType === "bar" || graphType === "line") {
+    graph_data_raw.options.scales.xAxes[0].scaleLabel.labelString = graph_data.options.scales.xAxes[0].scaleLabel.labelString
+    graph_data_raw.options.scales.yAxes[0].scaleLabel.labelString = graph_data.options.scales.yAxes[0].scaleLabel.labelString
+  }
   graph_data_raw.options.title.text = graph_data.options.title.text
   
   fetch('../scripts/saveGraph.php?graph_id=' + content, {
     method: "POST",
     body: JSON.stringify(graph_data_raw)
   })
-
+  console.log('saved')
   window.location.replace = "../pages/dashboard.php?edit=true";
 }

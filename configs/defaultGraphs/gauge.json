@@ -1,37 +1,38 @@
 {
-    "type": "gauge",
-    "data": {
-
-      "datasets": [{
+  "type": "gauge",
+  "data": {
+    "datasets": [
+      {
         "data": "data",
         "value": "value",
-        "backgroundColor": ["green", "orange", "red"],
+        "backgroundColor": [
+          "green",
+          "orange",
+          "red"
+        ],
         "borderWidth": 2
-      }]
-    },
-    "options": {
-      "responsive": true,
-      "title": {
-        "display": true,
-        "text": "Gauge chart"
-      },
-      "layout": {
-        "padding": {
-          "bottom": 30
-        }
-      },
-      "needle": {
-
-        "radiusPercentage": 2,
-
-        "widthPercentage": 3.2,
-
-        "lengthPercentage": 80,
-
-        "color": "rgba(0, 0, 0, 1)"
-      },
-      "valueLabel": {
-        "formatter": "Math.round"
       }
+    ]
+  },
+  "options": {
+    "responsive": true,
+    "title": {
+      "display": true,
+      "text": "Gauge chart"
+    },
+    "layout": {
+      "padding": {
+        "bottom": 30
+      }
+    },
+    "needle": {
+      "radiusPercentage": 2,
+      "widthPercentage": 3.2,
+      "lengthPercentage": 80,
+      "color": "rgba(0, 0, 0, 1)"
+    },
+    "valueLabel": {
+      "formatter": "Math.round"
     }
   }
+}

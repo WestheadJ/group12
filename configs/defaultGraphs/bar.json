@@ -1,21 +1,56 @@
 {
-    "type": "bar",
-    "data": {
-      "labels": ["Green", "Amber", "Red"],
-      "datasets": [{
+  "data": {
+    "labels": [
+      "Green",
+      "Amber",
+      "Red"
+    ],
+    "datasets": [
+      {
+        "data": "data",
         "label": "Chart",
-        "data":"data",
-        "backgroundColor": ["green", "orange", "red"],
-        "borderWidth": 1
-      }]
+        "borderWidth": 1,
+        "backgroundColor": [
+          "green",
+          "orange",
+          "red"
+        ]
+      }
+    ]
+  },
+  "type": "bar",
+  "options": {
+    "title": {
+      "font": {
+        "size": 30
+      },
+      "text": "Bar Chart",
+      "display": true
     },
-    "options": {
-      "scales": {
-        "yAxes": [{
+    "scales": {
+      "xAxes": [
+        {
           "ticks": {
             "beginAtZero": true
+          },
+          "scaleLabel": {
+            "display": true,
+            "labelString": ""
           }
-        }]
-      }
+        }
+      ],  
+      "yAxes": [
+        {
+          "ticks": {
+            "beginAtZero": true
+          },
+          "scaleLabel": {
+            "display": true,
+            "labelString": "",
+            "defaultFontSize": 100
+          }
+        }
+      ]
     }
   }
+}

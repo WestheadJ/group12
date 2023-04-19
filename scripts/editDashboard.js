@@ -73,7 +73,7 @@ function addChart() {
   var widgetCount = document.querySelectorAll('.grid-stack-item').length;
   // adds 1 to counter for the new widget
   widgetCount += 1;
-  x = "editWidget.php?newGraph=" + widgetCount;
+  x = "editWidget.php?widgetId=" + widgetCount;
   window.location.href = x;
   grid.addWidget({
     x: 0, y: 5, w: 6, h: 5, content: '<canvas id="dummy"></canvas>' // here

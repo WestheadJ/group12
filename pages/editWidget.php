@@ -22,7 +22,7 @@ else{
 
 <?php if(isset($_GET['newGraph'])):?>
   <h1 id="title">Adding New Chart</h1>
-  <canvas id="dummy"></canvas>
+  <canvas id="graph"></canvas>
   <div id="graph-edit">
   <div id="form-container">
     <form onsubmit="return saveGraph(event)" method="post" id="form">
@@ -48,22 +48,28 @@ else{
               <option value="line">Line Chart</option>
               <option value="gauge">Gauge Chart</option>
             </select>
+            </div>
+      <a  class = "te"href="dashboard.php">Cancel</a>
+      <input id="submit-button" type="submit" value="Add Graph">
+    </form>
+  </div>
+</div>
 <?php else:?>
-
-<?php endif; ?>
-        </select>
+  </select>
         <label>Chart title</label>
         <input type="text" id="graph-title" name="graph-title" oninput="updatePreview('graph-title')">
         <label id="x-axis-label">X Axis</label>
         <input type="text" id="x-axis" name="x-axis" oninput="updatePreview('x-axis')">
         <label id="y-axis-label">Y Axis</label>
         <input type="text" id="y-axis" name="y-axis" oninput="updatePreview('y-axis')">
-      </div>
+        </div>
       <a  class = "te"href="dashboard.php">Cancel</a>
       <input id="submit-button" type="submit" value="Save">
     </form>
   </div>
 </div>
+<?php endif; ?>
+        
 
 <?php
 require 'watermanBottom.php';

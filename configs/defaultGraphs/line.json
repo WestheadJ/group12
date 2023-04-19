@@ -1,23 +1,54 @@
 {
-    "type": "line",
-    "data": {
-      "labels": ["Green", "Amber", "Red"],
-      "datasets": [{
-        "label": "Chart",
+  "data": {
+    "labels": [
+      "Green",
+      "Amber",
+      "Red"
+    ],
+    "datasets": [
+      {
         "data": "data",
         "fill": false,
-        "backgroundColor": ["green", "orange", "red"],
-        "borderWidth": 1
-      }]
+        "label": "Chart",
+        "borderWidth": 1,
+        "backgroundColor": [
+          "green",
+          "orange",
+          "red"
+        ]
+      }
+    ]
+  },
+  "type": "line",
+  "options": {
+    "title": {
+      "text": "Line Chart",
+      "display": true
     },
-    "options": {
-      "scales": {
-        "yAxes": [{
+    "scales": {
+      "xAxes": [
+        {
           "ticks": {
             "beginAtZero": true
+          },
+          "scaleLabel": {
+            "display": true,
+            "labelString": ""
           }
-        }]
-      }
+        }
+      ],
+      "yAxes": [
+        {
+          "ticks": {
+            "beginAtZero": true
+          },
+          "scaleLabel": {
+            "display": true,
+            "labelString": "",
+            "defaultFontSize": 100
+          }
+        }
+      ]
     }
-    
   }
+}

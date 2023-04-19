@@ -18,5 +18,14 @@
       }
     ]
   },
-  "type": "pie"
+  "type": "pie",
+  "options": {
+    "title": {
+      "font": {
+        "size": 30
+      },
+      "text": "Pie Chart",
+      "display": true
+    }
+  }
 }

@@ -131,8 +131,6 @@ function render(json) {
           return graph
         })
     }
-
-
   })
 }
 
