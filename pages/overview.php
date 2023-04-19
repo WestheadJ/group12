@@ -3,6 +3,7 @@
 //require 'navbar.php';
 require 'watermanTop.php';
 ?>
+<link rel="stylesheet" href="../styles/waterman.css">
             <div id="chart-container">Overview chart will render here</div>
                 <script src="../scripts/overviewDrillChart.js"></script>
 

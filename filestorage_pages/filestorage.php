@@ -17,8 +17,8 @@ $folder_result = mysqli_query($conn, $folder_sql);
 
 <?php
 require '../pages/watermanTop.php';
-
 ?>
+<link rel="stylesheet" href="../styles/waterman.css">
 
 
 <!DOCTYPE html>
@@ -90,5 +90,5 @@ require '../pages/watermanTop.php';
 </html>
 
 <?php
-require '../pages/watermanBottom.php';
+  require '../pages/watermanBottom.php';
 ?>

@@ -3,8 +3,8 @@
 
 <?php
 require 'watermanTop.php';
-
 ?>
+<link rel="stylesheet" href="../styles/waterman.css">
 
 <?php
 // require 'watermanTop.php';

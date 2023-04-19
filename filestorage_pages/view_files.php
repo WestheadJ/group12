@@ -1,6 +1,7 @@
 <?php
   require '../pages/watermanTop.php';
 ?>
+<link rel="stylesheet" href="../styles/waterman.css">
 
 <?php
 include("../configs/db/dbConnection.php");
