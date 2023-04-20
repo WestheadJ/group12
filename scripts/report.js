@@ -1,28 +1,29 @@
 document.getElementById('linkModal').addEventListener('click', function () {
   var newWindow = window.open('', '_blank');
-  var htmlCode = `
-  <html>
-    <head>
-      <title>Report</title>
-      <link rel="stylesheet" href="../styles/report.css">
-    </head>
-    <body>
-      <button id="printReport">Print Report</button>
-      <table id="report-table"></table>
-      <div id="modal" class="offmodal">
-        <div class="modal-container">
-          <header>
-            <h2>Reports</h2>
-            <button id="printReport">Print Report</button>
-          </header>
-          <div class="modal-body">
-            <table id="report-table"></table>
-          </div>
-        </div>
-      </div>
-    </body>
-  </html>
-`;
+  newWindow.document.write('<html><head><title>Report</title><link rel="stylesheet" href="../styles/report.css"></head><body><button id="printReport">Print Report</button><table id="report-table"></table><div id="modal" class="offmodal"><div class="modal-container"><header><h2>Reports</h2><button id="printReport">Print Report</button></header><div class="modal-body"><table id="report-table"></table></div></div></div></body></html>');
+//   var htmlCode = `
+//   <html>
+//     <head>
+//       <title>Report</title>
+//       <link rel="stylesheet" href="../styles/report.css">
+//     </head>
+//     <body>
+//       <button id="printReport">Print Report</button>
+//       <table id="report-table"></table>
+//       <div id="modal" class="offmodal">
+//         <div class="modal-container">
+//           <header>
+//             <h2>Reports</h2>
+//             <button id="printReport">Print Report</button>
+//           </header>
+//           <div class="modal-body">
+//             <table id="report-table"></table>
+//           </div>
+//         </div>
+//       </div>
+//     </body>
+//   </html>
+// `;
   var reportTable = newWindow.document.getElementById('report-table');
   fetch('../configs/report/report.json')
     .then(response => response.json())
