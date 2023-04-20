@@ -2,6 +2,19 @@
 
 function edit() {
   menueToggle()
+
+   // Toggles between CSS classes for static and live state
+   var comment = document.querySelectorAll('[class=comment-saved]');
+   comment.forEach(comment => {
+     comment.setAttribute("class", `comment-editing`);
+   });
+ 
+   // Toggles between CSS classes for static and live state
+   var title = document.querySelectorAll('[class=title-saved]');
+   title.forEach(title => {
+     title.setAttribute("class", `title-editing`);
+   });
+
   var grid = GridStack.init();
   grid.setStatic(false);
   // Get all the widgets
@@ -149,6 +162,20 @@ function addComment() {
 
 function save() {
 
+  // Toggles between CSS classes for static and live state
+  var comment = document.querySelectorAll('[class=comment-editing]');
+  comment.forEach(comment => {
+    comment.setAttribute("class", `comment-saved`);
+  });
+
+  // Toggles between CSS classes for static and live state
+  var title = document.querySelectorAll('[class=title-editing]');
+  title.forEach(title => {
+    title.setAttribute("class", `title-saved`);
+  });
+
+ 
+
   var gridstackItems = document.querySelectorAll('.grid-stack-item')
 
   let dashboardJSON = {
@@ -208,7 +235,6 @@ function save() {
       json = JSON.parse(json)
       if (json.status === 200) {
 
-        //NEED TO BE ABLE TO SAVE DASHBOARD TO DB HERE
         var grid = GridStack.init();
         grid.setStatic(true);
         var deleteButtons = document.getElementsByClassName('delete-widget');
@@ -220,18 +246,6 @@ function save() {
         while (editButtons[0]) {
           editButtons[0].parentNode.removeChild(editButtons[0])
         }
-
-        // Toggles between CSS classes for static and live state
-        var comment = document.querySelectorAll('[class=comment-editing]');
-        comment.forEach(comment => {
-          comment.setAttribute("class", `comment-saved`);
-        });
-
-        // Toggles between CSS classes for static and live state
-        var title = document.querySelectorAll('[class=title-editing]');
-        title.forEach(title => {
-          title.setAttribute("class", `title-saved`);
-        });
         alert("Dashboard saved")
         menueToggle()
       }
@@ -265,16 +279,6 @@ function menueToggle() {
     }
   });
 
-  // Toggles between CSS classes for static and live state
-  var comment = document.querySelectorAll('[class=comment-saved]');
-  comment.forEach(comment => {
-    comment.setAttribute("class", `comment-editing`);
-  });
-
-  // Toggles between CSS classes for static and live state
-  var title = document.querySelectorAll('[class=title-saved]');
-  title.forEach(title => {
-    title.setAttribute("class", `title-editing`);
-  });
+  
 
 }
