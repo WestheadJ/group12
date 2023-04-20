@@ -55,15 +55,15 @@ function changeGraph() {
 }
 
 function saveGraph(e) {
- e.preventDefault();
+  e.preventDefault();
 
- fetch('../scripts/getGraphCount.php')
-  .then(res => res.json())
-  .then(res => {
-    graphID = res[0].x
-    graphID = parseInt(graphID) + 1 
-    console.log("Graph ID: " + graphID)
-  })
+  fetch('../scripts/getGraphCount.php')
+    .then(res => res.json())
+    .then(res => {
+      graphID = res[0].x
+      graphID = parseInt(graphID) + 1
+      console.log("Graph ID: " + graphID)
+    })
 
   fetch('../scripts/getDashboard.php')
     .then(res => res.json())
@@ -72,27 +72,27 @@ function saveGraph(e) {
       let length = data.configs.length
       console.log("length ID: " + length)
       data.configs.push({
-        widget_id: length+1,
+        widget_id: length + 1,
         content: graphID
       })
-      fetch('../scripts/saveDashboard.php', {
-        method: "POST",
-        body: data = JSON.stringify(data)
-      })
-        .then(res => res.json())
-        .then(res => {
-          console.log(res)
-        })
-        
+      // fetch('../scripts/saveDashboard.php', {
+      //   method: "POST",
+      //   body: data = JSON.stringify(data)
+      // })
+      //   .then(res => res.json())
+      //   .then(res => {
+      //     console.log(res)
+      //   })
+
     })
- 
+
   var input = document.getElementById('select-chart').value
   fetch('../configs/defaultGraphs/' + input + '.json')
     .then((response) => response.json())
     .then((responseData) => {
       console.log(JSON.stringify(responseData))
       console.log(graphID)
-      fetch('../scripts/saveGraph.php?id='+ graphID, {
+      fetch('../scripts/saveGraph.php?id=' + graphID, {
         method: "POST",
         body: JSON.stringify(responseData)
       })
