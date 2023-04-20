@@ -118,7 +118,6 @@ document.addEventListener('DOMContentLoaded', function () {
 })
 
 
-
 function addComment() {
   var gridstackItems = document.querySelectorAll('.grid-stack-item')
   var counter = 0

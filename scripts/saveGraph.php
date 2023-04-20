@@ -1,6 +1,6 @@
 <?php
 require('../configs/db/dbConnection.php');
-$graph_id = $_GET['graph_id'];
+$graph_id = $_GET['id'];
 $body = file_get_contents('php://input');
 $sql = "UPDATE graph SET graph_data='" . $body . "' WHERE graph_id=" . $graph_id;
 

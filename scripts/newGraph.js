@@ -1,10 +1,8 @@
 let graph;
 let x = 1;
 let graph_data;
-let graph_data_raw;
 let data;
 let graphID;
-let widgetID;
 
 var randomScalingFactor = function () {
   return Math.round(Math.random() * 100);
@@ -58,39 +56,23 @@ function changeGraph() {
 
 function saveGraph(e) {
  e.preventDefault();
-  widgetID = document.querySelectorAll('grid-stack-items').length
-  widgetID += 1;
-  var input = document.getElementById('select-chart').value
-  fetch('../configs/defaultGraphs/' + input + '.json')
-    .then((response) => response.json())
-    .then((responseData) => {
-      console.log(JSON.stringify(responseData))
-      fetch('../scripts/saveWidget.php?id='+widgetID, {
-        method: "POST",
-        body: JSON.stringify(responseData)
-      })
-        .then(res => res.json())
-        .then(res => {
-          console.log(res)
-        })
-    })
 
-  getDash()
-}
-
-function getDash() {
-  fetch('../scripts/getGraphCount.php')
+ fetch('../scripts/getGraphCount.php')
   .then(res => res.json())
   .then(res => {
-    graphID = res[0].x;
+    graphID = res[0].x
+    graphID = parseInt(graphID) + 1 
+    console.log("Graph ID: " + graphID)
   })
 
   fetch('../scripts/getDashboard.php')
     .then(res => res.json())
     .then(res => {
       data = JSON.parse(res[0].dashboard_data)
+      let length = data.configs.length
+      console.log("length ID: " + length)
       data.configs.push({
-        widget_id: widgetID,
+        widget_id: length+1,
         content: graphID
       })
       fetch('../scripts/saveDashboard.php', {
@@ -103,4 +85,21 @@ function getDash() {
         })
         
     })
+ 
+  var input = document.getElementById('select-chart').value
+  fetch('../configs/defaultGraphs/' + input + '.json')
+    .then((response) => response.json())
+    .then((responseData) => {
+      console.log(JSON.stringify(responseData))
+      console.log(graphID)
+      fetch('../scripts/saveGraph.php?id='+ graphID, {
+        method: "POST",
+        body: JSON.stringify(responseData)
+      })
+        .then(res => res.json())
+        .then(res => {
+          console.log(res)
+        })
+    })
 }
+
