@@ -1,17 +1,17 @@
 function edit() {
   menueToggle()
 
-   // Toggles between CSS classes for static and live state
-   var comment = document.querySelectorAll('[class=comment-saved]');
-   comment.forEach(comment => {
-     comment.setAttribute("class", `comment-editing`);
-   });
- 
-   // Toggles between CSS classes for static and live state
-   var title = document.querySelectorAll('[class=title-saved]');
-   title.forEach(title => {
-     title.setAttribute("class", `title-editing`);
-   });
+  // Toggles between CSS classes for static and live state
+  var comment = document.querySelectorAll('[class=comment-saved]');
+  comment.forEach(comment => {
+    comment.setAttribute("class", `comment-editing`);
+  });
+
+  // Toggles between CSS classes for static and live state
+  var title = document.querySelectorAll('[class=title-saved]');
+  title.forEach(title => {
+    title.setAttribute("class", `title-editing`);
+  });
 
   var grid = GridStack.init();
   grid.setStatic(false);
@@ -172,7 +172,7 @@ function save() {
     title.setAttribute("class", `title-saved`);
   });
 
- 
+
 
   var gridstackItems = document.querySelectorAll('.grid-stack-item')
 
@@ -193,7 +193,7 @@ function save() {
     if (id.split('-')[0] === "comment") {
       contentType = "comment"
       content = {
-        comment: item.querySelector(`#comment-${id.split('-')[1]}`).innerHTML
+        comment: item.querySelector(`#comment-${id.split('-')[1]}`).value
       }
 
     }
@@ -201,7 +201,7 @@ function save() {
       contentType = "title"
       content =
       {
-        title: item.querySelector(`#title-${id.split('-')[1]}`).innerHTML
+        title: item.querySelector(`#title-${id.split('-')[1]}`).value
       }
 
     }
@@ -277,6 +277,6 @@ function menueToggle() {
     }
   });
 
-  
+
 
 }
