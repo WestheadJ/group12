@@ -17,7 +17,7 @@ include 'report.php';
 </div>
 <div id="mainpage">
   <div class="toolbar">
-    <button id="edit" class="configure-btn" onclick="edit()">Edit Dashbaord</button>
+    <button id="edit" class="configure-btn" onclick="edit()">Edit Dashboard</button>
     <button id="editing" class="configure-btn" onclick="save()">Save</button>
     <button id="editing" class="configure-btn" onclick="addChart()">Add chart</button>
     <button id="editing" class="configure-btn" onclick="addComment()">Add comment</button>

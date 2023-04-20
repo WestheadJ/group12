@@ -67,8 +67,10 @@ a.edit-graph:hover{
 
 /* REFERENCE FOR CODE: https://stackoverflow.com/questions/2528462/how-to-set-readonly-property-of-textbox-from-css */
 .title-saved{
+  text-align: center;
+  min-height: 3em;
   background-color: rgb(232, 232, 232);
-  font-size: x-large;
+  font-size: 50px;
   font-weight: bold;
   resize: none;
   pointer-events: none;
@@ -88,7 +90,10 @@ a.edit-graph:hover{
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-left: 5em;
+  margin-right: 5em;
 }
+
 
 .filter-box {
   float: right;
