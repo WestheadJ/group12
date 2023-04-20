@@ -260,7 +260,7 @@
                                             <li class="button button--primary button-stack" id="old_dashboard"><a
                                                     href="../pages/dashboard.php">Dashboard</a></li>
                                             <li class="button button--primary button-stack" id="old_dashboard"><a
-                                                    href="../filestorage_pages/filestorage.php">Reports</a></li>
+                                                    href="../filestorage_pages/filestorage.php">Files</a></li>
                                         </ul>
                                         <script src="../scripts/currentPage.js"></script>
                                     </div>
