@@ -2,7 +2,7 @@ let graph_data;
 let graph_data_raw;
 let graph;
 let content;
-let graph_type;
+let graphType;
 
 window.onload = () => {
   let params = window.location.search;
@@ -105,10 +105,10 @@ function saveGraph(e) {
   }
   graph_data_raw.options.title.text = graph_data.options.title.text
   
-  fetch('../scripts/saveGraph.php?graph_id=' + content, {
+  fetch('../scripts/saveGraph.php?id=' + content, {
     method: "POST",
     body: JSON.stringify(graph_data_raw)
   })
   console.log('saved')
-  window.location.replace = "../pages/dashboard.php?edit=true";
+  window.location.href = "../pages/dashboard.php?edit=true";
 }
